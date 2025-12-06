@@ -14,7 +14,110 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      restaurants: {
+        Row: {
+          address: string
+          created_at: string
+          description: string | null
+          email: string | null
+          id: string
+          image_url: string | null
+          is_active: boolean | null
+          is_fssai_verified: boolean | null
+          name: string
+          phone: string
+          updated_at: string
+        }
+        Insert: {
+          address: string
+          created_at?: string
+          description?: string | null
+          email?: string | null
+          id?: string
+          image_url?: string | null
+          is_active?: boolean | null
+          is_fssai_verified?: boolean | null
+          name: string
+          phone: string
+          updated_at?: string
+        }
+        Update: {
+          address?: string
+          created_at?: string
+          description?: string | null
+          email?: string | null
+          id?: string
+          image_url?: string | null
+          is_active?: boolean | null
+          is_fssai_verified?: boolean | null
+          name?: string
+          phone?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      surplus_meals: {
+        Row: {
+          category: Database["public"]["Enums"]["meal_category"]
+          created_at: string
+          description: string | null
+          discounted_price: number
+          id: string
+          image_url: string | null
+          is_active: boolean | null
+          original_price: number
+          pickup_date: string
+          pickup_end_time: string
+          pickup_start_time: string
+          quantity_available: number
+          restaurant_id: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category?: Database["public"]["Enums"]["meal_category"]
+          created_at?: string
+          description?: string | null
+          discounted_price: number
+          id?: string
+          image_url?: string | null
+          is_active?: boolean | null
+          original_price: number
+          pickup_date: string
+          pickup_end_time: string
+          pickup_start_time: string
+          quantity_available?: number
+          restaurant_id: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: Database["public"]["Enums"]["meal_category"]
+          created_at?: string
+          description?: string | null
+          discounted_price?: number
+          id?: string
+          image_url?: string | null
+          is_active?: boolean | null
+          original_price?: number
+          pickup_date?: string
+          pickup_end_time?: string
+          pickup_start_time?: string
+          quantity_available?: number
+          restaurant_id?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "surplus_meals_restaurant_id_fkey"
+            columns: ["restaurant_id"]
+            isOneToOne: false
+            referencedRelation: "restaurants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +126,11 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      meal_category:
+        | "surprise_box"
+        | "meal_box"
+        | "grocery_rescue"
+        | "cloud_kitchen"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +257,13 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      meal_category: [
+        "surprise_box",
+        "meal_box",
+        "grocery_rescue",
+        "cloud_kitchen",
+      ],
+    },
   },
 } as const
