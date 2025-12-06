@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">M</span>
-              </div>
+              <img src={logo} alt="Meal Saver logo" className="w-10 h-10 object-contain brightness-0 invert" />
               <span className="font-bold text-xl">Meal Saver</span>
             </div>
             <p className="text-primary-foreground/70 max-w-sm leading-relaxed">
