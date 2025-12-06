@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 160 20% 15%;
 
-    --primary: 142 72% 42%;
+    --primary: 158 75% 21%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 30 80% 55%;
@@ -24,36 +24,36 @@
     --muted: 45 20% 92%;
     --muted-foreground: 160 10% 45%;
 
-    --accent: 142 40% 95%;
-    --accent-foreground: 142 72% 30%;
+    --accent: 158 40% 95%;
+    --accent-foreground: 158 75% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 45 20% 88%;
     --input: 45 20% 88%;
-    --ring: 142 72% 42%;
+    --ring: 158 75% 21%;
 
     --radius: 1rem;
 
     /* Custom colors */
     --cream: 45 33% 97%;
     --cream-dark: 45 25% 93%;
-    --green-light: 142 50% 95%;
-    --green-soft: 142 45% 85%;
+    --green-light: 158 50% 95%;
+    --green-soft: 158 45% 85%;
     --orange: 30 80% 55%;
     --orange-light: 30 70% 95%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(142, 50%, 95%) 0%, hsl(45, 33%, 97%) 50%, hsl(30, 70%, 95%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(142, 72%, 42%) 0%, hsl(142, 65%, 48%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(158, 50%, 95%) 0%, hsl(45, 33%, 97%) 50%, hsl(30, 70%, 95%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(158, 75%, 21%) 0%, hsl(158, 65%, 28%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(45, 20%, 98%) 100%);
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(160, 20%, 15%, 0.08);
     --shadow-card: 0 8px 30px -8px hsl(160, 20%, 15%, 0.12);
-    --shadow-button: 0 4px 14px -2px hsl(142, 72%, 42%, 0.4);
-    --shadow-glow: 0 0 40px hsl(142, 72%, 42%, 0.2);
+    --shadow-button: 0 4px 14px -2px hsl(158, 75%, 21%, 0.4);
+    --shadow-glow: 0 0 40px hsl(158, 75%, 21%, 0.2);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -75,7 +75,7 @@
     --popover: 160 18% 12%;
     --popover-foreground: 45 33% 97%;
 
-    --primary: 142 72% 45%;
+    --primary: 158 75% 26%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 30 70% 50%;
@@ -84,20 +84,20 @@
     --muted: 160 15% 18%;
     --muted-foreground: 45 15% 65%;
 
-    --accent: 142 30% 18%;
-    --accent-foreground: 142 60% 70%;
+    --accent: 158 30% 18%;
+    --accent-foreground: 158 60% 70%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 160 15% 20%;
     --input: 160 15% 20%;
-    --ring: 142 72% 45%;
+    --ring: 158 75% 26%;
 
     --cream: 160 20% 8%;
     --cream-dark: 160 18% 12%;
-    --green-light: 142 30% 15%;
-    --green-soft: 142 25% 25%;
+    --green-light: 158 30% 15%;
+    --green-soft: 158 25% 25%;
     --orange-light: 30 30% 15%;
 
     --sidebar-background: 240 5.9% 10%;
