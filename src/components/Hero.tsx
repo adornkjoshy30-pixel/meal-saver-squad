@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroFood from "@/assets/hero-food.jpg";
+import heroFood from "@/assets/hero-food-branded.jpg";
 import logo from "@/assets/logo.png";
 
 const Hero = () => {
