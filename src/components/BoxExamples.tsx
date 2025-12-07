@@ -1,7 +1,7 @@
-import surpriseBox from "@/assets/surprise-box.jpg";
-import mealBox from "@/assets/meal-box.jpg";
-import groceryBox from "@/assets/grocery-box.jpg";
-import cloudKitchenBox from "@/assets/cloud-kitchen-box.jpg";
+import surpriseBox from "@/assets/surprise-box-branded.jpg";
+import mealBox from "@/assets/meal-box-branded.jpg";
+import groceryBox from "@/assets/grocery-box-branded.jpg";
+import cloudKitchenBox from "@/assets/cloud-kitchen-box-branded.jpg";
 
 const boxes = [
   {
