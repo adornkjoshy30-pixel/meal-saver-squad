@@ -25,6 +25,7 @@ export type Database = {
           is_active: boolean | null
           is_fssai_verified: boolean | null
           name: string
+          order_method: Database["public"]["Enums"]["order_method"]
           phone: string
           updated_at: string
         }
@@ -38,6 +39,7 @@ export type Database = {
           is_active?: boolean | null
           is_fssai_verified?: boolean | null
           name: string
+          order_method?: Database["public"]["Enums"]["order_method"]
           phone: string
           updated_at?: string
         }
@@ -51,6 +53,7 @@ export type Database = {
           is_active?: boolean | null
           is_fssai_verified?: boolean | null
           name?: string
+          order_method?: Database["public"]["Enums"]["order_method"]
           phone?: string
           updated_at?: string
         }
@@ -131,6 +134,7 @@ export type Database = {
         | "meal_box"
         | "grocery_rescue"
         | "cloud_kitchen"
+      order_method: "pickup_only" | "dine_in_only" | "both"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -264,6 +268,7 @@ export const Constants = {
         "grocery_rescue",
         "cloud_kitchen",
       ],
+      order_method: ["pickup_only", "dine_in_only", "both"],
     },
   },
 } as const

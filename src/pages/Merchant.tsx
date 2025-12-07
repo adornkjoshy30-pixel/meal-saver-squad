@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Trophy, MessageCircle, CreditCard, Package, Clock, Users, BadgeCheck, BarChart3, Building2, Headphones, Zap, Store, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-
+import { MerchantSignupForm } from "@/components/MerchantSignupForm";
 const benefits = [
   {
     icon: CreditCard,
@@ -149,11 +149,13 @@ const Merchant = () => {
           <p className="text-primary font-semibold text-lg mb-8">
             Your first month is completely FREE.
           </p>
-          <Button variant="whatsapp" size="lg" className="shadow-lg">
-            <Store className="w-5 h-5" />
-            Start as a Merchant
-            <ArrowRight className="w-4 h-4" />
-          </Button>
+          <a href="#signup">
+            <Button variant="whatsapp" size="lg" className="shadow-lg">
+              <Store className="w-5 h-5" />
+              Start as a Merchant
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -297,20 +299,34 @@ const Merchant = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 lg:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Start Earning From Surplus Food Today
-          </h2>
-          <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-            Join hundreds of restaurants, bakeries, and kitchens saving food and making money.
-          </p>
-          <Button variant="whatsapp" size="lg" className="shadow-lg">
-            <Store className="w-5 h-5" />
-            Start as Merchant
-            <ArrowRight className="w-4 h-4" />
-          </Button>
+      {/* Signup Form Section */}
+      <section id="signup" className="py-20 lg:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div className="max-w-5xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Start Earning From Surplus Food Today
+              </h2>
+              <p className="text-gray-600 text-lg mb-8">
+                Join hundreds of restaurants, bakeries, and kitchens saving food and making money.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-primary" />
+                  <span className="text-gray-700">No credit card required</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-primary" />
+                  <span className="text-gray-700">First month completely free</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-primary" />
+                  <span className="text-gray-700">Cancel anytime, no contracts</span>
+                </div>
+              </div>
+            </div>
+            <MerchantSignupForm />
+          </div>
         </div>
       </section>
 
