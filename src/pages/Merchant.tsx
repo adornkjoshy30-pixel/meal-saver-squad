@@ -126,8 +126,8 @@ const Merchant = () => {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 px-6 py-4 lg:px-12">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Meal Saver logo" className="w-10 h-10 object-contain" />
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="Meal Saver logo" className="h-9 md:h-10 w-auto object-contain" />
             <span className="font-bold text-xl text-gray-900">Meal Saver</span>
           </Link>
           <Button variant="whatsapp" size="sm">
