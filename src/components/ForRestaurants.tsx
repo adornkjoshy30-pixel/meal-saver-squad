@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Store, Users, Smartphone, ShieldCheck, Clock, DollarSign } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const benefits = [
   { icon: DollarSign, text: "Earn from unsold food instead of throwing it away" },
@@ -45,10 +46,12 @@ const ForRestaurants = () => {
               ))}
             </div>
             
-            <Button variant="whatsapp" size="lg">
-              <Store className="w-5 h-5" />
-              Become a Partner
-            </Button>
+            <Link to="/merchant">
+              <Button variant="whatsapp" size="lg">
+                <Store className="w-5 h-5" />
+                Become a Partner
+              </Button>
+            </Link>
           </div>
           
           {/* Visual */}

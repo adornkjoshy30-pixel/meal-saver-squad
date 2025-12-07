@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroFood from "@/assets/hero-food.jpg";
 import logo from "@/assets/logo.png";
 
@@ -27,9 +28,11 @@ const Hero = () => {
               FAQ
             </a>
           </div>
-          <Button variant="outline" size="sm">
-            Partner With Us
-          </Button>
+          <Link to="/merchant">
+            <Button variant="outline" size="sm">
+              Join as Merchant
+            </Button>
+          </Link>
         </div>
       </nav>
 
@@ -59,9 +62,11 @@ const Hero = () => {
                 <MessageCircle className="group-hover:scale-110 transition-transform" />
                 Start on WhatsApp
               </Button>
-              <Button variant="whatsapp-outline" size="lg">
-                Partner With Us
-              </Button>
+              <Link to="/merchant">
+                <Button variant="whatsapp-outline" size="lg">
+                  Join as Merchant
+                </Button>
+              </Link>
             </div>
 
             {/* Stats */}
