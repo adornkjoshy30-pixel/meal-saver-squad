@@ -8,27 +8,43 @@ import {
 const faqs = [
   {
     question: "What is Meal Saver?",
-    answer: "Meal Saver lets you buy surplus food from restaurants at a discounted price to reduce food waste. We connect you with local restaurants, bakeries, and cloud kitchens that have unsold food at the end of the day.",
+    answer: "Meal Saver is a platform that connects you with local restaurants, bakeries, and cloud kitchens offering surplus food at 50-80% discount. We help reduce food waste while you enjoy delicious meals at great prices.",
   },
   {
-    question: "Is the food safe?",
-    answer: "Absolutely. All meals come from verified FSSAI-licensed restaurants, cafés, and bakeries. The food is freshly prepared and completely safe to eat — it's simply surplus that would otherwise go to waste.",
+    question: "Is the food safe to eat?",
+    answer: "Absolutely. All partner restaurants are FSSAI-licensed and verified for food safety compliance. The food is freshly prepared — it's simply surplus that would otherwise go to waste. Restaurants are required to maintain strict quality standards.",
   },
   {
-    question: "Do I need an app?",
-    answer: "No. Everything works through WhatsApp — completely app-free. Just message us, browse available boxes, pay via UPI, and pick up your food. It's that simple!",
+    question: "How do I place an order?",
+    answer: "Everything works through WhatsApp — no app needed! Browse available deals on our website, click 'Grab Now' on any deal you like, and you'll be redirected to WhatsApp to complete your order and payment via UPI.",
   },
   {
     question: "How do payments work?",
-    answer: "You pay securely through UPI directly on WhatsApp. Once your payment is confirmed, you'll receive a pickup confirmation with the restaurant details and pickup time window.",
-  },
-  {
-    question: "Can any restaurant join?",
-    answer: "Yes. Restaurants, bakeries, cloud kitchens, and supermarkets can join easily. We verify FSSAI licenses and ensure food safety compliance before onboarding any partner.",
+    answer: "Payments are processed securely through UPI on WhatsApp. Once your payment is confirmed, you'll receive a pickup confirmation with restaurant details, address, and your pickup time window.",
   },
   {
     question: "What is the pickup process?",
-    answer: "After payment, you get a pickup time + location. Just show your order message at the counter and collect your food. Most pickups are scheduled during off-peak hours for convenience.",
+    answer: "After payment confirmation, you'll receive a pickup time and location. Simply visit the restaurant during the specified window, show your order confirmation on WhatsApp, and collect your food. Most pickups are scheduled during off-peak hours.",
+  },
+  {
+    question: "What if I miss my pickup window?",
+    answer: "Pickup windows are strict to ensure food freshness. If you miss your window, the restaurant may not be able to honor your order, and refunds are not guaranteed for missed pickups. Please plan accordingly!",
+  },
+  {
+    question: "Can restaurants join Meal Saver?",
+    answer: "Yes! Restaurants, bakeries, cloud kitchens, and supermarkets can easily join. We verify FSSAI licenses and ensure food safety compliance before onboarding. Visit our 'For Restaurants' page to learn more and sign up.",
+  },
+  {
+    question: "What if there's an issue with my order?",
+    answer: "For food-related issues (quality, quantity), please contact the restaurant directly first. For platform issues (payment errors, technical problems), email us at saplinxai@gmail.com and we'll help resolve it within 24-48 hours.",
+  },
+  {
+    question: "Is my personal data safe?",
+    answer: "Yes. We take privacy seriously. Your data is encrypted and only shared with restaurants to fulfill your orders. We never sell your information to third parties. Read our Privacy Policy for complete details.",
+  },
+  {
+    question: "What is a Surprise Box?",
+    answer: "Surprise Boxes are mystery meal combos where the exact contents vary based on what's available. They offer the best value but the specific items are a surprise! Perfect for adventurous eaters looking for great deals.",
   },
 ];
 

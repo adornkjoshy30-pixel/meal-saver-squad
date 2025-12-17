@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -8,10 +9,10 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <img src={logo} alt="Meal Saver logo" className="h-9 md:h-10 w-auto object-contain brightness-0 invert" />
               <span className="font-bold text-xl">Meal Saver</span>
-            </div>
+            </Link>
             <p className="text-primary-foreground/70 max-w-sm leading-relaxed">
               Saving food. Saving money. Saving the planet. One meal at a time.
             </p>
@@ -39,27 +40,27 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link to="/" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <a href="/#how-it-works" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="#restaurants" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link to="/merchant" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   For Restaurants
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link to="/contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#faq" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <a href="/#faq" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   FAQ
                 </a>
               </li>
@@ -71,19 +72,19 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link to="/terms" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link to="/privacy" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link to="/refund" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Refund Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -92,7 +93,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 Meal Saver. All rights reserved.
+            © {new Date().getFullYear()} Meal Saver. All rights reserved.
           </p>
           <p className="text-primary-foreground/60 text-sm flex items-center gap-1">
             Made with <Heart className="w-4 h-4 text-destructive fill-destructive" /> in India
