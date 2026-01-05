@@ -4,6 +4,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ShoppingBag, UtensilsCrossed, MessageCircle, ArrowRight, Store } from "lucide-react";
+import { toast } from "sonner";
+import { 
+  merchantFormSchema, 
+  sanitizeForWhatsApp, 
+  validateUrlLength, 
+  MAX_URL_LENGTH 
+} from "@/lib/validation";
 
 type OrderMethod = "pickup_only" | "dine_in_only" | "both";
 
@@ -14,6 +21,14 @@ interface FormData {
   address: string;
   description: string;
   orderMethod: OrderMethod;
+}
+
+interface FormErrors {
+  restaurantName?: string;
+  phone?: string;
+  email?: string;
+  address?: string;
+  description?: string;
 }
 
 const orderMethodOptions = [
@@ -46,6 +61,7 @@ export const MerchantSignupForm = () => {
     description: "",
     orderMethod: "pickup_only",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
 
   const handleOrderMethodChange = (method: OrderMethod) => {
     setFormData((prev) => ({ ...prev, orderMethod: method }));
@@ -54,23 +70,56 @@ export const MerchantSignupForm = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name as keyof FormErrors]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create WhatsApp message with form data
+    // Validate form data with Zod
+    const result = merchantFormSchema.safeParse(formData);
+    
+    if (!result.success) {
+      const fieldErrors: FormErrors = {};
+      result.error.errors.forEach((err) => {
+        const field = err.path[0] as keyof FormErrors;
+        if (field && !fieldErrors[field]) {
+          fieldErrors[field] = err.message;
+        }
+      });
+      setErrors(fieldErrors);
+      toast.error("Please check your input and try again");
+      return;
+    }
+    
+    // Sanitize inputs for WhatsApp message
+    const sanitizedRestaurantName = sanitizeForWhatsApp(formData.restaurantName, 100);
+    const sanitizedAddress = sanitizeForWhatsApp(formData.address, 200);
+    const sanitizedDescription = sanitizeForWhatsApp(formData.description, 500);
+    
+    // Create WhatsApp message with sanitized form data
     const message = encodeURIComponent(
       `Hi! I want to join Meal Saver as a merchant.\n\n` +
-      `Restaurant: ${formData.restaurantName}\n` +
+      `Restaurant: ${sanitizedRestaurantName}\n` +
       `Phone: ${formData.phone}\n` +
       `Email: ${formData.email}\n` +
-      `Address: ${formData.address}\n` +
+      `Address: ${sanitizedAddress}\n` +
       `Order Method: ${formData.orderMethod.replace(/_/g, " ")}\n` +
-      `About: ${formData.description}`
+      `About: ${sanitizedDescription}`
     );
     
-    window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+    const url = `https://wa.me/919876543210?text=${message}`;
+    
+    // Check URL length
+    if (!validateUrlLength(url)) {
+      toast.error(`Message too long. Please shorten your description.`);
+      return;
+    }
+    
+    window.open(url, "_blank");
   };
 
   return (
@@ -95,8 +144,13 @@ export const MerchantSignupForm = () => {
               value={formData.restaurantName}
               onChange={handleInputChange}
               placeholder="Your restaurant name"
+              maxLength={100}
               required
+              className={errors.restaurantName ? "border-red-500" : ""}
             />
+            {errors.restaurantName && (
+              <p className="text-xs text-red-500">{errors.restaurantName}</p>
+            )}
           </div>
           <div className="space-y-2">
             <Label htmlFor="phone">Phone Number *</Label>
@@ -107,8 +161,13 @@ export const MerchantSignupForm = () => {
               value={formData.phone}
               onChange={handleInputChange}
               placeholder="+91 98765 43210"
+              maxLength={15}
               required
+              className={errors.phone ? "border-red-500" : ""}
             />
+            {errors.phone && (
+              <p className="text-xs text-red-500">{errors.phone}</p>
+            )}
           </div>
         </div>
 
@@ -122,7 +181,12 @@ export const MerchantSignupForm = () => {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="email@example.com"
+              maxLength={100}
+              className={errors.email ? "border-red-500" : ""}
             />
+            {errors.email && (
+              <p className="text-xs text-red-500">{errors.email}</p>
+            )}
           </div>
           <div className="space-y-2">
             <Label htmlFor="address">Address *</Label>
@@ -132,8 +196,13 @@ export const MerchantSignupForm = () => {
               value={formData.address}
               onChange={handleInputChange}
               placeholder="Your restaurant address"
+              maxLength={200}
               required
+              className={errors.address ? "border-red-500" : ""}
             />
+            {errors.address && (
+              <p className="text-xs text-red-500">{errors.address}</p>
+            )}
           </div>
         </div>
 
@@ -146,7 +215,12 @@ export const MerchantSignupForm = () => {
             onChange={handleInputChange}
             placeholder="Tell us about your restaurant, bakery, or kitchen..."
             rows={3}
+            maxLength={500}
+            className={errors.description ? "border-red-500" : ""}
           />
+          {errors.description && (
+            <p className="text-xs text-red-500">{errors.description}</p>
+          )}
         </div>
 
         {/* Order Method Selection */}
