@@ -14,20 +14,6 @@ const Hero = () => {
             <img src={logo} alt="Meal Saver logo" className="h-9 md:h-10 w-auto object-contain" />
             <span className="font-bold text-xl text-foreground">Meal Saver</span>
           </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-foreground/80 hover:text-foreground transition-colors font-medium">
-              How It Works
-            </a>
-            <a href="#boxes" className="text-foreground/80 hover:text-foreground transition-colors font-medium">
-              Boxes
-            </a>
-            <a href="#restaurants" className="text-foreground/80 hover:text-foreground transition-colors font-medium">
-              For Restaurants
-            </a>
-            <a href="#faq" className="text-foreground/80 hover:text-foreground transition-colors font-medium">
-              FAQ
-            </a>
-          </div>
           <Link to="/merchant">
             <Button variant="outline" size="sm">
               Join as Merchant
