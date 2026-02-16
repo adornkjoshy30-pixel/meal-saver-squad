@@ -41,7 +41,7 @@ export const DealDetails = ({
     const message = encodeURIComponent(
       `Hi! I want to grab "${title}" from ${restaurantName} for ₹${discountedPrice}.\n\nPickup: ${pickupDate} between ${pickupStartTime} - ${pickupEndTime}`
     );
-    window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+    window.open("https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g", "_blank");
   };
 
   const handleShare = async () => {

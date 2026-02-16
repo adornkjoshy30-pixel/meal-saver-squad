@@ -111,7 +111,7 @@ export const MerchantSignupForm = () => {
       `About: ${sanitizedDescription}`
     );
     
-    const url = `https://wa.me/919876543210?text=${message}`;
+    const url = `https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g`;
     
     // Check URL length
     if (!validateUrlLength(url)) {
