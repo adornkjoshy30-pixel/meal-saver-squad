@@ -23,10 +23,13 @@ const ForRestaurants = () => {
                 For Business
               </span>
               <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
-                Grow Revenue. <br />
-                <span className="text-primary">Reduce Waste.</span> <br />
-                Join the Movement.
+                For Restaurants & Stores in Kerala
               </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Whether you run a bakery, hotel, cloud kitchen, or grocery store in Kerala, Meal Saver helps you turn unsold food into revenue. 
+                Instead of wasting surplus items at the end of the day, list them on our platform and reach eco-conscious customers nearby. 
+                It's a win for your business and for the environment.
+              </p>
             </div>
             
             {/* Benefits Grid */}
