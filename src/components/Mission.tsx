@@ -19,16 +19,17 @@ const Mission = () => {
               </span>
               
               <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground">
-                We're Fighting Food Waste in India.
+                Reduce Food Waste in Kerala
               </h2>
               
               <p className="text-lg text-primary-foreground/90 leading-relaxed">
-                India wastes over <span className="font-bold">₹1 lakh crore</span> worth of food every year.
-                Meal Saver connects restaurants with conscious customers to rescue food that's still fresh and safe to eat.
+                India wastes over <span className="font-bold">₹1 lakh crore</span> worth of food every year, and Kerala is no exception.
+                Meal Saver connects local restaurants, bakeries, and grocery stores with conscious customers to rescue food that's still fresh and safe to eat.
               </p>
               
               <p className="text-lg text-primary-foreground/90 leading-relaxed">
-                Together, we can reduce waste, lower food costs, and support a healthier planet.
+                By choosing Meal Saver, you're not just saving money — you're actively contributing to a more sustainable Kerala. 
+                Together, we can reduce waste, lower food costs, and support a healthier planet for future generations.
               </p>
             </div>
             

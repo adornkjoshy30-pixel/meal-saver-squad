@@ -3,14 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { ShoppingBag, UtensilsCrossed, MessageCircle, ArrowRight, Store } from "lucide-react";
+import { ShoppingBag, UtensilsCrossed, ArrowRight, Store, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 import { 
   merchantFormSchema, 
   sanitizeForWhatsApp, 
-  validateUrlLength, 
-  MAX_URL_LENGTH 
 } from "@/lib/validation";
+import { supabase } from "@/integrations/supabase/client";
 
 type OrderMethod = "pickup_only" | "dine_in_only" | "both";
 
@@ -30,6 +29,15 @@ interface FormErrors {
   address?: string;
   description?: string;
 }
+
+const initialFormData: FormData = {
+  restaurantName: "",
+  phone: "",
+  email: "",
+  address: "",
+  description: "",
+  orderMethod: "pickup_only",
+};
 
 const orderMethodOptions = [
   {
@@ -53,15 +61,10 @@ const orderMethodOptions = [
 ];
 
 export const MerchantSignupForm = () => {
-  const [formData, setFormData] = useState<FormData>({
-    restaurantName: "",
-    phone: "",
-    email: "",
-    address: "",
-    description: "",
-    orderMethod: "pickup_only",
-  });
+  const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleOrderMethodChange = (method: OrderMethod) => {
     setFormData((prev) => ({ ...prev, orderMethod: method }));
@@ -70,16 +73,14 @@ export const MerchantSignupForm = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate form data with Zod
     const result = merchantFormSchema.safeParse(formData);
     
     if (!result.success) {
@@ -95,32 +96,55 @@ export const MerchantSignupForm = () => {
       return;
     }
     
-    // Sanitize inputs for WhatsApp message
-    const sanitizedRestaurantName = sanitizeForWhatsApp(formData.restaurantName, 100);
-    const sanitizedAddress = sanitizeForWhatsApp(formData.address, 200);
-    const sanitizedDescription = sanitizeForWhatsApp(formData.description, 500);
+    setIsSubmitting(true);
     
-    // Create WhatsApp message with sanitized form data
-    const message = encodeURIComponent(
-      `Hi! I want to join Meal Saver as a merchant.\n\n` +
-      `Restaurant: ${sanitizedRestaurantName}\n` +
-      `Phone: ${formData.phone}\n` +
-      `Email: ${formData.email}\n` +
-      `Address: ${sanitizedAddress}\n` +
-      `Order Method: ${formData.orderMethod.replace(/_/g, " ")}\n` +
-      `About: ${sanitizedDescription}`
-    );
-    
-    const url = `https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g`;
-    
-    // Check URL length
-    if (!validateUrlLength(url)) {
-      toast.error(`Message too long. Please shorten your description.`);
-      return;
+    try {
+      const sanitizedName = sanitizeForWhatsApp(formData.restaurantName, 100);
+      const sanitizedAddress = sanitizeForWhatsApp(formData.address, 200);
+      const sanitizedDescription = sanitizeForWhatsApp(formData.description, 500);
+      
+      const { error } = await supabase.from("restaurants").insert({
+        name: sanitizedName,
+        phone: formData.phone,
+        email: formData.email || null,
+        address: sanitizedAddress,
+        description: sanitizedDescription || null,
+        order_method: formData.orderMethod,
+        is_active: false,
+      });
+
+      if (error) throw error;
+
+      setIsSubmitted(true);
+      setFormData(initialFormData);
+      setErrors({});
+      toast.success("Application submitted successfully!");
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
-    
-    window.open(url, "_blank");
   };
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 text-center">
+        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+          <CheckCircle2 className="w-8 h-8 text-primary" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">Thank You!</h3>
+        <p className="text-gray-600">Our team will contact you shortly.</p>
+        <Button 
+          variant="outline" 
+          className="mt-6" 
+          onClick={() => setIsSubmitted(false)}
+        >
+          Submit Another Application
+        </Button>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
@@ -137,13 +161,13 @@ export const MerchantSignupForm = () => {
       <div className="space-y-5">
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="space-y-2">
-            <Label htmlFor="restaurantName">Restaurant Name *</Label>
+            <Label htmlFor="restaurantName">Business Name *</Label>
             <Input
               id="restaurantName"
               name="restaurantName"
               value={formData.restaurantName}
               onChange={handleInputChange}
-              placeholder="Your restaurant name"
+              placeholder="Your business name"
               maxLength={100}
               required
               className={errors.restaurantName ? "border-red-500" : ""}
@@ -189,13 +213,13 @@ export const MerchantSignupForm = () => {
             )}
           </div>
           <div className="space-y-2">
-            <Label htmlFor="address">Address *</Label>
+            <Label htmlFor="address">Location *</Label>
             <Input
               id="address"
               name="address"
               value={formData.address}
               onChange={handleInputChange}
-              placeholder="Your restaurant address"
+              placeholder="Your business location"
               maxLength={200}
               required
               className={errors.address ? "border-red-500" : ""}
@@ -223,9 +247,9 @@ export const MerchantSignupForm = () => {
           )}
         </div>
 
-        {/* Order Method Selection */}
+        {/* Order Method Selection (Type of Business) */}
         <div className="space-y-3">
-          <Label className="text-base">Order Method *</Label>
+          <Label className="text-base">Type of Business *</Label>
           <p className="text-sm text-gray-500 -mt-1">How will customers receive their orders?</p>
           
           <div className="grid sm:grid-cols-3 gap-3">
@@ -270,10 +294,21 @@ export const MerchantSignupForm = () => {
           </div>
         </div>
 
-        <Button type="submit" variant="whatsapp" size="lg" className="w-full mt-6">
-          <MessageCircle className="w-5 h-5" />
-          Start Free Trial on WhatsApp
-          <ArrowRight className="w-4 h-4" />
+        <Button 
+          type="submit" 
+          variant="whatsapp" 
+          size="lg" 
+          className="w-full mt-6"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            "Submitting..."
+          ) : (
+            <>
+              Submit Application
+              <ArrowRight className="w-4 h-4" />
+            </>
+          )}
         </Button>
 
         <p className="text-xs text-gray-500 text-center">

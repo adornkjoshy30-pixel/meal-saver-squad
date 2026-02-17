@@ -20,8 +20,8 @@ const CTASection = () => {
               </h2>
               
               <p className="text-lg text-muted-foreground max-w-lg mx-auto">
-                Join thousands of people rescuing meals and reducing waste. 
-                Get delicious food at amazing prices — all through WhatsApp.
+                Join thousands of people across Kerala who are rescuing meals and reducing waste every day. 
+                Get delicious surplus food from nearby bakeries, hotels, and stores at amazing prices — all through WhatsApp. No app needed.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">

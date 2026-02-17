@@ -52,10 +52,11 @@ const BoxExamples = () => {
             Our Boxes
           </span>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
-            Surplus Box Examples
+            Why Choose Meal Saver
           </h2>
           <p className="text-lg text-muted-foreground">
-            Discover amazing deals on fresh food that would otherwise go to waste
+            From surprise boxes to grocery rescue packs, Meal Saver offers a variety of surplus food options from local businesses across Kerala. 
+            Every box you grab means less food wasted and more savings in your pocket. Explore our most popular categories below.
           </p>
         </div>
 
