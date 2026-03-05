@@ -1,6 +1,7 @@
 import { Check, Sparkles, Store, Zap, Trophy, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import PageSEO from "@/components/PageSEO";
 
 const plans = [
   {
@@ -63,6 +64,11 @@ const plans = [
 const Pricing = () => {
   return (
     <div>
+      <PageSEO
+        title="Pricing | Meal Saver Partner Plans from ₹150/mo"
+        description="Zero commission partner plans for restaurants, bakeries & cloud kitchens in Kerala. First month free. Plans from ₹150/month."
+        path="/pricing"
+      />
       {/* Hero */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">

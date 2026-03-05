@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import PageSEO from "@/components/PageSEO";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -20,7 +21,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-
+      <PageSEO
+        title="Contact Meal Saver | Get in Touch"
+        description="Have questions about surplus food orders or partnerships? Contact the Meal Saver team — we respond within 24-48 hours."
+        path="/contact"
+      />
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
