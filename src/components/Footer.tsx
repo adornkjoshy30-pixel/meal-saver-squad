@@ -40,29 +40,28 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  Home
-                </Link>
+                <Link to="/" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Home</Link>
               </li>
               <li>
-                <a href="/#how-it-works" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  How It Works
-                </a>
+                <Link to="/how-it-works" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">How It Works</Link>
               </li>
               <li>
-                <Link to="/merchant" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  For Restaurants
-                </Link>
+                <Link to="/about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">About</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  Contact
-                </Link>
+                <Link to="/partners" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">For Restaurants</Link>
               </li>
               <li>
-                <a href="/#faq" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  FAQ
-                </a>
+                <Link to="/impact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Impact</Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Pricing</Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Blog</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Contact</Link>
               </li>
             </ul>
           </div>

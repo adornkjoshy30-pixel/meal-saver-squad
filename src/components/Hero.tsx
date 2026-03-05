@@ -7,23 +7,10 @@ import logo from "@/assets/logo.png";
 const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero overflow-hidden">
-      {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-50 px-6 py-4 lg:px-12 lg:py-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="Meal Saver logo" className="h-9 md:h-10 w-auto object-contain" />
-            <span className="font-bold text-xl text-foreground">Meal Saver</span>
-          </div>
-          <Link to="/merchant">
-            <Button variant="outline" size="sm">
-              Join as Merchant
-            </Button>
-          </Link>
-        </div>
-      </nav>
+      {/* Navigation handled by AppLayout Header */}
 
       {/* Hero Content */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in-up">
