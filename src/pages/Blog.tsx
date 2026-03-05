@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar } from "lucide-react";
+import PageSEO from "@/components/PageSEO";
 
 const posts = [
   {
@@ -28,6 +29,11 @@ const posts = [
 const Blog = () => {
   return (
     <div>
+      <PageSEO
+        title="Blog | Meal Saver Stories, Tips & Updates"
+        description="Read about food waste reduction in Kerala, partner success stories, and tips for saving food and money with Meal Saver."
+        path="/blog"
+      />
       {/* Hero */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">

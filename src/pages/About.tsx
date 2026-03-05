@@ -1,4 +1,5 @@
 import { Leaf, Users, Heart, Target } from "lucide-react";
+import PageSEO from "@/components/PageSEO";
 
 const values = [
   { icon: Leaf, title: "Sustainability", description: "We believe every meal saved is a step toward a greener planet. Our mission starts with reducing food waste across Kerala." },
@@ -10,6 +11,11 @@ const values = [
 const About = () => {
   return (
     <div>
+      <PageSEO
+        title="About Meal Saver | Our Mission to End Food Waste"
+        description="Learn how Meal Saver connects Kerala's restaurants and bakeries with customers to rescue surplus food, reduce waste, and save money."
+        path="/about"
+      />
       {/* Hero */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">

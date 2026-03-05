@@ -1,5 +1,6 @@
 import { Leaf, TrendingDown, Heart, Utensils, Store, Users } from "lucide-react";
 import Mission from "@/components/Mission";
+import PageSEO from "@/components/PageSEO";
 
 const stats = [
   { icon: Utensils, value: "50,000+", label: "Meals Saved", color: "bg-primary/10 text-primary" },
@@ -13,6 +14,11 @@ const stats = [
 const Impact = () => {
   return (
     <div>
+      <PageSEO
+        title="Our Impact | Food Waste Reduction in Kerala"
+        description="50,000+ meals saved, 200+ partners, ₹15L+ saved by users. See how Meal Saver is fighting food waste across Kerala."
+        path="/impact"
+      />
       {/* Hero */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">

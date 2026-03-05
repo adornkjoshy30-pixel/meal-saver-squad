@@ -1,25 +1,13 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
-import Footer from "@/components/Footer";
+import PageSEO from "@/components/PageSEO";
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-background/95 backdrop-blur-md border-b border-border sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-3">
-              <img src={logo} alt="Meal Saver logo" className="h-9 md:h-10 w-auto object-contain" />
-              <span className="font-bold text-xl text-foreground">Meal Saver</span>
-            </Link>
-            <Link to="/">
-              <Button variant="outline">Back to Home</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <PageSEO
+        title="Terms & Conditions | Meal Saver"
+        description="Read the terms and conditions for using the Meal Saver platform for surplus food purchases and merchant partnerships in Kerala."
+        path="/terms"
+      />
 
       {/* Content */}
       <section className="py-16 lg:py-24">
@@ -164,7 +152,7 @@ const Terms = () => {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   );
 };

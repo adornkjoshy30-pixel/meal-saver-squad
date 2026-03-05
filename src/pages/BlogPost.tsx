@@ -1,12 +1,19 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import PageSEO from "@/components/PageSEO";
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const readableTitle = slug?.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()) || "Blog Post";
 
   return (
     <div>
+      <PageSEO
+        title={`${readableTitle} | Meal Saver Blog`}
+        description={`Read "${readableTitle}" on the Meal Saver blog — insights on food waste reduction and surplus food in Kerala.`}
+        path={`/blog/${slug}`}
+      />
       <section className="py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
           <Link to="/blog">
