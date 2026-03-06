@@ -55,6 +55,8 @@ const signupSchema = z.object({
     .optional()
     .or(z.literal("")),
   orderMethod: z.enum(["pickup_only", "dine_in_only", "both"]),
+  // Honeypot field — must be empty
+  website: z.string().max(0, "Bot detected").optional().or(z.literal("")),
 });
 
 function sanitize(str: string, maxLength: number): string {
