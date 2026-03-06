@@ -104,6 +104,7 @@ export const MerchantSignupForm = () => {
           address: formData.address,
           description: formData.description,
           orderMethod: formData.orderMethod,
+          website: (document.getElementById("website") as HTMLInputElement)?.value || "",
         },
       });
 
