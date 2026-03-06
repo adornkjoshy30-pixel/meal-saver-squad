@@ -106,6 +106,14 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Honeypot: if filled, silently accept (fool the bot)
+    if (result.data.website) {
+      return new Response(JSON.stringify({ ok: true }), {
+        status: 200,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
+    }
+
     const data = result.data;
 
     const supabaseAdmin = createClient(
