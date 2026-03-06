@@ -5,10 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ShoppingBag, UtensilsCrossed, ArrowRight, Store, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
-import { 
-  merchantFormSchema, 
-  sanitizeForWhatsApp, 
-} from "@/lib/validation";
+import { merchantFormSchema } from "@/lib/validation";
 import { supabase } from "@/integrations/supabase/client";
 
 type OrderMethod = "pickup_only" | "dine_in_only" | "both";
@@ -99,29 +96,30 @@ export const MerchantSignupForm = () => {
     setIsSubmitting(true);
     
     try {
-      const sanitizedName = sanitizeForWhatsApp(formData.restaurantName, 100);
-      const sanitizedAddress = sanitizeForWhatsApp(formData.address, 200);
-      const sanitizedDescription = sanitizeForWhatsApp(formData.description, 500);
-      
-      const { error } = await supabase.from("restaurants").insert({
-        name: sanitizedName,
-        phone: formData.phone,
-        email: formData.email || null,
-        address: sanitizedAddress,
-        description: sanitizedDescription || null,
-        order_method: formData.orderMethod,
-        is_active: false,
+      const { data: fnData, error } = await supabase.functions.invoke("partner-signup", {
+        body: {
+          restaurantName: formData.restaurantName,
+          phone: formData.phone,
+          email: formData.email,
+          address: formData.address,
+          description: formData.description,
+          orderMethod: formData.orderMethod,
+        },
       });
 
       if (error) throw error;
+      if (fnData && !fnData.ok) throw new Error(fnData.error || "Submission failed");
 
       setIsSubmitted(true);
       setFormData(initialFormData);
       setErrors({});
       toast.success("Application submitted successfully!");
-    } catch (error) {
+    } catch (error: any) {
       console.error("Submission error:", error);
-      toast.error("Something went wrong. Please try again.");
+      const msg = error?.message?.includes("Too many")
+        ? "Too many requests. Please try again later."
+        : "Something went wrong. Please try again.";
+      toast.error(msg);
     } finally {
       setIsSubmitting(false);
     }
