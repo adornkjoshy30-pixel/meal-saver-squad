@@ -290,7 +290,13 @@ export const MerchantSignupForm = () => {
                 <span className="text-xs text-gray-500 text-center mt-1">{option.description}</span>
               </button>
             ))}
-          </div>
+        </div>
+
+        {/* Honeypot — hidden from humans */}
+        <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0, overflow: "hidden" }}>
+          <label htmlFor="website">Website</label>
+          <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
         </div>
 
         <Button 
