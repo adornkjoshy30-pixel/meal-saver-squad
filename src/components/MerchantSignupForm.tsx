@@ -5,10 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ShoppingBag, UtensilsCrossed, ArrowRight, Store, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
-import { 
-  merchantFormSchema, 
-  sanitizeForWhatsApp, 
-} from "@/lib/validation";
+import { merchantFormSchema } from "@/lib/validation";
 import { supabase } from "@/integrations/supabase/client";
 
 type OrderMethod = "pickup_only" | "dine_in_only" | "both";
