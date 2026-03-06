@@ -1,1 +1,4 @@
 project_id = "qtokgeuejuserxoakszk"
+
+[functions.partner-signup]
+verify_jwt = false
