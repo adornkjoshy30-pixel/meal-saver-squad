@@ -111,7 +111,7 @@ const Terms = () => {
                 <h2 className="text-2xl font-bold text-foreground">7. Dispute Resolution</h2>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                   <li>For food-related complaints, users should first contact the restaurant directly</li>
-                  <li>If unresolved, users may escalate to Meal Saver at saplinxai@gmail.com</li>
+                  <li>If unresolved, users may escalate to Meal Saver at hello@mealsaver.in</li>
                   <li>We will mediate disputes in good faith but are not obligated to provide resolution</li>
                   <li>Any legal disputes shall be governed by the laws of India and subject to the exclusive jurisdiction of courts in Bangalore</li>
                 </ul>
