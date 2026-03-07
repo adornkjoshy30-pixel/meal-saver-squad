@@ -14,7 +14,17 @@ export default {
     },
     extend: {
       fontFamily: {
-        outfit: ["Outfit", "sans-serif"],
+        outfit: [
+          "Outfit",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "'Segoe UI'",
+          "Roboto",
+          "'Helvetica Neue'",
+          "Arial",
+          "sans-serif",
+        ],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -68,6 +68,8 @@ const Hero = () => {
               src={heroFood} 
               alt="Delicious surplus food boxes with fresh meals and salads" 
               className="relative rounded-3xl shadow-card w-full object-cover animate-float"
+              fetchPriority="high"
+              decoding="async"
             />
             {/* Floating Badge */}
             <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-card">
