@@ -3,12 +3,12 @@ import Mission from "@/components/Mission";
 import PageSEO from "@/components/PageSEO";
 
 const stats = [
-  { icon: Utensils, value: "50,000+", label: "Meals Saved", color: "bg-primary/10 text-primary" },
-  { icon: Store, value: "200+", label: "Partner Restaurants", color: "bg-secondary/10 text-secondary" },
-  { icon: Users, value: "10,000+", label: "Active Customers", color: "bg-accent text-accent-foreground" },
-  { icon: Leaf, value: "10,000+ kg", label: "Food Rescued", color: "bg-primary/10 text-primary" },
-  { icon: TrendingDown, value: "₹15L+", label: "Saved by Users", color: "bg-secondary/10 text-secondary" },
-  { icon: Heart, value: "14+", label: "Districts Reached", color: "bg-accent text-accent-foreground" },
+  { icon: Utensils, value: "50,000+", label: "Meals Saved*", color: "bg-primary/10 text-primary" },
+  { icon: Store, value: "200+", label: "Partner Restaurants*", color: "bg-secondary/10 text-secondary" },
+  { icon: Users, value: "10,000+", label: "Active Customers*", color: "bg-accent text-accent-foreground" },
+  { icon: Leaf, value: "10,000+ kg", label: "Food Rescued*", color: "bg-primary/10 text-primary" },
+  { icon: TrendingDown, value: "₹15L+", label: "Saved by Users*", color: "bg-secondary/10 text-secondary" },
+  { icon: Heart, value: "14+", label: "Districts Reached*", color: "bg-accent text-accent-foreground" },
 ];
 
 const Impact = () => {
@@ -48,6 +48,7 @@ const Impact = () => {
               </div>
             ))}
           </div>
+          <p className="text-center text-sm text-muted-foreground/60 mt-6">*Pilot targets — we're building toward these milestones</p>
         </div>
       </section>
 

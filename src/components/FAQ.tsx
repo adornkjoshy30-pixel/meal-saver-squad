@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "What if there's an issue with my order?",
-    answer: "For food-related issues (quality, quantity), please contact the restaurant directly first. For platform issues (payment errors, technical problems), email us at saplinxai@gmail.com and we'll help resolve it within 24-48 hours.",
+    answer: "For food-related issues (quality, quantity), please contact the restaurant directly first. For platform issues (payment errors, technical problems), email us at hello@mealsaver.in and we'll help resolve it within 24-48 hours.",
   },
   {
     question: "Is my personal data safe?",

@@ -143,7 +143,7 @@ const Privacy = () => {
                   <li><strong className="text-foreground">Withdraw Consent:</strong> Withdraw previously given consent</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed">
-                  To exercise these rights, contact us at saplinxai@gmail.com.
+                  To exercise these rights, contact us at hello@mealsaver.in.
                 </p>
               </section>
 
@@ -185,8 +185,8 @@ const Privacy = () => {
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong>{" "}
-                  <a href="mailto:saplinxai@gmail.com" className="text-primary hover:underline">
-                    saplinxai@gmail.com
+                  <a href="mailto:hello@mealsaver.in" className="text-primary hover:underline">
+                    hello@mealsaver.in
                   </a>
                 </p>
               </section>

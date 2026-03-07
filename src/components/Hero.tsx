@@ -43,21 +43,22 @@ const Hero = () => {
               </Link>
             </div>
 
-            {/* Stats */}
+            {/* Stats — Pilot Targets */}
             <div className="flex gap-8 pt-4">
               <div>
                 <p className="text-3xl font-bold text-foreground">50K+</p>
-                <p className="text-sm text-muted-foreground">Meals Saved</p>
+                <p className="text-sm text-muted-foreground">Meals Saved*</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-foreground">200+</p>
-                <p className="text-sm text-muted-foreground">Restaurant Partners</p>
+                <p className="text-sm text-muted-foreground">Restaurant Partners*</p>
               </div>
               <div>
                 <p className="text-3xl font-bold text-foreground">₹15L+</p>
-                <p className="text-sm text-muted-foreground">Saved by Users</p>
+                <p className="text-sm text-muted-foreground">Saved by Users*</p>
               </div>
             </div>
+            <p className="text-xs text-muted-foreground/60 pt-1">*Pilot targets</p>
           </div>
 
           {/* Hero Image */}
