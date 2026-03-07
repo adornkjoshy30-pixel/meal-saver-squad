@@ -185,8 +185,8 @@ const Privacy = () => {
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong>{" "}
-                  <a href="mailto:saplinxai@gmail.com" className="text-primary hover:underline">
-                    saplinxai@gmail.com
+                  <a href="mailto:hello@mealsaver.in" className="text-primary hover:underline">
+                    hello@mealsaver.in
                   </a>
                 </p>
               </section>

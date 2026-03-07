@@ -16,6 +16,10 @@ const Footer = () => {
             <p className="text-primary-foreground/70 max-w-sm leading-relaxed">
               Saving food. Saving money. Saving the planet. One meal at a time.
             </p>
+            <div className="space-y-1 text-sm text-primary-foreground/70">
+              <p>📧 <a href="mailto:hello@mealsaver.in" className="hover:text-primary-foreground transition-colors">hello@mealsaver.in</a></p>
+              <p>📍 Kerala, India</p>
+            </div>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

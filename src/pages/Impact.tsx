@@ -48,6 +48,7 @@ const Impact = () => {
               </div>
             ))}
           </div>
+          <p className="text-center text-sm text-muted-foreground/60 mt-6">*Pilot targets — we're building toward these milestones</p>
         </div>
       </section>
 
