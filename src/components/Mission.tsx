@@ -33,7 +33,7 @@ const Mission = () => {
               </p>
             </div>
             
-            {/* Stats */}
+            {/* The Problem — real public data only */}
             <div className="grid gap-6">
               <div className="bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
@@ -53,8 +53,8 @@ const Mission = () => {
                     <Leaf className="w-7 h-7 text-primary-foreground" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-primary-foreground">10K+ kg</p>
-                    <p className="text-primary-foreground/80">Food saved through Meal Saver</p>
+                    <p className="text-3xl font-bold text-primary-foreground">68 million</p>
+                    <p className="text-primary-foreground/80">Tonnes of food wasted per year</p>
                   </div>
                 </div>
               </div>
@@ -65,8 +65,8 @@ const Mission = () => {
                     <Heart className="w-7 h-7 text-primary-foreground" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-primary-foreground">50K+</p>
-                    <p className="text-primary-foreground/80">Conscious customers joined</p>
+                    <p className="text-3xl font-bold text-primary-foreground">40%</p>
+                    <p className="text-primary-foreground/80">Of food produced in India is wasted</p>
                   </div>
                 </div>
               </div>

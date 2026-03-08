@@ -1,8 +1,6 @@
 import Hero from "@/components/Hero";
-import PartnerLogos from "@/components/PartnerLogos";
 import HowItWorks from "@/components/HowItWorks";
 import BoxExamples from "@/components/BoxExamples";
-import Testimonials from "@/components/Testimonials";
 import ForRestaurants from "@/components/ForRestaurants";
 import Mission from "@/components/Mission";
 import FAQ from "@/components/FAQ";
@@ -18,10 +16,8 @@ const Index = () => {
         path="/"
       />
       <Hero />
-      <PartnerLogos />
       <HowItWorks />
       <BoxExamples />
-      <Testimonials />
       <ForRestaurants />
       <Mission />
       <FAQ />

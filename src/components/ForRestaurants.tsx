@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Store, Users, Smartphone, ShieldCheck, Clock, DollarSign } from "lucide-react";
+import { Store, Users, Smartphone, Check, ShieldCheck, Clock, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const benefits = [
@@ -27,8 +27,7 @@ const ForRestaurants = () => {
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Whether you run a bakery, hotel, cloud kitchen, or grocery store in Kerala, Meal Saver helps you turn unsold food into revenue. 
-                Instead of wasting surplus items at the end of the day, list them on our platform and reach eco-conscious customers nearby. 
-                It's a win for your business and for the environment.
+                Instead of wasting surplus items at the end of the day, list them on our platform and reach eco-conscious customers nearby.
               </p>
             </div>
             
@@ -52,47 +51,37 @@ const ForRestaurants = () => {
             <Link to="/merchant">
               <Button variant="whatsapp" size="lg" className="min-h-[48px]">
                 <Store className="w-5 h-5" aria-hidden="true" />
-                Become a Partner
+                Become an Early Partner
               </Button>
             </Link>
           </div>
           
-          {/* Visual */}
+          {/* Visual — honest early-stage card */}
           <div className="relative">
             <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-3xl transform -rotate-6"></div>
             <div className="relative bg-card rounded-3xl p-8 lg:p-12 shadow-card">
-              {/* Stats Card */}
               <div className="space-y-8">
                 <div className="text-center">
                   <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <Store className="w-10 h-10 text-primary" aria-hidden="true" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Join 200+ Partners</h3>
-                  <p className="text-muted-foreground">Restaurants already saving food with us</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Now Onboarding Partners</h3>
+                  <p className="text-muted-foreground">Be among the first restaurants to join Meal Saver in Kerala</p>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-background rounded-xl">
-                    <p className="text-3xl font-bold text-primary">₹50K+</p>
-                    <p className="text-sm text-muted-foreground">Extra monthly revenue</p>
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="p-4 bg-background rounded-xl">
+                    <p className="font-semibold text-foreground mb-1">✅ Zero setup cost</p>
+                    <p className="text-sm text-muted-foreground">No fees to get started. List your surplus and start earning.</p>
                   </div>
-                  <div className="text-center p-4 bg-background rounded-xl">
-                    <p className="text-3xl font-bold text-primary">40%</p>
-                    <p className="text-sm text-muted-foreground">Less food waste</p>
+                  <div className="p-4 bg-background rounded-xl">
+                    <p className="font-semibold text-foreground mb-1">✅ WhatsApp-first workflow</p>
+                    <p className="text-sm text-muted-foreground">No new apps or devices. Manage orders through WhatsApp.</p>
                   </div>
-                </div>
-                
-                <div className="flex items-center justify-center gap-4 pt-4">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-10 h-10 rounded-full bg-muted border-2 border-card flex items-center justify-center text-sm font-medium text-muted-foreground">
-                        {["🍕", "🍜", "🥐", "🍔"][i - 1]}
-                      </div>
-                    ))}
+                  <div className="p-4 bg-background rounded-xl">
+                    <p className="font-semibold text-foreground mb-1">✅ FSSAI verified onboarding</p>
+                    <p className="text-sm text-muted-foreground">We verify food safety compliance before listing any partner.</p>
                   </div>
-                  <span className="text-sm text-muted-foreground">
-                    +196 more restaurants
-                  </span>
                 </div>
               </div>
             </div>
