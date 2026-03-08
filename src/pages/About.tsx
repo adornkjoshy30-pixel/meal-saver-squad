@@ -26,8 +26,8 @@ const About = () => {
             We're on a Mission to End Food Waste in Kerala
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Meal Saver is building a platform to connect customers with surplus food from local bakeries, hotels, cloud kitchens, and grocery stores — at discounted prices.
-            We aim to help businesses earn from what would otherwise be wasted, and customers access affordable meals while making a positive impact.
+            Meal Saver connects customers with surplus food from local bakeries, hotels, cloud kitchens, and grocery stores — at discounted prices, all through WhatsApp.
+            We help businesses earn from what would otherwise be wasted, and customers access affordable meals while making a positive impact.
           </p>
         </div>
       </section>
