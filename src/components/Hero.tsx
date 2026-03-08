@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Store } from "lucide-react";
 import { Link } from "react-router-dom";
+import { site, whatsapp } from "@/config/appConfig";
 
 const Hero = () => {
   return (
