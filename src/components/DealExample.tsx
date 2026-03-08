@@ -26,7 +26,7 @@ const DealExample = () => {
               </div>
               <div>
                 <p className="font-bold text-primary-foreground text-sm">🔔 Surplus Deal Alert</p>
-                <p className="text-primary-foreground/70 text-xs">MealSaver • Kochi Channel</p>
+                <p className="text-primary-foreground/70 text-xs">MealSaver • Idukki Channel</p>
               </div>
             </div>
 
