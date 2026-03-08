@@ -17,6 +17,9 @@ const Hero = () => {
             <span className="text-primary">From Local Restaurants</span>
           </h1>
           
+          <p className="text-xl lg:text-2xl font-semibold text-primary mb-2">
+            Good Food. Great Price. Zero Waste.
+          </p>
           <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Restaurants share unsold meals with us. We verify them and publish the deals in WhatsApp channels — so you can grab affordable food before it goes to waste.
           </p>
