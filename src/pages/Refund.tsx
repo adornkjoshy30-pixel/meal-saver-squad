@@ -1,5 +1,6 @@
 import { AlertTriangle } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
+import { contact } from "@/config/appConfig";
 
 const Refund = () => {
   return (

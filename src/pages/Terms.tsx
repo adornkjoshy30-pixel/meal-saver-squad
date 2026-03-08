@@ -1,4 +1,5 @@
 import PageSEO from "@/components/PageSEO";
+import { contact } from "@/config/appConfig";
 
 const Terms = () => {
   return (
