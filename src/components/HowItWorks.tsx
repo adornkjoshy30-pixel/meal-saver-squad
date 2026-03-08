@@ -8,13 +8,13 @@ const customerSteps = [
   },
   {
     icon: Bell,
-    title: "Receive Surplus Food Deals",
-    description: "Get real-time notifications when restaurants near you have surplus food available at a discount.",
+    title: "See a Deal & Reserve via WhatsApp",
+    description: "When a deal is posted, tap 'Reserve' to send a pre-filled WhatsApp message to MealSaver. We'll confirm your reservation.",
   },
   {
     icon: ShoppingBag,
-    title: "Visit the Restaurant & Pick Up",
-    description: "Head to the restaurant during the pickup window, grab your meal, and save money while reducing waste.",
+    title: "Pick Up Your Reserved Meal",
+    description: "Visit the restaurant during your confirmed pickup window. Your portion is held for you — no surprises.",
   },
 ];
 
