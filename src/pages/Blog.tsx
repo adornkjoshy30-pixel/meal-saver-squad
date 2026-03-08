@@ -1,30 +1,14 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
+import { blogPosts } from "@/data/blog-posts";
 
-const posts = [
-  {
-    slug: "reducing-food-waste-in-kerala",
-    title: "How Kerala Can Lead India's Fight Against Food Waste",
-    excerpt: "With over ₹1 lakh crore worth of food wasted annually in India, Kerala's vibrant food industry has a unique opportunity to lead the change.",
-    date: "2026-02-20",
-    category: "Impact",
-  },
-  {
-    slug: "why-surplus-food-is-safe",
-    title: "Is Surplus Food Safe to Eat? Here's What You Need to Know",
-    excerpt: "Surplus food is not expired food. Learn about the difference and why Meal Saver boxes are perfectly safe and delicious.",
-    date: "2026-02-10",
-    category: "Education",
-  },
-  {
-    slug: "merchant-success-story-kozhikode",
-    title: "How a Kozhikode Bakery Earns ₹30K Extra Monthly With Meal Saver",
-    excerpt: "A local bakery shares how listing surplus items on Meal Saver turned waste into a reliable income stream.",
-    date: "2026-01-28",
-    category: "Stories",
-  },
-];
+const categoryColors: Record<string, string> = {
+  Impact: "bg-primary/10 text-primary",
+  Education: "bg-secondary/10 text-secondary",
+  Stories: "bg-accent text-accent-foreground",
+  Tips: "bg-green-light text-primary",
+};
 
 const Blog = () => {
   return (
@@ -53,19 +37,25 @@ const Blog = () => {
       <section className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <div className="space-y-8">
-            {posts.map((post) => (
+            {blogPosts.map((post) => (
               <Link
                 key={post.slug}
                 to={`/blog/${post.slug}`}
-                className="block bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group"
+                className="block bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
+                <div className="flex flex-wrap items-center gap-3 mb-3">
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${categoryColors[post.category] || "bg-primary/10 text-primary"}`}>
                     {post.category}
                   </span>
                   <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <Calendar className="w-3 h-3" />
-                    {new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}
+                    <Calendar className="w-3 h-3" aria-hidden="true" />
+                    <time dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}
+                    </time>
+                  </span>
+                  <span className="flex items-center gap-1 text-xs text-muted-foreground">
+                    <Clock className="w-3 h-3" aria-hidden="true" />
+                    {post.readTime}
                   </span>
                 </div>
                 <h2 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
@@ -73,7 +63,7 @@ const Blog = () => {
                 </h2>
                 <p className="text-muted-foreground mb-4">{post.excerpt}</p>
                 <span className="inline-flex items-center gap-1 text-primary text-sm font-medium">
-                  Read more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Read more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </span>
               </Link>
             ))}
