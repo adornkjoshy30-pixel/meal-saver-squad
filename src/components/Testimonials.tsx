@@ -55,17 +55,19 @@ const Testimonials = () => {
               key={i}
               className="bg-background rounded-2xl p-8 shadow-soft border border-border"
             >
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4" role="img" aria-label={`${t.stars} out of 5 stars`}>
                 {Array.from({ length: t.stars }).map((_, s) => (
                   <Star
                     key={s}
                     className="w-5 h-5 fill-primary text-primary"
+                    aria-hidden="true"
                   />
                 ))}
                 {Array.from({ length: 5 - t.stars }).map((_, s) => (
                   <Star
                     key={s}
                     className="w-5 h-5 text-muted-foreground/30"
+                    aria-hidden="true"
                   />
                 ))}
               </div>

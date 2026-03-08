@@ -80,7 +80,7 @@ const Header = () => {
               key={link.to}
               to={link.to}
               onClick={() => setMobileOpen(false)}
-              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+              className={`block px-4 py-3 min-h-[48px] flex items-center rounded-lg text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                 location.pathname === link.to
                   ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
