@@ -52,7 +52,7 @@ const DealExample = () => {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <MapPin className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  <span>Kakkanad, Kochi</span>
+                  <span>Kattappana, Idukki</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <ShoppingBag className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
