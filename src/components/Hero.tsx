@@ -2,21 +2,17 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroFood from "@/assets/hero-food-branded.jpg";
-import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen gradient-hero overflow-hidden">
-      {/* Navigation handled by AppLayout Header */}
-
-      {/* Hero Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              Reducing food waste across India
+              Launching soon in Kerala
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-tight">
@@ -26,39 +22,38 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Meal Saver is a platform that connects customers with local bakeries, hotels, and grocery stores across Kerala to purchase surplus food at reduced prices. We help businesses reduce food waste while helping customers save money.
+              Meal Saver connects customers with local bakeries, hotels, and grocery stores across Kerala to purchase surplus food at reduced prices. We help businesses reduce food waste while helping customers save money.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
                 <Button variant="whatsapp" size="lg" className="group min-h-[48px]">
                   <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
-                  Start on WhatsApp
+                  Join Early Access
                 </Button>
               </a>
               <Link to="/merchant">
                 <Button variant="whatsapp-outline" size="lg" className="min-h-[48px]">
-                  Join as Merchant
+                  Partner With Us
                 </Button>
               </Link>
             </div>
 
-            {/* Stats — Pilot Targets */}
-            <div className="flex gap-8 pt-4">
-              <div>
-                <p className="text-3xl font-bold text-foreground">50K+</p>
-                <p className="text-sm text-muted-foreground">Meals Saved*</p>
+            {/* Value Props instead of fake stats */}
+            <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
+                <span className="text-lg">🍽️</span>
+                <span className="text-sm font-medium text-foreground">Up to 60% off meals</span>
               </div>
-              <div>
-                <p className="text-3xl font-bold text-foreground">200+</p>
-                <p className="text-sm text-muted-foreground">Restaurant Partners*</p>
+              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
+                <span className="text-lg">📱</span>
+                <span className="text-sm font-medium text-foreground">Order via WhatsApp</span>
               </div>
-              <div>
-                <p className="text-3xl font-bold text-foreground">₹15L+</p>
-                <p className="text-sm text-muted-foreground">Saved by Users*</p>
+              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
+                <span className="text-lg">🌱</span>
+                <span className="text-sm font-medium text-foreground">Reduce food waste</span>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground/60 pt-1">*Pilot targets</p>
           </div>
 
           {/* Hero Image */}
@@ -73,7 +68,6 @@ const Hero = () => {
               width={600}
               height={400}
             />
-            {/* Floating Badge */}
             <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-card">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-green-light flex items-center justify-center">

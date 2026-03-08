@@ -1,54 +1,55 @@
-import { Leaf, TrendingDown, Heart, Utensils, Store, Users } from "lucide-react";
+import { Leaf, TrendingDown, Utensils, Target, Rocket, Heart } from "lucide-react";
 import Mission from "@/components/Mission";
 import PageSEO from "@/components/PageSEO";
 
-const stats = [
-  { icon: Utensils, value: "50,000+", label: "Meals Saved*", color: "bg-primary/10 text-primary" },
-  { icon: Store, value: "200+", label: "Partner Restaurants*", color: "bg-secondary/10 text-secondary" },
-  { icon: Users, value: "10,000+", label: "Active Customers*", color: "bg-accent text-accent-foreground" },
-  { icon: Leaf, value: "10,000+ kg", label: "Food Rescued*", color: "bg-primary/10 text-primary" },
-  { icon: TrendingDown, value: "₹15L+", label: "Saved by Users*", color: "bg-secondary/10 text-secondary" },
-  { icon: Heart, value: "14+", label: "Districts Reached*", color: "bg-accent text-accent-foreground" },
+const goals = [
+  { icon: Utensils, label: "Save 50,000+ meals in our first year", color: "bg-primary/10 text-primary" },
+  { icon: Target, label: "Onboard 200+ restaurant partners across Kerala", color: "bg-secondary/10 text-secondary" },
+  { icon: Leaf, label: "Divert 10,000+ kg of food from landfills", color: "bg-accent text-accent-foreground" },
+  { icon: TrendingDown, label: "Help customers save ₹15L+ on food", color: "bg-primary/10 text-primary" },
+  { icon: Rocket, label: "Expand to 14+ districts in Kerala", color: "bg-secondary/10 text-secondary" },
+  { icon: Heart, label: "Build a community of conscious consumers", color: "bg-accent text-accent-foreground" },
 ];
 
 const Impact = () => {
   return (
     <div>
       <PageSEO
-        title="Our Impact | Food Waste Reduction in Kerala"
-        description="50,000+ meals saved, 200+ partners, ₹15L+ saved by users. See how Meal Saver is fighting food waste across Kerala."
+        title="Our Impact Goals | Meal Saver — Fighting Food Waste in Kerala"
+        description="Meal Saver is building a platform to reduce food waste across Kerala. See our goals and the problem we're solving."
         path="/impact"
       />
       {/* Hero */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
-            Our Impact
+            Our Impact Goals
           </span>
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Making a Real Difference in Kerala
+            The Change We're Building Toward
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Every meal saved through Meal Saver reduces food waste, supports local businesses, and helps customers save money.
+            We're just getting started. Here's what we aim to achieve as we grow Meal Saver across Kerala — every meal saved counts.
           </p>
         </div>
       </section>
 
-      {/* Stats Grid */}
+      {/* Goals Grid */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {stats.map((stat, i) => (
-              <div key={i} className="bg-card rounded-2xl p-8 shadow-soft text-center">
-                <div className={`w-14 h-14 rounded-xl ${stat.color} flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className="w-7 h-7" />
+            {goals.map((goal, i) => (
+              <div key={i} className="bg-card rounded-2xl p-8 shadow-soft">
+                <div className={`w-14 h-14 rounded-xl ${goal.color} flex items-center justify-center mb-4`}>
+                  <goal.icon className="w-7 h-7" aria-hidden="true" />
                 </div>
-                <p className="text-3xl font-bold text-foreground mb-1">{stat.value}</p>
-                <p className="text-muted-foreground">{stat.label}</p>
+                <p className="text-foreground font-semibold text-lg">{goal.label}</p>
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-muted-foreground/60 mt-6">*Pilot targets — we're building toward these milestones</p>
+          <p className="text-center text-sm text-muted-foreground mt-8">
+            These are our goals, not claims. We'll share real numbers as we grow.
+          </p>
         </div>
       </section>
 

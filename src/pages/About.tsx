@@ -46,8 +46,8 @@ const About = () => {
               No app downloads, no complex onboarding — just WhatsApp.
             </p>
             <p>
-              Today, we work with 200+ restaurant partners across Kerala, helping them turn waste into revenue while giving
-              customers access to delicious food at a fraction of the price.
+              We're currently onboarding our first restaurant partners across Kerala, building the foundation for a
+              platform that turns surplus food into savings for customers and revenue for businesses.
             </p>
           </div>
         </div>
