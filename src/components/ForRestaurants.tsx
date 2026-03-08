@@ -73,8 +73,8 @@ const ForRestaurants = () => {
                 
                 <div className="grid grid-cols-1 gap-4">
                   <div className="p-4 bg-background rounded-xl">
-                    <p className="font-semibold text-foreground mb-1">✅ Zero setup cost</p>
-                    <p className="text-sm text-muted-foreground">No fees to get started. List your surplus and start earning.</p>
+                    <p className="font-semibold text-foreground mb-1">✅ Zero cost to join</p>
+                    <p className="text-sm text-muted-foreground">No fees or commissions during the pilot. Just WhatsApp.</p>
                   </div>
                   <div className="p-4 bg-background rounded-xl">
                     <p className="font-semibold text-foreground mb-1">✅ WhatsApp-first workflow</p>
