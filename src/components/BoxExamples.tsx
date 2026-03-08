@@ -49,14 +49,14 @@ const BoxExamples = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-green-light text-primary text-sm font-medium mb-4">
-            Our Boxes
+            What We're Building
           </span>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
-            Why Choose Meal Saver
+            Meal Saver Box Categories
           </h2>
           <p className="text-lg text-muted-foreground">
-            From surprise boxes to grocery rescue packs, Meal Saver offers a variety of surplus food options from local businesses across Kerala. 
-            Every box you grab means less food wasted and more savings in your pocket. Explore our most popular categories below.
+            Here's what you'll be able to grab once we launch — from surprise bakery boxes to grocery rescue packs, 
+            all from local businesses across Kerala at a fraction of the original price.
           </p>
         </div>
 

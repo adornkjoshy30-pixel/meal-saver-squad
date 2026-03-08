@@ -34,8 +34,8 @@ const HowItWorks = () => {
             How It Works
           </h2>
           <p className="text-lg text-muted-foreground">
-            Getting delicious surplus food in Kerala is easy. Simply browse available deals from local restaurants and bakeries near you, 
-            reserve your order through WhatsApp, and pick it up fresh at a fraction of the original price. No app download needed — it all works seamlessly on WhatsApp.
+            Once we launch, getting surplus food in Kerala will be simple. Browse deals from local restaurants and bakeries, 
+            reserve your order through WhatsApp, and pick it up fresh at a fraction of the original price. No app download needed.
           </p>
         </div>
 

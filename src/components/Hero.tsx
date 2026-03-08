@@ -34,7 +34,7 @@ const Hero = () => {
               </a>
               <Link to="/merchant">
                 <Button variant="whatsapp-outline" size="lg" className="min-h-[48px]">
-                  Partner With Us
+                  Apply as Launch Partner
                 </Button>
               </Link>
             </div>
