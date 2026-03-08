@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import { site } from "@/config/appConfig";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -25,8 +26,8 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
-            <img src={logo} alt="Meal Saver logo" className="h-9 md:h-10 w-auto object-contain" />
-            <span className="font-bold text-xl text-foreground">Meal Saver</span>
+            <img src={logo} alt={`${site.name} logo`} className="h-9 md:h-10 w-auto object-contain" />
+            <span className="font-bold text-xl text-foreground">{site.name}</span>
           </Link>
 
           {/* Desktop Nav */}

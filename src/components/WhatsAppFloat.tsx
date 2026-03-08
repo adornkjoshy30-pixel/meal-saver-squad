@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
+import { whatsapp } from "@/config/appConfig";
 
-const WHATSAPP_LINK = "https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g";
+const WHATSAPP_LINK = whatsapp.channelUrl;
 
 const WhatsAppFloat = () => {
   const [expanded, setExpanded] = useState(false);

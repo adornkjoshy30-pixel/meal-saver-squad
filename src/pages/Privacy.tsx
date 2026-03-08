@@ -1,4 +1,5 @@
 import PageSEO from "@/components/PageSEO";
+import { contact } from "@/config/appConfig";
 
 const Privacy = () => {
   return (
@@ -143,7 +144,7 @@ const Privacy = () => {
                   <li><strong className="text-foreground">Withdraw Consent:</strong> Withdraw previously given consent</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed">
-                  To exercise these rights, contact us at saplinxai@gmail.com.
+                  To exercise these rights, contact us at {contact.email}.
                 </p>
               </section>
 
@@ -185,8 +186,8 @@ const Privacy = () => {
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong>{" "}
-                  <a href="mailto:saplinxai@gmail.com" className="text-primary hover:underline">
-                    saplinxai@gmail.com
+                  <a href={`mailto:${contact.email}`} className="text-primary hover:underline">
+                    {contact.email}
                   </a>
                 </p>
               </section>

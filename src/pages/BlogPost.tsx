@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import PageSEO from "@/components/PageSEO";
 import BlogInternalLinks from "@/components/BlogInternalLinks";
 import { getPostBySlug } from "@/data/blog-posts";
+import { whatsapp } from "@/config/appConfig";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -62,7 +63,7 @@ const BlogPost = () => {
             {/* CTA */}
             <div className="mt-12 p-8 bg-card rounded-2xl text-center">
               <p className="text-muted-foreground mb-4">Want to stay updated?</p>
-              <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
+              <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="whatsapp" className="min-h-[48px]">Follow us on WhatsApp</Button>
               </a>
             </div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Store } from "lucide-react";
 import { Link } from "react-router-dom";
+import { site, whatsapp } from "@/config/appConfig";
 
 const Hero = () => {
   return (
@@ -18,14 +19,14 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl lg:text-2xl font-semibold text-primary mb-2">
-            Good Food. Great Price. Zero Waste.
+            {site.tagline}
           </p>
           <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Restaurants share unsold meals with us. We verify them and publish the deals in WhatsApp channels — so you can grab affordable food before it goes to waste.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
+            <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="whatsapp" size="lg" className="group min-h-[48px] w-full sm:w-auto">
                 <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
                 Join WhatsApp Deals
