@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const benefits = [
   { icon: DollarSign, text: "Earn from unsold food instead of throwing it away" },
-  { icon: Users, text: "Reach new local customers" },
-  { icon: Smartphone, text: "Simple WhatsApp-based system" },
-  { icon: Check, text: "Zero setup cost" },
-  { icon: ShieldCheck, text: "Food safety compliant" },
-  { icon: Clock, text: "Real-time pickup management" },
+  { icon: Users, text: "Reach new local customers via WhatsApp" },
+  { icon: Smartphone, text: "Simple WhatsApp-based workflow — no apps needed" },
+  { icon: Check, text: "Zero cost during pilot — no fees or commissions" },
+  { icon: ShieldCheck, text: "Food safety verified before listing" },
+  { icon: Clock, text: "You set the pickup window and price" },
 ];
 
 const ForRestaurants = () => {
