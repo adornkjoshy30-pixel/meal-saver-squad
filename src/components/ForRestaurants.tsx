@@ -49,7 +49,7 @@ const ForRestaurants = () => {
             </div>
             
             <div className="flex justify-center">
-              <Link to="/merchant">
+              <Link to="/partners">
                 <Button variant="whatsapp" size="lg" className="min-h-[48px]">
                   <Store className="w-5 h-5" aria-hidden="true" />
                   Become an Early Partner
