@@ -7,44 +7,36 @@ import {
 
 const faqs = [
   {
-    question: "What is Meal Saver?",
-    answer: "Meal Saver is a platform designed to connect you with local restaurants, bakeries, and cloud kitchens that have surplus food available at 50-80% discount. We're building a way to reduce food waste while making meals more affordable.",
+    question: "Do I need an app to use MealSaver?",
+    answer: "No. MealSaver works entirely through WhatsApp. Join your city's WhatsApp channel, receive surplus food deals, and visit the restaurant to pick up your meal. No app download needed.",
+  },
+  {
+    question: "How do I get surplus food deals?",
+    answer: "Join the WhatsApp channel for your city. Whenever a restaurant near you has surplus food, we publish the deal in the channel with all the details — food items, price, pickup time, and location. You then go directly to the restaurant.",
+  },
+  {
+    question: "Do I need to reserve or pre-order?",
+    answer: "No reservation needed. Deals are first-come, first-served. When you see a deal in the WhatsApp channel, head to the restaurant during the pickup window. Quantities are limited, so act fast!",
   },
   {
     question: "Is the food safe to eat?",
-    answer: "Absolutely. All partner restaurants are FSSAI-licensed and verified for food safety compliance. The food is freshly prepared — it's simply surplus that would otherwise go to waste. Restaurants are required to maintain strict quality standards.",
+    answer: "Yes. We only work with restaurants that meet food safety standards. The food is freshly prepared — it's simply surplus that went unsold. We verify deal details before publishing.",
   },
   {
-    question: "How do I place an order?",
-    answer: "Everything works through WhatsApp — no app needed! Browse available deals on our website, click 'Grab Now' on any deal you like, and you'll be redirected to WhatsApp to complete your order and payment via UPI.",
+    question: "What if a deal sells out before I arrive?",
+    answer: "Deals are first-come, first-served and quantities are limited. If a deal sells out, you'll catch the next one. Joining the WhatsApp channel ensures you see deals as soon as they're posted.",
   },
   {
-    question: "How do payments work?",
-    answer: "Payments are processed securely through UPI on WhatsApp. Once your payment is confirmed, you'll receive a pickup confirmation with restaurant details, address, and your pickup time window.",
+    question: "How do restaurants join MealSaver?",
+    answer: "Restaurants can apply through our website. We'll verify your details and onboard you. Once you're a partner, you simply send us your surplus food details via WhatsApp, and we publish the deal in the local channel.",
   },
   {
-    question: "What is the pickup process?",
-    answer: "After payment confirmation, you'll receive a pickup time and location. Simply visit the restaurant during the specified window, show your order confirmation on WhatsApp, and collect your food. Most pickups are scheduled during off-peak hours.",
+    question: "Is there any cost for customers?",
+    answer: "Joining the WhatsApp channel is completely free. You only pay the discounted price directly to the restaurant when you pick up the food.",
   },
   {
-    question: "What if I miss my pickup window?",
-    answer: "Pickup windows are strict to ensure food freshness. If you miss your window, the restaurant may not be able to honor your order, and refunds are not guaranteed for missed pickups. Please plan accordingly!",
-  },
-  {
-    question: "Can restaurants join Meal Saver?",
-    answer: "Yes! Restaurants, bakeries, cloud kitchens, and supermarkets can easily join. We verify FSSAI licenses and ensure food safety compliance before onboarding. Visit our 'For Restaurants' page to learn more and sign up.",
-  },
-  {
-    question: "What if there's an issue with my order?",
-    answer: "For food-related issues (quality, quantity), please contact the restaurant directly first. For platform issues (payment errors, technical problems), email us at hello@mealsaver.in and we'll help resolve it within 24-48 hours.",
-  },
-  {
-    question: "Is my personal data safe?",
-    answer: "Yes. We take privacy seriously. Your data is encrypted and only shared with restaurants to fulfill your orders. We never sell your information to third parties. Read our Privacy Policy for complete details.",
-  },
-  {
-    question: "What is a Surprise Box?",
-    answer: "Surprise Boxes are mystery meal combos where the exact contents vary based on what's available. They offer the best value but the specific items are a surprise! Perfect for adventurous eaters looking for great deals.",
+    question: "Is there any cost for restaurants?",
+    answer: "We're offering free onboarding for early restaurant partners. There are no setup costs or complex systems to learn — just WhatsApp.",
   },
 ];
 
@@ -52,20 +44,18 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-20 lg:py-32 bg-background">
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
-        {/* Section Header */}
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
-            Got Questions?
+            Questions
           </span>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything you need to know about Meal Saver
+            Simple answers about how MealSaver works
           </p>
         </div>
 
-        {/* Accordion */}
         <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem 

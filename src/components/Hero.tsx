@@ -1,83 +1,54 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Store } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroFood from "@/assets/hero-food-branded.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen gradient-hero overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-20 lg:pt-24 lg:pb-28">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Text Content */}
-          <div className="space-y-8 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              Launching soon in Kerala
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-tight">
-              A Smarter Way to <br />
-              <span className="text-primary">Reduce Food Waste</span> <br />
-              & Save on Meals
-            </h1>
-            
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Meal Saver is building a platform to connect Kerala's bakeries, hotels, and grocery stores with customers who want quality surplus food at reduced prices. We're preparing to launch — join us early.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
-                <Button variant="whatsapp" size="lg" className="group min-h-[48px]">
-                  <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
-                  Get Launch Updates
-                </Button>
-              </a>
-              <Link to="/merchant">
-                <Button variant="whatsapp-outline" size="lg" className="min-h-[48px]">
-                  Apply as Launch Partner
-                </Button>
-              </Link>
-            </div>
-
-            {/* Value Props instead of fake stats */}
-            <div className="flex flex-wrap gap-4 pt-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
-                <span className="text-lg">🍽️</span>
-                <span className="text-sm font-medium text-foreground">Up to 60% off meals</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
-                <span className="text-lg">📱</span>
-                <span className="text-sm font-medium text-foreground">Order via WhatsApp</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
-                <span className="text-lg">🌱</span>
-                <span className="text-sm font-medium text-foreground">Reduce food waste</span>
-              </div>
-            </div>
+    <section className="relative min-h-[85vh] gradient-hero overflow-hidden flex items-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-20 lg:pt-20 lg:pb-24">
+        <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Now launching in Kerala
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-tight">
+            Get Surplus Food Deals <br />
+            <span className="text-primary">From Local Restaurants</span>
+          </h1>
+          
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Restaurants share unsold meals with us. We verify them and publish the deals in WhatsApp channels — so you can grab affordable food before it goes to waste.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
+              <Button variant="whatsapp" size="lg" className="group min-h-[48px] w-full sm:w-auto">
+                <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
+                Join WhatsApp Deals
+              </Button>
+            </a>
+            <Link to="/merchant">
+              <Button variant="whatsapp-outline" size="lg" className="min-h-[48px] w-full sm:w-auto">
+                <Store className="w-5 h-5" aria-hidden="true" />
+                Become a Restaurant Partner
+              </Button>
+            </Link>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative animate-scale-in">
-            <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-3xl transform rotate-6"></div>
-            <img 
-              src={heroFood} 
-              alt="Surplus food boxes containing fresh meals, salads, and bakery items available at discounted prices" 
-              className="relative rounded-3xl shadow-card w-full object-cover animate-float"
-              fetchPriority="high"
-              decoding="async"
-              width={600}
-              height={400}
-            />
-            <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-card">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-green-light flex items-center justify-center">
-                  <span className="text-2xl">🌱</span>
-                </div>
-                <div>
-                  <p className="font-bold text-foreground">Eco-Friendly</p>
-                  <p className="text-sm text-muted-foreground">Zero waste packaging</p>
-                </div>
-              </div>
+          {/* Simple value props */}
+          <div className="flex flex-wrap gap-4 justify-center pt-2">
+            <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
+              <span className="text-lg">📱</span>
+              <span className="text-sm font-medium text-foreground">No app needed</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
+              <span className="text-lg">🍽️</span>
+              <span className="text-sm font-medium text-foreground">40–60% off meals</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
+              <span className="text-lg">✅</span>
+              <span className="text-sm font-medium text-foreground">Verified deals only</span>
             </div>
           </div>
         </div>
