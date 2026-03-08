@@ -32,7 +32,7 @@ const benefits = [
   {
     icon: Users,
     title: "Verified Customer Base",
-    description: "Reach eco-conscious customers who love saving food and money.",
+    description: "Reach eco-conscious customers looking for affordable surplus food.",
   },
 ];
 
