@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Store } from "lucide-react";
 import { Link } from "react-router-dom";
+import { whatsapp } from "@/config/appConfig";
 
 const CTASection = () => {
   return (
