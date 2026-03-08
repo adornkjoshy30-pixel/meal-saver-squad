@@ -24,7 +24,7 @@ const Mission = () => {
               
               <p className="text-lg text-primary-foreground/90 leading-relaxed">
                 India wastes over <span className="font-bold">₹1 lakh crore</span> worth of food every year, and Kerala is no exception.
-                Meal Saver connects local restaurants, bakeries, and grocery stores with conscious customers to rescue food that's still fresh and safe to eat.
+                Meal Saver is designed to connect local restaurants, bakeries, and grocery stores with conscious customers to rescue food that's still fresh and safe to eat.
               </p>
               
               <p className="text-lg text-primary-foreground/90 leading-relaxed">
