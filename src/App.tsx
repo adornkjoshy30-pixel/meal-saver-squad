@@ -47,7 +47,7 @@ const App = () => (
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/refund" element={<Refund />} />
-                <Route path="/merchant" element={<Partners />} />
+                <Route path="/merchant" element={<Partners />} /> {/* Legacy redirect */}
                 <Route path="/deal-policy" element={<DealPolicy />} />
                 <Route path="*" element={<NotFound />} />
               </Route>

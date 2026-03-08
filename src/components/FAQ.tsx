@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "Is there any cost for restaurants?",
-    answer: "We're offering free onboarding for early restaurant partners. There are no setup costs or complex systems to learn — just WhatsApp.",
+    answer: "No. Partnering with Meal Saver is completely free during our pilot phase — no setup fees, no monthly charges, no commission. Restaurants just need WhatsApp to share surplus food details with our team.",
   },
 ];
 

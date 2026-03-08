@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const benefits = [
   { icon: DollarSign, text: "Earn from unsold food instead of throwing it away" },
-  { icon: Users, text: "Reach new local customers" },
-  { icon: Smartphone, text: "Simple WhatsApp-based system" },
-  { icon: Check, text: "Zero setup cost" },
-  { icon: ShieldCheck, text: "Food safety compliant" },
-  { icon: Clock, text: "Real-time pickup management" },
+  { icon: Users, text: "Reach new local customers via WhatsApp" },
+  { icon: Smartphone, text: "Simple WhatsApp-based workflow — no apps needed" },
+  { icon: Check, text: "Zero cost during pilot — no fees or commissions" },
+  { icon: ShieldCheck, text: "Food safety verified before listing" },
+  { icon: Clock, text: "You set the pickup window and price" },
 ];
 
 const ForRestaurants = () => {
@@ -27,7 +27,7 @@ const ForRestaurants = () => {
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Whether you run a bakery, hotel, cloud kitchen, or grocery store in Kerala, Meal Saver helps you turn unsold food into revenue. 
-                Instead of wasting surplus items at the end of the day, list them on our platform and reach eco-conscious customers nearby.
+                Send us your surplus details via WhatsApp — we verify and publish deals to nearby customers.
               </p>
             </div>
             
@@ -49,7 +49,7 @@ const ForRestaurants = () => {
             </div>
             
             <div className="flex justify-center">
-              <Link to="/merchant">
+              <Link to="/partners">
                 <Button variant="whatsapp" size="lg" className="min-h-[48px]">
                   <Store className="w-5 h-5" aria-hidden="true" />
                   Become an Early Partner
@@ -73,12 +73,12 @@ const ForRestaurants = () => {
                 
                 <div className="grid grid-cols-1 gap-4">
                   <div className="p-4 bg-background rounded-xl">
-                    <p className="font-semibold text-foreground mb-1">✅ Zero setup cost</p>
-                    <p className="text-sm text-muted-foreground">No fees to get started. List your surplus and start earning.</p>
+                    <p className="font-semibold text-foreground mb-1">✅ Zero cost to join</p>
+                    <p className="text-sm text-muted-foreground">No fees or commissions during the pilot. Just WhatsApp.</p>
                   </div>
                   <div className="p-4 bg-background rounded-xl">
-                    <p className="font-semibold text-foreground mb-1">✅ WhatsApp-first workflow</p>
-                    <p className="text-sm text-muted-foreground">No new apps or devices. Manage orders through WhatsApp.</p>
+                    <p className="font-semibold text-foreground mb-1">✅ WhatsApp-only workflow</p>
+                    <p className="text-sm text-muted-foreground">No apps or dashboards. Send us surplus details on WhatsApp.</p>
                   </div>
                   <div className="p-4 bg-background rounded-xl">
                     <p className="font-semibold text-foreground mb-1">✅ FSSAI verified onboarding</p>

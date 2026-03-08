@@ -1,164 +1,125 @@
-import { Check, Sparkles, Store, Zap, Trophy, MessageCircle } from "lucide-react";
+import { MessageCircle, Store, Check, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import PageSEO from "@/components/PageSEO";
-
-const plans = [
-  {
-    name: "Starter Plan",
-    price: "₹150",
-    period: "/ month",
-    badge: null,
-    bestFor: "Small bakeries, cafés & home kitchens",
-    icon: Store,
-    features: [
-      "0% commission",
-      "Unlimited surplus listings",
-      "WhatsApp order management",
-      "Basic analytics",
-      "1 outlet supported",
-      "Standard support",
-      "Digital storefront included",
-    ],
-    highlight: false,
-  },
-  {
-    name: "Growth Plan",
-    price: "₹379",
-    period: "/ month",
-    badge: "Best Value",
-    bestFor: "Cloud kitchens & mid-sized restaurants",
-    icon: Zap,
-    features: [
-      "Everything in Starter +",
-      "Priority listing in your area",
-      '"Green Partner" badge',
-      "Early visibility for deals",
-      "Faster payouts",
-      "Up to 3 outlets",
-      "Promo slots (3/month)",
-      "Detailed analytics dashboard",
-    ],
-    highlight: true,
-  },
-  {
-    name: "Enterprise",
-    price: "₹999",
-    period: "/ month",
-    badge: null,
-    bestFor: "5-star hotels & multi-branch chains",
-    icon: Trophy,
-    features: [
-      "Everything in Growth +",
-      "Unlimited outlets",
-      "Chain-level management dashboard",
-      "Brand banner on platform",
-      "Dedicated success manager",
-      "Custom WhatsApp ordering flow",
-      "Staff training & onboarding",
-    ],
-    highlight: false,
-  },
-];
+import { site, whatsapp } from "@/config/appConfig";
 
 const Pricing = () => {
   return (
     <div>
       <PageSEO
-        title="Pricing | Meal Saver Partner Plans from ₹150/mo"
-        description="Zero commission partner plans for restaurants, bakeries & cloud kitchens in Kerala. First month free. Plans from ₹150/month."
+        title="Pricing | Meal Saver — Free for Restaurants During Pilot"
+        description="Meal Saver is completely free for restaurant partners during our pilot launch in Kerala. Zero fees, zero commission, zero risk."
         path="/pricing"
       />
+
       {/* Hero */}
       <section className="py-16 lg:py-24 bg-card">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            <Sparkles className="w-4 h-4" />
-            Simple Pricing
-          </div>
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            Pricing
+          </span>
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Plans That Grow With Your Business
+            Free During Our Pilot Phase
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Zero commission. Fixed monthly cost. Your first month is completely free.
+            {site.name} is launching across Kerala. During this phase, partnering with us is completely free — no setup fees, no monthly charges, no commission per order.
           </p>
         </div>
       </section>
 
-      {/* Plans */}
+      {/* What's included */}
       <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-card rounded-3xl p-8 ${
-                  plan.highlight
-                    ? "ring-2 ring-primary shadow-card lg:scale-105"
-                    : "border border-border shadow-soft"
-                }`}
-              >
-                {plan.badge && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground text-sm font-semibold px-4 py-1.5 rounded-full">
-                      {plan.badge}
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <div className={`w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center ${
-                    plan.highlight ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary"
-                  }`}>
-                    <plan.icon className="w-7 h-7" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-1">{plan.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{plan.bestFor}</p>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-bold text-foreground">{plan.price}</span>
-                    <span className="text-muted-foreground">{plan.period}</span>
-                  </div>
+        <div className="max-w-3xl mx-auto px-6 lg:px-12">
+          <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border">
+            <div className="text-center mb-8">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <Store className="w-8 h-8 text-primary" />
+              </div>
+              <h2 className="text-2xl font-bold text-foreground mb-2">Pilot Partner — Free</h2>
+              <p className="text-muted-foreground">Everything you need to start earning from surplus food</p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              {[
+                "Zero commission on all orders",
+                "Unlimited surplus food listings",
+                "Deal published in your city's WhatsApp channel",
+                "MealSaver team verifies and manages deal posting",
+                "Customers pay you directly — no middleman",
+                "WhatsApp-based workflow — no apps or dashboards",
+                "Priority support during pilot phase",
+              ].map((feature, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-muted-foreground">{feature}</span>
                 </div>
-                <div className="space-y-3 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="space-y-3">
-                  <div className="bg-destructive/10 text-destructive text-sm font-medium py-2 px-4 rounded-lg text-center">
-                    🎁 First Month FREE
-                  </div>
-                  <Link to="/partners#signup">
-                    <Button
-                      variant={plan.highlight ? "whatsapp" : "outline"}
-                      className="w-full"
-                      size="lg"
-                    >
-                      Get Started
-                    </Button>
-                  </Link>
-                </div>
+              ))}
+            </div>
+
+            <Link to="/partners#signup">
+              <Button variant="whatsapp" size="lg" className="w-full">
+                <Store className="w-5 h-5" />
+                Apply as a Partner
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ-like section */}
+      <section className="py-16 lg:py-24 bg-card">
+        <div className="max-w-3xl mx-auto px-6 lg:px-12">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Common Questions</h2>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "Will it always be free?",
+                a: "We're free during our pilot launch. If we introduce pricing in the future, it will be simple, transparent, and communicated well in advance. Early partners will always get the best terms.",
+              },
+              {
+                q: "Is there a commission per order?",
+                a: "No. Customers pay you directly at pickup. We don't process payments or take any cut from your sales.",
+              },
+              {
+                q: "Do I need any special software?",
+                a: "No. Everything works through WhatsApp. You send us your surplus details, we publish the deal, and customers come to you.",
+              },
+              {
+                q: "What's the catch?",
+                a: "There isn't one. We're building something new and need restaurant partners to make it work. You help us prove the model, we help you earn from food that would otherwise go to waste.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-background rounded-xl p-6 shadow-soft">
+                <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                  <HelpCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  {item.q}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed pl-7">{item.a}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* FAQ-like note */}
-      <section className="py-16 bg-card">
-        <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Questions?</h2>
-          <p className="text-muted-foreground mb-6">
-            We're happy to help you choose the right plan for your business.
-          </p>
-          <Link to="/contact">
-            <Button variant="outline" size="lg">
-              <MessageCircle className="w-5 h-5" />
-              Contact Us
-            </Button>
-          </Link>
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground mb-4">Still have questions?</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button variant="outline" size="lg">
+                  <MessageCircle className="w-5 h-5" />
+                  Contact Us
+                </Button>
+              </Link>
+              <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
+                <Button variant="whatsapp" size="lg">
+                  <MessageCircle className="w-5 h-5" />
+                  Join WhatsApp Channel
+                </Button>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>

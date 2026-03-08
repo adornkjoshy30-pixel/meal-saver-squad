@@ -152,8 +152,8 @@ export const MerchantSignupForm = () => {
           <Store className="w-6 h-6 text-primary" />
         </div>
         <div>
-          <h3 className="text-xl font-bold text-gray-900">Merchant Signup</h3>
-          <p className="text-sm text-gray-500">Start your free trial today</p>
+          <h3 className="text-xl font-bold text-gray-900">Partner Application</h3>
+          <p className="text-sm text-gray-500">Tell us about your business</p>
         </div>
       </div>
 
@@ -317,7 +317,7 @@ export const MerchantSignupForm = () => {
         </Button>
 
         <p className="text-xs text-gray-500 text-center">
-          By signing up, you agree to our terms. First month is free, cancel anytime.
+          By submitting, you agree to our terms. No fees or charges during the pilot phase.
         </p>
       </div>
     </form>
