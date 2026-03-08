@@ -40,7 +40,7 @@ const ForRestaurants = () => {
                   className="flex items-center gap-3 p-4 bg-card rounded-xl shadow-soft"
                 >
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-5 h-5 text-primary" />
+                    <benefit.icon className="w-5 h-5 text-primary" aria-hidden="true" />
                   </div>
                   <span className="text-foreground font-medium text-sm">
                     {benefit.text}
@@ -65,7 +65,7 @@ const ForRestaurants = () => {
               <div className="space-y-8">
                 <div className="text-center">
                   <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <Store className="w-10 h-10 text-primary" />
+                    <Store className="w-10 h-10 text-primary" aria-hidden="true" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">Join 200+ Partners</h3>
                   <p className="text-muted-foreground">Restaurants already saving food with us</p>

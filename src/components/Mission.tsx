@@ -38,7 +38,7 @@ const Mission = () => {
               <div className="bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                    <TrendingDown className="w-7 h-7 text-primary-foreground" />
+                    <TrendingDown className="w-7 h-7 text-primary-foreground" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-3xl font-bold text-primary-foreground">₹1 Lakh Cr</p>
@@ -50,7 +50,7 @@ const Mission = () => {
               <div className="bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                    <Leaf className="w-7 h-7 text-primary-foreground" />
+                    <Leaf className="w-7 h-7 text-primary-foreground" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-3xl font-bold text-primary-foreground">10K+ kg</p>
@@ -62,7 +62,7 @@ const Mission = () => {
               <div className="bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
-                    <Heart className="w-7 h-7 text-primary-foreground" />
+                    <Heart className="w-7 h-7 text-primary-foreground" aria-hidden="true" />
                   </div>
                   <div>
                     <p className="text-3xl font-bold text-primary-foreground">50K+</p>
