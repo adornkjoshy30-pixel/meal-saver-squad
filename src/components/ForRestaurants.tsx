@@ -27,7 +27,7 @@ const ForRestaurants = () => {
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Whether you run a bakery, hotel, cloud kitchen, or grocery store in Kerala, Meal Saver helps you turn unsold food into revenue. 
-                Instead of wasting surplus items at the end of the day, list them on our platform and reach eco-conscious customers nearby.
+                Send us your surplus details via WhatsApp — we verify and publish deals to nearby customers.
               </p>
             </div>
             
