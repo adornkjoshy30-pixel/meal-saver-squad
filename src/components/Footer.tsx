@@ -11,8 +11,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-3">
-              <img src={logo} alt="Meal Saver logo" className="h-9 md:h-10 w-auto object-contain brightness-0 invert" />
-              <span className="font-bold text-xl">Meal Saver</span>
+              <img src={logo} alt={`${site.name} logo`} className="h-9 md:h-10 w-auto object-contain brightness-0 invert" />
+              <span className="font-bold text-xl">{site.name}</span>
             </Link>
             <p className="text-primary-foreground/70 max-w-sm leading-relaxed">
               Good Food. Great Price. Zero Waste.
