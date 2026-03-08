@@ -305,10 +305,10 @@ const Merchant = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Start Earning From Surplus Food Today
+                Become a Launch Partner
               </h2>
               <p className="text-gray-600 text-lg mb-8">
-                Join hundreds of restaurants, bakeries, and kitchens saving food and making money.
+                Be among the first restaurants, bakeries, and kitchens to join Meal Saver and turn surplus food into revenue.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">

@@ -28,8 +28,8 @@ const Mission = () => {
               </p>
               
               <p className="text-lg text-primary-foreground/90 leading-relaxed">
-                By choosing Meal Saver, you're not just saving money — you're actively contributing to a more sustainable Kerala. 
-                Together, we can reduce waste, lower food costs, and support a healthier planet for future generations.
+                By choosing Meal Saver, you'll be part of a movement toward a more sustainable Kerala. 
+                Together, we aim to reduce waste, lower food costs, and support a healthier planet for future generations.
               </p>
             </div>
             
