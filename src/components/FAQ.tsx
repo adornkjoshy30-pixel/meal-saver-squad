@@ -23,8 +23,8 @@ const faqs = [
     answer: "Yes. We only work with restaurants that meet food safety standards. The food is freshly prepared — it's simply surplus that went unsold. We verify deal details before publishing.",
   },
   {
-    question: "What if a deal sells out before I arrive?",
-    answer: "Deals are first-come, first-served and quantities are limited. If a deal sells out, you'll catch the next one. Joining the WhatsApp channel ensures you see deals as soon as they're posted.",
+    question: "What if a deal sells out before I can reserve?",
+    answer: "Deals are limited by quantity. Once all portions are reserved, the deal is closed. Joining the WhatsApp channel ensures you see deals the moment they're posted, giving you the best chance to reserve.",
   },
   {
     question: "How do restaurants join MealSaver?",

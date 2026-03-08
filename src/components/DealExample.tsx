@@ -1,6 +1,11 @@
-import { Clock, MapPin, ShoppingBag } from "lucide-react";
+import { Clock, MapPin, ShoppingBag, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const DealExample = () => {
+  const reserveMessage = encodeURIComponent(
+    "Hi MealSaver! I'd like to reserve:\n\n🍱 6 Veg Meals – ₹80\n🏪 Hotel Aishwarya, Kattappana\n⏰ Pickup: 8:30 PM – 9:00 PM\n\nPlease confirm my reservation."
+  );
+
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -12,7 +17,7 @@ const DealExample = () => {
             What a Deal Looks Like
           </h2>
           <p className="text-lg text-muted-foreground">
-            Here's an example of the surplus food deals we share in our WhatsApp channels.
+            Here's an example of the surplus food deals we share in our WhatsApp channels. Tap "Reserve" to hold your portion.
           </p>
         </div>
 
@@ -56,20 +61,33 @@ const DealExample = () => {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <ShoppingBag className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  <span>4 of 6 remaining — first come, first served</span>
+                  <span>4 of 6 remaining</span>
                 </div>
               </div>
 
+              {/* Reserve CTA */}
+              <a
+                href={`https://wa.me/917012345678?text=${reserveMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Button variant="whatsapp" size="default" className="w-full">
+                  <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                  Reserve on WhatsApp
+                </Button>
+              </a>
+
               <div className="pt-2 border-t border-border">
                 <p className="text-xs text-muted-foreground">
-                  📍 Visit the restaurant directly during the pickup window. No reservation needed.
+                  💬 Tap "Reserve" to send a WhatsApp message. We'll confirm your reservation and share pickup details.
                 </p>
               </div>
             </div>
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
-            Deals like this are shared in our WhatsApp channels whenever restaurants have surplus food.
+            Deals like this are shared in our WhatsApp channels. Reserve your portion before it's gone.
           </p>
         </div>
       </div>
