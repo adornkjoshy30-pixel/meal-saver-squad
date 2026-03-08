@@ -71,6 +71,7 @@ const Header = () => {
       {/* Mobile Nav */}
       {mobileOpen && (
         <nav
+          id="mobile-nav"
           className="lg:hidden border-t border-border bg-background px-6 py-4 space-y-1"
           aria-label="Mobile navigation"
         >
