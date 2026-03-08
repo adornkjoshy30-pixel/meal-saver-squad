@@ -13,7 +13,7 @@ const About = () => {
     <div>
       <PageSEO
         title="About Meal Saver | Our Mission to End Food Waste"
-        description="Learn how Meal Saver is building a platform to connect Kerala's restaurants and bakeries with customers — reducing surplus food waste and making meals more affordable."
+        description="Learn how Meal Saver connects Kerala's restaurants with customers via WhatsApp — reducing surplus food waste and making meals more affordable."
         path="/about"
       />
       {/* Hero */}
