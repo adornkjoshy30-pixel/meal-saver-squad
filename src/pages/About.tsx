@@ -46,8 +46,8 @@ const About = () => {
               No app downloads, no complex onboarding — just WhatsApp.
             </p>
             <p>
-              We're currently onboarding our first restaurant partners across Kerala, building the foundation for a
-              platform that turns surplus food into savings for customers and revenue for businesses.
+              We're currently onboarding our first restaurant partners across Kerala. Restaurants share their surplus with us on WhatsApp,
+              we verify the deals, and publish them in city-specific WhatsApp channels so nearby customers can grab affordable meals.
             </p>
           </div>
         </div>
