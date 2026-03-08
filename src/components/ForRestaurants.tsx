@@ -48,12 +48,14 @@ const ForRestaurants = () => {
               ))}
             </div>
             
-            <Link to="/merchant">
-              <Button variant="whatsapp" size="lg" className="min-h-[48px]">
-                <Store className="w-5 h-5" aria-hidden="true" />
-                Become an Early Partner
-              </Button>
-            </Link>
+            <div className="flex justify-center">
+              <Link to="/merchant">
+                <Button variant="whatsapp" size="lg" className="min-h-[48px]">
+                  <Store className="w-5 h-5" aria-hidden="true" />
+                  Become an Early Partner
+                </Button>
+              </Link>
+            </div>
           </div>
           
           {/* Visual — honest early-stage card */}
