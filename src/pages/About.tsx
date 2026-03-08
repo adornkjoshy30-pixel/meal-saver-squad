@@ -2,9 +2,9 @@ import { Leaf, Users, Heart, Target } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
 
 const values = [
-  { icon: Leaf, title: "Sustainability", description: "We believe every meal saved is a step toward a greener planet. Our mission starts with reducing food waste across Kerala." },
-  { icon: Users, title: "Community", description: "We connect local businesses with eco-conscious customers, building a community that cares about food and the environment." },
-  { icon: Heart, title: "Accessibility", description: "Great food shouldn't go to waste — or cost a fortune. We make surplus meals affordable and easy to access via WhatsApp." },
+  { icon: Leaf, title: "Sustainability", description: "Every meal rescued is a step toward a greener planet. Our mission starts with reducing food waste across Kerala." },
+  { icon: Users, title: "Community", description: "We're building connections between local businesses and eco-conscious customers who care about food and the environment." },
+  { icon: Heart, title: "Accessibility", description: "Great food shouldn't go to waste — or cost a fortune. We're designing surplus meals to be affordable and easy to access via WhatsApp." },
   { icon: Target, title: "Transparency", description: "No hidden fees, no commissions per order. We keep things simple and honest for both merchants and customers." },
 ];
 
