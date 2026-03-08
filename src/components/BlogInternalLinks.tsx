@@ -10,7 +10,7 @@ const links = [
   {
     to: "/partners",
     title: "Become a Partner",
-    description: "Join 200+ restaurants reducing waste with Meal Saver.",
+    description: "Be among the first restaurants to join Meal Saver.",
   },
   {
     to: "/impact",
