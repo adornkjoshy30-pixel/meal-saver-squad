@@ -34,7 +34,7 @@ const DealExample = () => {
             <div className="p-6 space-y-4">
               <div>
                 <h3 className="font-bold text-foreground text-lg">🍱 6 Veg Meals Available</h3>
-                <p className="text-muted-foreground text-sm mt-1">City Bites Restaurant</p>
+                <p className="text-muted-foreground text-sm mt-1">Hotel Aishwarya, Kattappana</p>
               </div>
 
               <div className="space-y-3">
