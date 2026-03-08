@@ -77,8 +77,8 @@ const ForRestaurants = () => {
                     <p className="text-sm text-muted-foreground">No fees or commissions during the pilot. Just WhatsApp.</p>
                   </div>
                   <div className="p-4 bg-background rounded-xl">
-                    <p className="font-semibold text-foreground mb-1">✅ WhatsApp-first workflow</p>
-                    <p className="text-sm text-muted-foreground">No new apps or devices. Manage orders through WhatsApp.</p>
+                    <p className="font-semibold text-foreground mb-1">✅ WhatsApp-only workflow</p>
+                    <p className="text-sm text-muted-foreground">No apps or dashboards. Send us surplus details on WhatsApp.</p>
                   </div>
                   <div className="p-4 bg-background rounded-xl">
                     <p className="font-semibold text-foreground mb-1">✅ FSSAI verified onboarding</p>

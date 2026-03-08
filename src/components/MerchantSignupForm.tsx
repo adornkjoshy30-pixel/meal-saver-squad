@@ -317,7 +317,7 @@ export const MerchantSignupForm = () => {
         </Button>
 
         <p className="text-xs text-gray-500 text-center">
-          By signing up, you agree to our terms. First month is free, cancel anytime.
+          By submitting, you agree to our terms. No fees or charges during the pilot phase.
         </p>
       </div>
     </form>
