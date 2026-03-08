@@ -11,8 +11,8 @@ const Index = () => {
   return (
     <div className="overflow-hidden">
       <PageSEO
-        title="Meal Saver | Surplus Food at Discounted Prices in Kerala"
-        description="Buy surplus food from bakeries, hotels & grocery stores in Kerala at up to 50% off. Save money, reduce waste — order via WhatsApp."
+        title="Meal Saver | Reduce Food Waste & Save on Meals in Kerala"
+        description="Meal Saver is building a platform to connect Kerala's restaurants with customers looking for affordable surplus food. Launching soon — join the waitlist."
         path="/"
       />
       <Hero />

@@ -16,25 +16,25 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-tight">
-              Buy Surplus Food at <br />
-              <span className="text-primary">Discounted Prices</span> <br />
-              in Kerala
+              A Smarter Way to <br />
+              <span className="text-primary">Reduce Food Waste</span> <br />
+              & Save on Meals
             </h1>
             
             <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Meal Saver connects customers with local bakeries, hotels, and grocery stores across Kerala to purchase surplus food at reduced prices. We help businesses reduce food waste while helping customers save money.
+              Meal Saver is building a platform to connect Kerala's bakeries, hotels, and grocery stores with customers who want quality surplus food at reduced prices. We're preparing to launch — join us early.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
                 <Button variant="whatsapp" size="lg" className="group min-h-[48px]">
                   <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
-                  Join Early Access
+                  Get Launch Updates
                 </Button>
               </a>
               <Link to="/merchant">
                 <Button variant="whatsapp-outline" size="lg" className="min-h-[48px]">
-                  Partner With Us
+                  Apply as Launch Partner
                 </Button>
               </Link>
             </div>
