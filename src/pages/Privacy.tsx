@@ -143,7 +143,7 @@ const Privacy = () => {
                   <li><strong className="text-foreground">Withdraw Consent:</strong> Withdraw previously given consent</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed">
-                  To exercise these rights, contact us at saplinxai@gmail.com.
+                  To exercise these rights, contact us at {contact.email}.
                 </p>
               </section>
 
