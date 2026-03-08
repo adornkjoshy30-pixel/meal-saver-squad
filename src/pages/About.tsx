@@ -5,7 +5,7 @@ const values = [
   { icon: Leaf, title: "Sustainability", description: "Every meal rescued is a step toward a greener planet. Our mission starts with reducing food waste across Kerala." },
   { icon: Users, title: "Community", description: "We're building connections between local businesses and eco-conscious customers who care about food and the environment." },
   { icon: Heart, title: "Accessibility", description: "Great food shouldn't go to waste — or cost a fortune. We're designing surplus meals to be affordable and easy to access via WhatsApp." },
-  { icon: Target, title: "Transparency", description: "No hidden fees, no commissions per order. We keep things simple and honest for both merchants and customers." },
+  { icon: Target, title: "Transparency", description: "No hidden fees, no commissions. We keep things simple and honest for both restaurants and customers." },
 ];
 
 const About = () => {
