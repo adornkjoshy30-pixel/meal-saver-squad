@@ -26,7 +26,7 @@ const DealExample = () => {
               </div>
               <div>
                 <p className="font-bold text-primary-foreground text-sm">🔔 Surplus Deal Alert</p>
-                <p className="text-primary-foreground/70 text-xs">MealSaver • Kochi Channel</p>
+                <p className="text-primary-foreground/70 text-xs">MealSaver • Idukki Channel</p>
               </div>
             </div>
 
@@ -34,7 +34,7 @@ const DealExample = () => {
             <div className="p-6 space-y-4">
               <div>
                 <h3 className="font-bold text-foreground text-lg">🍱 6 Veg Meals Available</h3>
-                <p className="text-muted-foreground text-sm mt-1">City Bites Restaurant</p>
+                <p className="text-muted-foreground text-sm mt-1">Hotel Aishwarya, Kattappana</p>
               </div>
 
               <div className="space-y-3">
@@ -52,7 +52,7 @@ const DealExample = () => {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <MapPin className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  <span>Kakkanad, Kochi</span>
+                  <span>Kattappana, Idukki</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <ShoppingBag className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
