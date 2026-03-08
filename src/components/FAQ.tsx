@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "What is Meal Saver?",
-    answer: "Meal Saver is a platform that connects you with local restaurants, bakeries, and cloud kitchens offering surplus food at 50-80% discount. We help reduce food waste while you enjoy delicious meals at great prices.",
+    answer: "Meal Saver is a platform designed to connect you with local restaurants, bakeries, and cloud kitchens that have surplus food available at 50-80% discount. We're building a way to reduce food waste while making meals more affordable.",
   },
   {
     question: "Is the food safe to eat?",

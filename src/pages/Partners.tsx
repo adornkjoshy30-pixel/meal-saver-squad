@@ -5,7 +5,7 @@ const Partners = () => (
   <>
     <PageSEO
       title="Partner With Meal Saver | Zero Commission Platform"
-      description="Join 200+ Kerala restaurants earning from surplus food. Zero commission, WhatsApp ordering, first month free. Start as a merchant today."
+      description="Become an early Meal Saver partner in Kerala. Zero commission, WhatsApp ordering, first month free. Apply as a launch partner today."
       path="/partners"
     />
     <Merchant />

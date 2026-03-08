@@ -2,9 +2,9 @@ import { Leaf, Users, Heart, Target } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
 
 const values = [
-  { icon: Leaf, title: "Sustainability", description: "We believe every meal saved is a step toward a greener planet. Our mission starts with reducing food waste across Kerala." },
-  { icon: Users, title: "Community", description: "We connect local businesses with eco-conscious customers, building a community that cares about food and the environment." },
-  { icon: Heart, title: "Accessibility", description: "Great food shouldn't go to waste — or cost a fortune. We make surplus meals affordable and easy to access via WhatsApp." },
+  { icon: Leaf, title: "Sustainability", description: "Every meal rescued is a step toward a greener planet. Our mission starts with reducing food waste across Kerala." },
+  { icon: Users, title: "Community", description: "We're building connections between local businesses and eco-conscious customers who care about food and the environment." },
+  { icon: Heart, title: "Accessibility", description: "Great food shouldn't go to waste — or cost a fortune. We're designing surplus meals to be affordable and easy to access via WhatsApp." },
   { icon: Target, title: "Transparency", description: "No hidden fees, no commissions per order. We keep things simple and honest for both merchants and customers." },
 ];
 
@@ -13,7 +13,7 @@ const About = () => {
     <div>
       <PageSEO
         title="About Meal Saver | Our Mission to End Food Waste"
-        description="Learn how Meal Saver connects Kerala's restaurants and bakeries with customers to rescue surplus food, reduce waste, and save money."
+        description="Learn how Meal Saver is building a platform to connect Kerala's restaurants and bakeries with customers — reducing surplus food waste and making meals more affordable."
         path="/about"
       />
       {/* Hero */}
@@ -26,8 +26,8 @@ const About = () => {
             We're on a Mission to End Food Waste in Kerala
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Meal Saver connects customers with surplus food from local bakeries, hotels, cloud kitchens, and grocery stores — at discounted prices.
-            We help businesses earn from what would otherwise be wasted, and customers save money while making a positive impact.
+            Meal Saver is building a platform to connect customers with surplus food from local bakeries, hotels, cloud kitchens, and grocery stores — at discounted prices.
+            We aim to help businesses earn from what would otherwise be wasted, and customers access affordable meals while making a positive impact.
           </p>
         </div>
       </section>

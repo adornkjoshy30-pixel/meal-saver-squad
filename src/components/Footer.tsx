@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="font-bold text-xl">Meal Saver</span>
             </Link>
             <p className="text-primary-foreground/70 max-w-sm leading-relaxed">
-              Saving food. Saving money. Saving the planet. One meal at a time.
+              Reducing food waste. Making meals affordable. One step at a time.
             </p>
             <div className="space-y-1 text-sm text-primary-foreground/70">
               <p>📧 <a href="mailto:hello@mealsaver.in" className="hover:text-primary-foreground transition-colors">hello@mealsaver.in</a></p>
