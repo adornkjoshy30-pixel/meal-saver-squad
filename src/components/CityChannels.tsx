@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin } from "lucide-react";
+import { whatsapp } from "@/config/appConfig";
 
 const cities = [
   {
