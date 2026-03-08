@@ -17,7 +17,7 @@ const Footer = () => {
               Reducing food waste. Making meals affordable. One step at a time.
             </p>
             <div className="space-y-1 text-sm text-primary-foreground/70">
-              <p>📧 <a href="mailto:hello@mealsaver.in" className="hover:text-primary-foreground transition-colors">hello@mealsaver.in</a></p>
+              <p>📧 <a href="mailto:saplinxai@gmail.com" className="hover:text-primary-foreground transition-colors">saplinxai@gmail.com</a></p>
               <p>📍 Kerala, India</p>
             </div>
             <div className="flex gap-4">

@@ -110,7 +110,7 @@ const Refund = () => {
                   To request a refund for platform-related issues:
                 </p>
                 <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-                  <li>Email us at <a href="mailto:hello@mealsaver.in" className="text-primary hover:underline">hello@mealsaver.in</a></li>
+                  <li>Email us at <a href="mailto:saplinxai@gmail.com" className="text-primary hover:underline">saplinxai@gmail.com</a></li>
                   <li>Include your order details (order ID, restaurant name, date)</li>
                   <li>Describe the issue clearly with any supporting evidence</li>
                   <li>Provide your UPI ID for refund processing</li>
@@ -177,8 +177,8 @@ const Refund = () => {
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong>{" "}
-                  <a href="mailto:hello@mealsaver.in" className="text-primary hover:underline">
-                    hello@mealsaver.in
+                  <a href="mailto:saplinxai@gmail.com" className="text-primary hover:underline">
+                    saplinxai@gmail.com
                   </a>
                 </p>
                 <p className="text-muted-foreground">
