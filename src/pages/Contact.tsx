@@ -52,7 +52,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <PageSEO
         title="Contact Meal Saver | Get in Touch"
-        description="Have questions about surplus food orders or partnerships? Contact the Meal Saver team — we respond within 24-48 hours."
+        description="Have questions about surplus food deals or partnerships? Contact the Meal Saver team — we respond within 24-48 hours."
         path="/contact"
       />
       {/* Hero Section */}
