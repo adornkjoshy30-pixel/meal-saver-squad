@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
+import { site, social } from "@/config/appConfig";
 
-const BASE_URL = import.meta.env.VITE_SITE_URL || "https://mealsaver.in";
+const BASE_URL = site.url;
 
 interface PageSEOProps {
   title: string;
