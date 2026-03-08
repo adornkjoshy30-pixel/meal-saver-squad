@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import PageSEO from "@/components/PageSEO";
 import BlogInternalLinks from "@/components/BlogInternalLinks";
 import { getPostBySlug } from "@/data/blog-posts";
+import { whatsapp } from "@/config/appConfig";
 
 const BlogPost = () => {
   const { slug } = useParams();
