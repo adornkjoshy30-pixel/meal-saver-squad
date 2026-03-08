@@ -4,18 +4,13 @@
 
 The canonical domain is `https://mealsaver.in`. All `<link rel="canonical">`, `og:url`, and sitemap URLs reference this domain.
 
-The env variable `VITE_SITE_URL` controls the base URL (defaults to `https://mealsaver.in`).
+The site URL is configured in `src/config/appConfig.ts` (defaults to `https://mealsaver.in`).
 
 ## Required Redirects (308 Permanent)
 
-Set these up in your hosting provider (Vercel, Lovable, or DNS):
+Set these up in your hosting provider (Lovable, Vercel, or DNS):
 
-1. **Preview → Production**
-   ```
-   meal-saver-squad.vercel.app/* → https://mealsaver.in/* (308)
-   ```
-
-2. **www → non-www** (pick one canonical; we use non-www)
+1. **www → non-www** (canonical is non-www)
    ```
    www.mealsaver.in/* → https://mealsaver.in/* (308)
    ```
@@ -28,3 +23,7 @@ Set these up in your hosting provider (Vercel, Lovable, or DNS):
 ## SPA Hosting Note
 
 Since this is a single-page app, configure your host to serve `index.html` for all routes (Lovable does this automatically).
+
+## Environment Variables
+
+See `.env.example` for required variables. The `.env` file is not committed to the repository.
