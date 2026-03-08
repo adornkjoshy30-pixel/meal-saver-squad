@@ -60,7 +60,7 @@ const HowItWorks = () => {
                 
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-2xl ${step.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <step.icon className="w-8 h-8" />
+                  <step.icon className="w-8 h-8" aria-hidden="true" />
                 </div>
                 
                 {/* Content */}

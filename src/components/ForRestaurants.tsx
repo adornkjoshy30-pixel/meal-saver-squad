@@ -65,7 +65,7 @@ const ForRestaurants = () => {
               <div className="space-y-8">
                 <div className="text-center">
                   <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <Store className="w-10 h-10 text-primary" />
+                    <Store className="w-10 h-10 text-primary" aria-hidden="true" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">Join 200+ Partners</h3>
                   <p className="text-muted-foreground">Restaurants already saving food with us</p>
