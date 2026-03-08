@@ -8,20 +8,21 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-// Simple in-memory rate limiter (per isolate lifetime)
-const rateMap = new Map<string, { count: number; resetAt: number }>();
-const RATE_LIMIT = 5; // max requests
-const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const FUNCTION_NAME = "partner-signup";
 
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = rateMap.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
-    return false;
-  }
-  entry.count++;
-  return entry.count > RATE_LIMIT;
+function getClientIp(req: Request): string {
+  return (
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    req.headers.get("cf-connecting-ip") ||
+    "unknown"
+  );
+}
+
+function log(level: "info" | "warn" | "error", event: string, meta: Record<string, unknown> = {}) {
+  const entry = { ts: new Date().toISOString(), fn: FUNCTION_NAME, level, event, ...meta };
+  if (level === "error") console.error(JSON.stringify(entry));
+  else if (level === "warn") console.warn(JSON.stringify(entry));
+  else console.log(JSON.stringify(entry));
 }
 
 const signupSchema = z.object({
@@ -55,7 +56,6 @@ const signupSchema = z.object({
     .optional()
     .or(z.literal("")),
   orderMethod: z.enum(["pickup_only", "dine_in_only", "both"]),
-  // Honeypot field — must be empty
   website: z.string().max(0, "Bot detected").optional().or(z.literal("")),
 });
 
@@ -75,20 +75,32 @@ Deno.serve(async (req) => {
     });
   }
 
-  // Rate limit by IP
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    req.headers.get("cf-connecting-ip") ||
-    "unknown";
+  const ip = getClientIp(req);
 
-  if (isRateLimited(ip)) {
-    return new Response(
-      JSON.stringify({ error: "Too many requests. Please try again later." }),
-      {
-        status: 429,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    );
+  const supabaseAdmin = createClient(
+    Deno.env.get("SUPABASE_URL")!,
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+  );
+
+  // Durable rate limiting via database
+  try {
+    const { data: isLimited } = await supabaseAdmin.rpc("check_rate_limit", {
+      p_identifier: ip,
+      p_function_name: FUNCTION_NAME,
+      p_max_requests: 5,
+      p_window_seconds: 3600,
+    });
+
+    if (isLimited) {
+      log("warn", "rate_limited", { ip });
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+  } catch (rlErr) {
+    // If rate limit check fails, log but don't block the request
+    log("error", "rate_limit_check_failed", { ip, error: String(rlErr) });
   }
 
   try {
@@ -97,17 +109,16 @@ Deno.serve(async (req) => {
 
     if (!result.success) {
       const messages = result.error.errors.map((e) => e.message);
+      log("warn", "validation_failed", { ip, errors: messages });
       return new Response(
         JSON.stringify({ error: "Validation failed", details: messages }),
-        {
-          status: 400,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        }
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    // Honeypot: if filled, silently accept (fool the bot)
+    // Honeypot: silently accept if filled
     if (result.data.website) {
+      log("warn", "honeypot_triggered", { ip });
       return new Response(JSON.stringify({ ok: true }), {
         status: 200,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -115,11 +126,6 @@ Deno.serve(async (req) => {
     }
 
     const data = result.data;
-
-    const supabaseAdmin = createClient(
-      Deno.env.get("SUPABASE_URL")!,
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-    );
 
     const { error } = await supabaseAdmin.from("restaurants").insert({
       name: sanitize(data.restaurantName, 100),
@@ -132,28 +138,23 @@ Deno.serve(async (req) => {
     });
 
     if (error) {
-      console.error("DB insert error:", error);
+      log("error", "db_insert_failed", { ip, table: "restaurants", error: error.message });
       return new Response(
         JSON.stringify({ error: "Failed to submit application" }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        }
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
+    log("info", "submission_success", { ip });
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (err) {
-    console.error("Unexpected error:", err);
+    log("error", "unexpected_error", { ip, error: String(err) });
     return new Response(
       JSON.stringify({ error: "Invalid request" }),
-      {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
+      { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
 });
