@@ -29,7 +29,7 @@ const Hero = () => {
               <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
                 <Button variant="whatsapp" size="lg" className="group min-h-[48px]">
                   <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
-                  Join Early Access
+                  Get Launch Updates
                 </Button>
               </a>
               <Link to="/merchant">
