@@ -118,7 +118,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Quick Support</h3>
                     <p className="text-muted-foreground">
-                      For urgent order-related issues, please contact the restaurant directly via WhatsApp.
+                      For deal-related issues, please contact the restaurant directly. Meal Saver can help facilitate communication.
                     </p>
                   </div>
                 </div>

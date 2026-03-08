@@ -27,7 +27,7 @@ const CTASection = () => {
                     Join WhatsApp Deals
                   </Button>
                 </a>
-                <Link to="/merchant">
+                <Link to="/partners">
                   <Button variant="whatsapp-outline" size="lg" className="min-h-[48px] w-full sm:w-auto">
                     <Store className="w-5 h-5" aria-hidden="true" />
                     Become a Restaurant Partner
