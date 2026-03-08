@@ -34,7 +34,7 @@ export const DealCard = ({
     const message = encodeURIComponent(
       `Hi! I want to grab "${title}" from ${restaurantName} for ₹${discountedPrice}`
     );
-    window.open("https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g", "_blank");
+    window.open(whatsapp.channelUrl, "_blank");
   };
 
   return (

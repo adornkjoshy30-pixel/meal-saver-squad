@@ -38,7 +38,7 @@ const PageSEO = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
-      <meta name="twitter:site" content="@MealSaverIndia" />
+      <meta name="twitter:site" content={social.twitterHandle} />
     </Helmet>
   );
 };

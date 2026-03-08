@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} Meal Saver. All rights reserved.
+            © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
           <p className="text-primary-foreground/60 text-sm flex items-center gap-1">
             Made with <Heart className="w-4 h-4 text-destructive fill-destructive" aria-hidden="true" /> in India

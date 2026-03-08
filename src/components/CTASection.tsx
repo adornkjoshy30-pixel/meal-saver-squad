@@ -21,7 +21,7 @@ const CTASection = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
+                <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
                   <Button variant="whatsapp" size="xl" className="group min-h-[48px] w-full sm:w-auto">
                     <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
                     Join WhatsApp Deals

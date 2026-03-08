@@ -6,25 +6,25 @@ const cities = [
   {
     name: "Idukki",
     description: "Kattappana, Thodupuzha, Cheruthoni, Adimaly & more",
-    link: "https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g",
+    link: whatsapp.channelUrl,
     status: "Live",
   },
   {
     name: "Kochi",
     description: "Ernakulam, Kakkanad, Edappally & more",
-    link: "https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g",
+    link: whatsapp.channelUrl,
     status: "Coming Soon",
   },
   {
     name: "Trivandrum",
     description: "Technopark, Pattom, Kowdiar & more",
-    link: "https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g",
+    link: whatsapp.channelUrl,
     status: "Coming Soon",
   },
   {
     name: "Calicut",
     description: "SM Street, Palayam, Mankavu & more",
-    link: "https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g",
+    link: whatsapp.channelUrl,
     status: "Coming Soon",
   },
 ];

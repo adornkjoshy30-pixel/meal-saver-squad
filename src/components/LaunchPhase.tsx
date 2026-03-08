@@ -32,7 +32,7 @@ const LaunchPhase = () => {
               Apply as a Restaurant Partner
             </Button>
           </Link>
-          <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
+          <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
             <Button variant="whatsapp" size="lg" className="min-h-[48px] w-full sm:w-auto">
               <MessageCircle className="w-5 h-5" aria-hidden="true" />
               Join WhatsApp Deals
