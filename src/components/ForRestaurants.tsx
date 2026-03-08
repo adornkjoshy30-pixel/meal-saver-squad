@@ -50,8 +50,8 @@ const ForRestaurants = () => {
             </div>
             
             <Link to="/merchant">
-              <Button variant="whatsapp" size="lg">
-                <Store className="w-5 h-5" />
+              <Button variant="whatsapp" size="lg" className="min-h-[48px]">
+                <Store className="w-5 h-5" aria-hidden="true" />
                 Become a Partner
               </Button>
             </Link>

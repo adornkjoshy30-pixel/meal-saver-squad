@@ -57,10 +57,11 @@ const Header = () => {
 
           {/* Mobile Toggle */}
           <button
-            className="lg:hidden p-2 rounded-lg text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="lg:hidden min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg text-foreground hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -70,6 +71,7 @@ const Header = () => {
       {/* Mobile Nav */}
       {mobileOpen && (
         <nav
+          id="mobile-nav"
           className="lg:hidden border-t border-border bg-background px-6 py-4 space-y-1"
           aria-label="Mobile navigation"
         >
@@ -78,7 +80,7 @@ const Header = () => {
               key={link.to}
               to={link.to}
               onClick={() => setMobileOpen(false)}
-              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+              className={`block px-4 py-3 min-h-[48px] flex items-center rounded-lg text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                 location.pathname === link.to
                   ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
