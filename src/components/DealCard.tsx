@@ -1,6 +1,7 @@
 import { Clock, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { OrderMethodBadge } from "./OrderMethodBadge";
+import { whatsapp } from "@/config/appConfig";
 
 type OrderMethod = "pickup_only" | "dine_in_only" | "both";
 
