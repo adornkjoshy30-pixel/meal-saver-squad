@@ -5,12 +5,11 @@ const Refund = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSEO
-        title="Refund Policy | Meal Saver"
-        description="Understand Meal Saver's refund policy for surplus food purchases. Learn about eligibility, timelines, and how to request a refund."
+        title="Refund & Return Policy | Meal Saver"
+        description="Understand Meal Saver's refund policy for surplus food deals. MealSaver is a promotion platform — all payments are made directly to restaurants."
         path="/refund"
       />
 
-      {/* Content */}
       <section className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <div className="mb-12">
@@ -18,10 +17,10 @@ const Refund = () => {
               Legal
             </span>
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Refund Policy
+              Refund &amp; Return Policy
             </h1>
             <p className="text-muted-foreground">
-              Last updated: December 2024
+              Last updated: March 2026
             </p>
           </div>
 
@@ -32,7 +31,7 @@ const Refund = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Important Notice</h3>
                 <p className="text-muted-foreground">
-                  Meal Saver is a technology platform that connects users with restaurants. We <strong className="text-foreground">do not prepare, deliver, or handle food</strong>. Food quality, safety, quantity, and accuracy are the <strong className="text-foreground">sole responsibility of the restaurant (merchant)</strong>.
+                  Meal Saver is a <strong className="text-foreground">promotion and communication platform</strong>. We share surplus food deal alerts from restaurants through our website and WhatsApp channels. We <strong className="text-foreground">do not sell food, process payments, or handle food preparation</strong>. All purchases are made directly at the restaurant.
                 </p>
               </div>
             </div>
@@ -40,140 +39,136 @@ const Refund = () => {
 
           <div className="prose prose-lg max-w-none">
             <div className="space-y-8 text-foreground">
-              
-              {/* Scope */}
+
+              {/* 1. Introduction */}
               <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">1. Scope of This Policy</h2>
+                <h2 className="text-2xl font-bold text-foreground">1. Introduction</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  This Refund Policy outlines the conditions under which refunds may be issued for transactions made through Meal Saver. Please read this policy carefully before making a purchase.
+                  Meal Saver shares surplus food deal alerts from restaurants through its website and WhatsApp channels. Restaurants provide the deal information, and customers visit the restaurant directly to purchase the food.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Meal Saver does not process payments and does not handle food orders. Our role is limited to promoting available deals and facilitating communication between customers and restaurants.
                 </p>
               </section>
 
-              {/* Restaurant Responsibility */}
+              {/* 2. Payment Responsibility */}
               <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">2. Restaurant Responsibility</h2>
+                <h2 className="text-2xl font-bold text-foreground">2. Payment Responsibility</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  All restaurants (merchants) on Meal Saver are required to:
+                  All payments for surplus food deals are made directly to the restaurant by the customer. Please note:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Maintain valid FSSAI licenses and comply with food safety regulations</li>
-                  <li>Ensure food quality, freshness, and safety at all times</li>
-                  <li>Accurately describe food items, portions, and ingredients</li>
-                  <li>Honor all confirmed orders during the specified pickup window</li>
-                  <li>Handle refund requests professionally and fairly</li>
-                  <li>Follow strict operational and quality standards set by Meal Saver</li>
+                  <li>Meal Saver <strong className="text-foreground">does not collect money</strong> from customers</li>
+                  <li>Meal Saver <strong className="text-foreground">does not process any payments</strong></li>
+                  <li>All transactions happen between the customer and the restaurant</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed">
-                  Meal Saver reserves the right to enforce compliance, including suspending or removing restaurants that fail to meet these standards.
+                  Since Meal Saver does not handle payments, <strong className="text-foreground">Meal Saver does not issue refunds directly</strong>.
                 </p>
               </section>
 
-              {/* Eligible Refunds */}
+              {/* 3. When Refunds May Be Allowed */}
               <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">3. Refunds for Platform-Related Issues</h2>
+                <h2 className="text-2xl font-bold text-foreground">3. When Refunds May Be Allowed</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Meal Saver will process refunds only for issues directly related to our platform, including:
+                  Refunds may be provided <strong className="text-foreground">only by the restaurant</strong>, not by Meal Saver. The restaurant may consider a refund in situations such as:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li><strong className="text-foreground">Failed Payments:</strong> If payment was deducted but the order was not confirmed</li>
-                  <li><strong className="text-foreground">Double Charges:</strong> If you were charged multiple times for the same order</li>
-                  <li><strong className="text-foreground">Technical Errors:</strong> System glitches that prevented order completion</li>
-                  <li><strong className="text-foreground">Restaurant No-Show:</strong> If a restaurant cancels after payment (verified case)</li>
-                </ul>
-              </section>
-
-              {/* Non-Eligible Refunds */}
-              <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">4. Non-Eligible Refunds</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Meal Saver is <strong className="text-foreground">not responsible</strong> for refunds related to:
-                </p>
-                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Food quality, taste, or preparation issues</li>
-                  <li>Food safety concerns or illness claims</li>
-                  <li>Incorrect or missing items in the order</li>
-                  <li>Portion size or quantity disputes</li>
-                  <li>Allergen-related issues</li>
-                  <li>User's failure to pick up within the specified time window</li>
-                  <li>Change of mind after order confirmation</li>
-                  <li>Dissatisfaction with the surprise box contents</li>
+                  <li>The restaurant confirmed a deal but refuses to honour the advertised price</li>
+                  <li>The restaurant runs out of food despite confirming availability</li>
+                  <li>The wrong food item is given to the customer</li>
+                  <li>The food is clearly unsafe or spoiled</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed">
-                  For these issues, please contact the restaurant directly. If unresolved, you may escalate to Meal Saver for mediation.
+                  In these cases the restaurant may choose to:
                 </p>
-              </section>
-
-              {/* How to Request */}
-              <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">5. How to Request a Refund</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  To request a refund for platform-related issues:
-                </p>
-                <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-                  <li>Email us at <a href="mailto:saplinxai@gmail.com" className="text-primary hover:underline">saplinxai@gmail.com</a></li>
-                  <li>Include your order details (order ID, restaurant name, date)</li>
-                  <li>Describe the issue clearly with any supporting evidence</li>
-                  <li>Provide your UPI ID for refund processing</li>
-                </ol>
-                <p className="text-muted-foreground leading-relaxed">
-                  Refund requests must be submitted within <strong className="text-foreground">48 hours</strong> of the transaction.
-                </p>
-              </section>
-
-              {/* Processing Time */}
-              <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">6. Refund Processing</h2>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Approved refunds will be processed within <strong className="text-foreground">5-7 business days</strong></li>
-                  <li>Refunds will be credited to the original payment method (UPI)</li>
-                  <li>You will receive a confirmation email once the refund is processed</li>
-                  <li>Bank processing times may vary; allow additional days for the amount to reflect</li>
+                  <li>Refund the payment</li>
+                  <li>Replace the food item</li>
+                  <li>Provide an alternative</li>
                 </ul>
-              </section>
-
-              {/* Disputes */}
-              <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">7. Dispute Resolution</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  For food-related complaints:
-                </p>
-                <ol className="list-decimal pl-6 space-y-2 text-muted-foreground">
-                  <li><strong className="text-foreground">Contact the Restaurant First:</strong> Most issues can be resolved directly with the merchant</li>
-                  <li><strong className="text-foreground">Document the Issue:</strong> Take photos if there are quality or quantity concerns</li>
-                  <li><strong className="text-foreground">Escalate to Meal Saver:</strong> If the restaurant is unresponsive, email us for mediation</li>
-                </ol>
-                <p className="text-muted-foreground leading-relaxed">
-                  Meal Saver will review cases and may take action against restaurants that repeatedly violate quality standards, including issuing refunds from restaurant deposits where applicable.
+                  Meal Saver may assist in communication between the customer and the restaurant, but <strong className="text-foreground">does not guarantee refunds</strong>.
                 </p>
               </section>
 
-              {/* Enforcement */}
+              {/* 4. When Refunds Are NOT Allowed */}
               <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">8. Restaurant Compliance Enforcement</h2>
+                <h2 className="text-2xl font-bold text-foreground">4. When Refunds Are NOT Allowed</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Meal Saver enforces strict quality and operational standards. Restaurants that fail to comply may face:
+                  Refunds are generally not applicable in the following situations:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Warnings and required corrective action</li>
-                  <li>Temporary suspension from the platform</li>
-                  <li>Permanent removal for repeated violations</li>
-                  <li>Deductions from security deposits for user refunds</li>
+                  <li>The deal has already sold out</li>
+                  <li>The customer arrives after the specified pickup time</li>
+                  <li>The customer changes their mind after reserving or purchasing</li>
+                  <li>The customer does not like the taste of the food</li>
+                  <li>The customer fails to follow pickup instructions shared via WhatsApp</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed">
+                  These conditions are clearly communicated at the time of each deal to avoid misunderstandings.
+                </p>
+              </section>
+
+              {/* 5. Deal Availability Disclaimer */}
+              <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-foreground">5. Deal Availability Disclaimer</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Surplus food deals are limited in nature. Please keep the following in mind:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>Deals may <strong className="text-foreground">sell out quickly</strong> due to limited quantities</li>
+                  <li>Restaurants control the <strong className="text-foreground">final availability</strong> of each deal</li>
+                  <li>Restaurants may stop accepting reservations when the deal quantity is finished</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed">
+                  Meal Saver <strong className="text-foreground">cannot guarantee availability</strong> of any deal. Reserving via WhatsApp helps secure your portion, but availability is ultimately determined by the restaurant.
+                </p>
+              </section>
+
+              {/* 6. MealSaver's Role in Disputes */}
+              <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-foreground">6. Meal Saver's Role in Disputes</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  If a dispute arises between a customer and a restaurant, Meal Saver may help facilitate communication between both parties. However:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>Meal Saver is <strong className="text-foreground">not responsible for issuing refunds</strong></li>
+                  <li>Final decisions about refunds, replacements, or alternatives are made <strong className="text-foreground">solely by the restaurant</strong></li>
+                  <li>Meal Saver reserves the right to remove restaurants that repeatedly fail to honour confirmed deals</li>
                 </ul>
               </section>
 
-              {/* Final Clause */}
+              {/* 7. Customer Responsibility */}
               <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">9. Final Provisions</h2>
+                <h2 className="text-2xl font-bold text-foreground">7. Customer Responsibility</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Meal Saver reserves the right to modify this Refund Policy at any time. All refund decisions made by Meal Saver are final. By using our platform, you agree to this policy.
+                  To ensure a smooth experience, customers are expected to:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>Arrive at the restaurant during the <strong className="text-foreground">specified pickup time</strong></li>
+                  <li>Confirm deal availability with the restaurant if necessary</li>
+                  <li>Follow pickup instructions shared via WhatsApp</li>
+                  <li>Reserve portions via WhatsApp message before visiting the restaurant</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed">
+                  Failure to follow these steps may result in the deal being unavailable, and no refund will be applicable in such cases.
                 </p>
               </section>
 
-              {/* Contact */}
+              {/* 8. Final Provisions */}
               <section className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">10. Contact Us</h2>
+                <h2 className="text-2xl font-bold text-foreground">8. Final Provisions</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  For refund requests or questions about this policy:
+                  Meal Saver reserves the right to modify this Refund &amp; Return Policy at any time. Changes will be reflected on this page with an updated date. By using our platform, you agree to this policy.
+                </p>
+              </section>
+
+              {/* 9. Contact */}
+              <section className="space-y-4">
+                <h2 className="text-2xl font-bold text-foreground">9. Contact Us</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  If you have questions about a deal or experience a problem with a restaurant, you can reach us at:
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong>{" "}
@@ -182,7 +177,10 @@ const Refund = () => {
                   </a>
                 </p>
                 <p className="text-muted-foreground">
-                  <strong className="text-foreground">Response Time:</strong> Within 24-48 hours (Monday–Friday, 9 AM–6 PM IST)
+                  <strong className="text-foreground">Response Time:</strong> Within 24–48 hours (Monday–Friday, 9 AM–6 PM IST)
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Meal Saver may assist in communication but does not manage payments or food service.
                 </p>
               </section>
 
@@ -190,8 +188,6 @@ const Refund = () => {
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 };
