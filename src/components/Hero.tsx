@@ -16,13 +16,13 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-tight">
-              Buy Surplus Food at <br />
-              <span className="text-primary">Discounted Prices</span> <br />
-              in Kerala
+              A Smarter Way to <br />
+              <span className="text-primary">Reduce Food Waste</span> <br />
+              & Save on Meals
             </h1>
             
             <p className="text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Meal Saver connects customers with local bakeries, hotels, and grocery stores across Kerala to purchase surplus food at reduced prices. We help businesses reduce food waste while helping customers save money.
+              Meal Saver is building a platform to connect Kerala's bakeries, hotels, and grocery stores with customers who want quality surplus food at reduced prices. We're preparing to launch — join us early.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
