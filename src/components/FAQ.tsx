@@ -15,8 +15,8 @@ const faqs = [
     answer: "Join the WhatsApp channel for your city. Whenever a restaurant near you has surplus food, we publish the deal in the channel with all the details — food items, price, pickup time, and location. You then go directly to the restaurant.",
   },
   {
-    question: "Do I need to reserve or pre-order?",
-    answer: "No reservation needed. Deals are first-come, first-served. When you see a deal in the WhatsApp channel, head to the restaurant during the pickup window. Quantities are limited, so act fast!",
+    question: "How do I reserve a deal?",
+    answer: "When you see a deal in the WhatsApp channel, tap the 'Reserve' link to send a pre-filled WhatsApp message to MealSaver. Our team will confirm your reservation and share the pickup details. Your portion is held until the end of the pickup window.",
   },
   {
     question: "Is the food safe to eat?",
