@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import BoxExamples from "@/components/BoxExamples";
+import WhyMealSaver from "@/components/WhyMealSaver";
 import ForRestaurants from "@/components/ForRestaurants";
 import Mission from "@/components/Mission";
 import FAQ from "@/components/FAQ";
@@ -18,6 +19,7 @@ const Index = () => {
       <Hero />
       <HowItWorks />
       <BoxExamples />
+      <WhyMealSaver />
       <ForRestaurants />
       <Mission />
       <FAQ />
