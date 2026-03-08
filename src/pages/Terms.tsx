@@ -141,8 +141,8 @@ const Terms = () => {
                 </p>
                 <p className="text-muted-foreground">
                   <strong className="text-foreground">Email:</strong>{" "}
-                  <a href="mailto:hello@mealsaver.in" className="text-primary hover:underline">
-                    hello@mealsaver.in
+                  <a href="mailto:saplinxai@gmail.com" className="text-primary hover:underline">
+                    saplinxai@gmail.com
                   </a>
                 </p>
               </section>
