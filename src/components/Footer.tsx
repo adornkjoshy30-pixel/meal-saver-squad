@@ -15,11 +15,11 @@ const Footer = () => {
               <span className="font-bold text-xl">{site.name}</span>
             </Link>
             <p className="text-primary-foreground/70 max-w-sm leading-relaxed">
-              Good Food. Great Price. Zero Waste.
+              {site.tagline}
             </p>
             <div className="space-y-1 text-sm text-primary-foreground/70">
-              <p>📧 <a href="mailto:saplinxai@gmail.com" className="hover:text-primary-foreground transition-colors">saplinxai@gmail.com</a></p>
-              <p>📍 Kerala, India</p>
+              <p>📧 <a href={`mailto:${contact.email}`} className="hover:text-primary-foreground transition-colors">{contact.email}</a></p>
+              <p>📍 {site.location}</p>
             </div>
             <div className="flex gap-4">
               <a href="#" aria-label="Follow Meal Saver on Twitter" className="w-12 h-12 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
