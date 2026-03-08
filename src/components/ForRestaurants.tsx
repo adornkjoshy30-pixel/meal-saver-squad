@@ -40,7 +40,7 @@ const ForRestaurants = () => {
                   className="flex items-center gap-3 p-4 bg-card rounded-xl shadow-soft"
                 >
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-5 h-5 text-primary" />
+                    <benefit.icon className="w-5 h-5 text-primary" aria-hidden="true" />
                   </div>
                   <span className="text-foreground font-medium text-sm">
                     {benefit.text}
