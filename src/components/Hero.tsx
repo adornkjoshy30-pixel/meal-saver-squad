@@ -31,13 +31,13 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g" target="_blank" rel="noopener noreferrer">
-                <Button variant="whatsapp" size="lg" className="group">
-                  <MessageCircle className="group-hover:scale-110 transition-transform" />
+                <Button variant="whatsapp" size="lg" className="group min-h-[48px]">
+                  <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
                   Start on WhatsApp
                 </Button>
               </a>
               <Link to="/merchant">
-                <Button variant="whatsapp-outline" size="lg">
+                <Button variant="whatsapp-outline" size="lg" className="min-h-[48px]">
                   Join as Merchant
                 </Button>
               </Link>
