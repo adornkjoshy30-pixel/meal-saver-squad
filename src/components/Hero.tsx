@@ -66,10 +66,12 @@ const Hero = () => {
             <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-3xl transform rotate-6"></div>
             <img 
               src={heroFood} 
-              alt="Delicious surplus food boxes with fresh meals and salads" 
+              alt="Surplus food boxes containing fresh meals, salads, and bakery items available at discounted prices" 
               className="relative rounded-3xl shadow-card w-full object-cover animate-float"
               fetchPriority="high"
               decoding="async"
+              width={600}
+              height={400}
             />
             {/* Floating Badge */}
             <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-card">
