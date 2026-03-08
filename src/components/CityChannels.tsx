@@ -3,10 +3,16 @@ import { MessageCircle, MapPin } from "lucide-react";
 
 const cities = [
   {
+    name: "Idukki",
+    description: "Kattappana, Thodupuzha, Cheruthoni, Adimaly & more",
+    link: "https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g",
+    status: "Live",
+  },
+  {
     name: "Kochi",
     description: "Ernakulam, Kakkanad, Edappally & more",
     link: "https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g",
-    status: "Live",
+    status: "Coming Soon",
   },
   {
     name: "Trivandrum",
