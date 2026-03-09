@@ -1,11 +1,13 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import AppLayout from "@/components/AppLayout";
+import LazyRoute from "@/components/LazyRoute";
 import Index from "./pages/Index";
 
 // Lazy-load non-critical pages
@@ -26,37 +28,37 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const queryClient = new QueryClient();
 
 const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Suspense fallback={<div className="min-h-screen bg-background" />}>
+  <ErrorBoundary>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
             <Routes>
               <Route element={<AppLayout />}>
                 <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/how-it-works" element={<HowItWorksPage />} />
-                <Route path="/partners" element={<Partners />} />
-                <Route path="/impact" element={<Impact />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/refund" element={<Refund />} />
+                <Route path="/about" element={<LazyRoute component={About} />} />
+                <Route path="/how-it-works" element={<LazyRoute component={HowItWorksPage} />} />
+                <Route path="/partners" element={<LazyRoute component={Partners} />} />
+                <Route path="/impact" element={<LazyRoute component={Impact} />} />
+                <Route path="/pricing" element={<LazyRoute component={Pricing} />} />
+                <Route path="/blog" element={<LazyRoute component={Blog} />} />
+                <Route path="/blog/:slug" element={<LazyRoute component={BlogPost} />} />
+                <Route path="/contact" element={<LazyRoute component={Contact} />} />
+                <Route path="/terms" element={<LazyRoute component={Terms} />} />
+                <Route path="/privacy" element={<LazyRoute component={Privacy} />} />
+                <Route path="/refund" element={<LazyRoute component={Refund} />} />
                 <Route path="/merchant" element={<Navigate to="/partners" replace />} />
-                <Route path="/deal-policy" element={<DealPolicy />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path="/deal-policy" element={<LazyRoute component={DealPolicy} />} />
+                <Route path="*" element={<LazyRoute component={NotFound} />} />
               </Route>
             </Routes>
-          </Suspense>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </ErrorBoundary>
 );
 
 export default App;
