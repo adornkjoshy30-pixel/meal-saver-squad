@@ -6,17 +6,17 @@
 
 // ─── Environment variables (VITE_ prefix = browser-safe) ────────────────────
 
-const requiredEnv = (key: string): string => {
+const safeEnv = (key: string, fallback = ""): string => {
   const value = import.meta.env[key];
-  if (!value) {
-    throw new Error(`Missing required environment variable: ${key}`);
+  if (!value && import.meta.env.DEV) {
+    console.warn(`[appConfig] Missing env variable: ${key}`);
   }
-  return value as string;
+  return (value as string) || fallback;
 };
 
 export const env = {
-  supabaseUrl: requiredEnv("VITE_SUPABASE_URL"),
-  supabaseAnonKey: requiredEnv("VITE_SUPABASE_PUBLISHABLE_KEY"),
+  supabaseUrl: safeEnv("VITE_SUPABASE_URL"),
+  supabaseAnonKey: safeEnv("VITE_SUPABASE_PUBLISHABLE_KEY"),
 } as const;
 
 // ─── Site / Brand ───────────────────────────────────────────────────────────
