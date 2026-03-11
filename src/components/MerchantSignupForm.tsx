@@ -97,6 +97,7 @@ export const MerchantSignupForm = () => {
     setIsSubmitting(true);
     
     try {
+      const supabase = await getSupabase();
       const { data: fnData, error } = await supabase.functions.invoke("partner-signup", {
         body: {
           restaurantName: formData.restaurantName,
