@@ -6,7 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { ShoppingBag, UtensilsCrossed, ArrowRight, Store, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 import { merchantFormSchema } from "@/lib/validation";
-import { supabase } from "@/integrations/supabase/client";
+// Lazy-import supabase to avoid crash if env vars are missing at module load
+const getSupabase = () => import("@/integrations/supabase/client").then(m => m.supabase);
 
 type OrderMethod = "pickup_only" | "dine_in_only" | "both";
 
@@ -96,6 +97,7 @@ export const MerchantSignupForm = () => {
     setIsSubmitting(true);
     
     try {
+      const supabase = await getSupabase();
       const { data: fnData, error } = await supabase.functions.invoke("partner-signup", {
         body: {
           restaurantName: formData.restaurantName,
