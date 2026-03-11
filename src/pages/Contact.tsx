@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import PageSEO from "@/components/PageSEO";
-import { supabase } from "@/integrations/supabase/client";
+const getSupabase = () => import("@/integrations/supabase/client").then(m => m.supabase);
 import { contact } from "@/config/appConfig";
 
 const Contact = () => {
