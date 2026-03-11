@@ -21,6 +21,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      const supabase = await getSupabase();
       const { data: fnData, error } = await supabase.functions.invoke("contact-submit", {
         body: {
           name: formData.get("name"),
