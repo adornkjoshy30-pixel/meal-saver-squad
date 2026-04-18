@@ -31,7 +31,7 @@ export const site = {
 // ─── Contact ────────────────────────────────────────────────────────────────
 
 export const contact = {
-  email: "saplinxai@gmail.com",
+  email: "hello@mealsaver.in",
   supportHours: "Monday – Friday, 9:00 AM – 6:00 PM IST",
   responseTime: "Within 24–48 hours",
 } as const;
