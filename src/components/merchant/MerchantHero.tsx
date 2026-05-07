@@ -61,7 +61,7 @@ const MerchantHero = () => {
               </div>
 
               {/* WhatsApp message stack */}
-              <div className="space-y-2 mb-6 min-h-[120px]">
+              <div className="relative h-[60px] mb-6">
                 <FlowMsg className="ms-msg-1" text="🍛 12 plates Biriyani · ₹80 · pickup 9–10 PM" />
                 <FlowMsg className="ms-msg-2" text="🥘 8 portions Curry Meals · ₹60 · pickup 9–10 PM" />
                 <FlowMsg className="ms-msg-3" text="🥖 20 fresh buns · ₹15 · pickup until 10 PM" />
@@ -90,7 +90,7 @@ const MerchantHero = () => {
 };
 
 const FlowMsg = ({ text, className }: { text: string; className?: string }) => (
-  <div className={`absolute-stack inline-block w-full ${className ?? ""}`}>
+  <div className={`absolute inset-x-0 top-0 ${className ?? ""}`}>
     <div className="inline-flex max-w-full px-3.5 py-2.5 rounded-2xl rounded-bl-sm bg-[var(--ms-accent-soft)] border border-[var(--ms-accent)]/25 text-sm text-[var(--ms-text)]">
       {text}
     </div>
