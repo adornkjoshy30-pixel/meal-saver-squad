@@ -1,29 +1,27 @@
-import Hero from "@/components/Hero";
-import HowItWorks from "@/components/HowItWorks";
-import DealExample from "@/components/DealExample";
-import CityChannels from "@/components/CityChannels";
-import WhyItMatters from "@/components/WhyItMatters";
-import LaunchPhase from "@/components/LaunchPhase";
-import FAQ from "@/components/FAQ";
-import CTASection from "@/components/CTASection";
 import PageSEO from "@/components/PageSEO";
+import MerchantHero from "@/components/merchant/MerchantHero";
+import MerchantProblem from "@/components/merchant/MerchantProblem";
+import MerchantSolution from "@/components/merchant/MerchantSolution";
+import MerchantRetention from "@/components/merchant/MerchantRetention";
+import MerchantPilot from "@/components/merchant/MerchantPilot";
+import MerchantFinalCTA from "@/components/merchant/MerchantFinalCTA";
+import FAQ from "@/components/FAQ";
 
 const Index = () => {
   return (
     <div className="overflow-hidden">
       <PageSEO
-        title="MealSaver | Surplus Food Deals From Local Restaurants in Kerala"
-        description="Get surplus food deals from restaurants near you via WhatsApp. No app needed. Join your city's channel and grab affordable meals before they go to waste."
+        title="MealSaver | Recover Revenue From Unsold Food via WhatsApp"
+        description="MealSaver helps Kerala restaurants recover daily revenue from unsold food. List surplus on WhatsApp in 30 seconds — no app, no commission. Pilot onboarding open."
         path="/"
       />
-      <Hero />
-      <HowItWorks />
-      <DealExample />
-      <CityChannels />
-      <WhyItMatters />
-      <LaunchPhase />
+      <MerchantHero />
+      <MerchantProblem />
+      <MerchantSolution />
+      <MerchantRetention />
+      <MerchantPilot />
       <FAQ />
-      <CTASection />
+      <MerchantFinalCTA />
     </div>
   );
 };
