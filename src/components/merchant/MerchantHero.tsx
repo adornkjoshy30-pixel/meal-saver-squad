@@ -1,78 +1,86 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Store, ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle, Send, Sparkles, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const MerchantHero = () => {
   return (
-    <section className="border-b border-border bg-background">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 pt-16 pb-16 lg:pt-24 lg:pb-20">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wide uppercase">
-              For Restaurants in Kerala · Pilot Onboarding Open
+    <section className="relative ms-grid-bg overflow-hidden">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--ms-accent)]/40 to-transparent" />
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-24 pb-24 lg:pt-32 lg:pb-36">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* LEFT */}
+          <div className="lg:col-span-6 space-y-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--ms-border-strong)] bg-[var(--ms-surface)] text-[11px] uppercase tracking-[0.18em] text-[var(--ms-text-dim)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--ms-accent)] shadow-[0_0_10px_var(--ms-accent)]" />
+              Merchant Activation System
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.05] tracking-tight">
-              Recover Revenue From <br />
-              <span className="text-primary">Unsold Food — Daily.</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-[-0.03em] leading-[0.98] text-[var(--ms-text)]">
+              Turn unsold food <br />
+              into <span className="text-[var(--ms-accent)]">daily revenue</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
-              List your end-of-day surplus on WhatsApp in under 30 seconds.
-              MealSaver pushes it to nearby customers — they pick up before it expires.
-              No app. No commission. No new staff process.
+            <p className="text-base lg:text-lg text-[var(--ms-text-dim)] max-w-md">
+              List surplus meals in 30 seconds via WhatsApp.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <Link to="/partners#signup">
-                <Button variant="whatsapp" size="lg" className="min-h-[52px] w-full sm:w-auto font-semibold">
-                  <MessageCircle className="w-5 h-5" aria-hidden="true" />
-                  Start Listing Surplus on WhatsApp
-                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </Button>
+              <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full bg-[var(--ms-accent)] text-[#06251c] font-semibold text-sm tracking-tight ms-cta-glow"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Start WhatsApp Listing
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <Link
+                to="/partners#signup"
+                className="inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full border border-[var(--ms-border-strong)] text-[var(--ms-text)] hover:bg-[var(--ms-surface-2)] font-medium text-sm tracking-tight transition"
+              >
+                Become Partner Restaurant
               </Link>
-              <Link to="/partners">
-                <Button variant="whatsapp-outline" size="lg" className="min-h-[52px] w-full sm:w-auto">
-                  <Store className="w-5 h-5" aria-hidden="true" />
-                  Become a Partner Restaurant
-                </Button>
-              </Link>
-            </div>
-
-            <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 text-sm text-muted-foreground">
-              <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> No app to install</span>
-              <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> No commission during pilot</span>
-              <span className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> You set the price</span>
             </div>
           </div>
 
-          {/* Operational ROI panel */}
-          <div className="lg:col-span-5">
-            <div className="bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-card">
-              <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-4">
-                A typical closing-time loss
-              </p>
-              <div className="space-y-4">
-                <div className="flex justify-between items-baseline border-b border-border pb-3">
-                  <span className="text-sm text-muted-foreground">Unsold meals / day</span>
-                  <span className="text-xl font-bold text-foreground">15–40</span>
+          {/* RIGHT — Animated system flow */}
+          <div className="lg:col-span-6">
+            <div className="relative ms-glass rounded-3xl p-6 lg:p-8 overflow-hidden">
+              <div className="absolute -top-px left-10 right-10 h-px bg-gradient-to-r from-transparent via-[var(--ms-accent)]/60 to-transparent" />
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[var(--ms-text-mute)]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--ms-accent)] animate-pulse" />
+                  Live system
                 </div>
-                <div className="flex justify-between items-baseline border-b border-border pb-3">
-                  <span className="text-sm text-muted-foreground">Avg. cost per meal</span>
-                  <span className="text-xl font-bold text-foreground">₹60–₹120</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-border pb-3">
-                  <span className="text-sm text-muted-foreground">Daily loss (est.)</span>
-                  <span className="text-xl font-bold text-destructive">₹900–₹4,800</span>
-                </div>
-                <div className="flex justify-between items-baseline pt-1">
-                  <span className="text-sm font-medium text-foreground">Recoverable via MealSaver</span>
-                  <span className="text-xl font-bold text-primary">40–60%</span>
+                <div className="flex gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/15" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/15" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-white/15" />
                 </div>
               </div>
-              <p className="text-xs text-muted-foreground mt-5 leading-relaxed">
-                Indicative figures based on typical Kerala café & hotel kitchens. Your actual recovery depends on volume and pricing.
-              </p>
+
+              {/* WhatsApp message stack */}
+              <div className="space-y-2 mb-6 min-h-[120px]">
+                <FlowMsg className="ms-msg-1" text="🍛 12 plates Biriyani · ₹80 · pickup 9–10 PM" />
+                <FlowMsg className="ms-msg-2" text="🥘 8 portions Curry Meals · ₹60 · pickup 9–10 PM" />
+                <FlowMsg className="ms-msg-3" text="🥖 20 fresh buns · ₹15 · pickup until 10 PM" />
+              </div>
+
+              {/* Flow line */}
+              <svg viewBox="0 0 400 60" className="w-full h-12">
+                <line x1="20" y1="30" x2="380" y2="30" stroke="rgba(45,212,168,0.5)" strokeWidth="1.5" className="ms-flow-line" />
+                <circle cx="20" cy="30" r="4" fill="#2dd4a8" />
+                <circle cx="200" cy="30" r="5" fill="#2dd4a8" />
+                <circle cx="380" cy="30" r="4" fill="#2dd4a8" />
+              </svg>
+
+              {/* Three node states */}
+              <div className="grid grid-cols-3 gap-3 pt-2">
+                <FlowNode icon={Send} label="Restaurant sends" />
+                <FlowNode icon={Sparkles} label="MealSaver routes" highlight />
+                <FlowNode icon={ShoppingBag} label="Customer pickup" />
+              </div>
             </div>
           </div>
         </div>
@@ -80,5 +88,20 @@ const MerchantHero = () => {
     </section>
   );
 };
+
+const FlowMsg = ({ text, className }: { text: string; className?: string }) => (
+  <div className={`absolute-stack inline-block w-full ${className ?? ""}`}>
+    <div className="inline-flex max-w-full px-3.5 py-2.5 rounded-2xl rounded-bl-sm bg-[var(--ms-accent-soft)] border border-[var(--ms-accent)]/25 text-sm text-[var(--ms-text)]">
+      {text}
+    </div>
+  </div>
+);
+
+const FlowNode = ({ icon: Icon, label, highlight }: { icon: any; label: string; highlight?: boolean }) => (
+  <div className={`flex flex-col items-center gap-2 p-3 rounded-xl border ${highlight ? "border-[var(--ms-accent)]/40 bg-[var(--ms-accent-soft)]" : "border-[var(--ms-border)] bg-[var(--ms-surface)]"}`}>
+    <Icon className={`w-4 h-4 ${highlight ? "text-[var(--ms-accent)]" : "text-[var(--ms-text-dim)]"}`} />
+    <span className="text-[11px] tracking-tight text-[var(--ms-text-dim)] text-center">{label}</span>
+  </div>
+);
 
 export default MerchantHero;
