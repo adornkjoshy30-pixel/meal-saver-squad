@@ -200,3 +200,89 @@ html {
 .animate-scale-in {
   animation: scale-in 0.5s ease-out forwards;
 }
+
+/* ============================================================
+   Merchant landing — futuristic dark theme tokens & utilities
+   ============================================================ */
+.ms-dark {
+  --ms-bg: #0a0d0c;
+  --ms-bg-2: #0f1413;
+  --ms-surface: rgba(255,255,255,0.03);
+  --ms-surface-2: rgba(255,255,255,0.05);
+  --ms-border: rgba(255,255,255,0.08);
+  --ms-border-strong: rgba(255,255,255,0.14);
+  --ms-text: #e8efed;
+  --ms-text-dim: #8a9794;
+  --ms-text-mute: #5b6664;
+  --ms-accent: #2dd4a8;
+  --ms-accent-soft: rgba(45,212,168,0.12);
+  --ms-accent-glow: 0 0 0 1px rgba(45,212,168,0.4), 0 0 30px rgba(45,212,168,0.35);
+  background: var(--ms-bg);
+  color: var(--ms-text);
+}
+
+.ms-grid-bg {
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(45,212,168,0.10), transparent 60%),
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+  background-position: center top, center, center;
+}
+
+.ms-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+  border: 1px solid var(--ms-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.ms-card-hover {
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease, background .35s ease;
+}
+.ms-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: var(--ms-border-strong);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow: 0 20px 60px -20px rgba(45,212,168,0.18);
+}
+
+.ms-cta-glow {
+  box-shadow: 0 0 0 1px rgba(45,212,168,0.45), 0 10px 40px -8px rgba(45,212,168,0.55);
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+.ms-cta-glow:hover { transform: translateY(-1px); box-shadow: 0 0 0 1px rgba(45,212,168,0.7), 0 14px 50px -6px rgba(45,212,168,0.75); }
+
+@keyframes ms-pulse-glow {
+  0%,100% { box-shadow: 0 0 0 1px rgba(45,212,168,0.45), 0 10px 40px -8px rgba(45,212,168,0.45); }
+  50%    { box-shadow: 0 0 0 1px rgba(45,212,168,0.8),  0 14px 60px -4px rgba(45,212,168,0.85); }
+}
+.ms-pulse { animation: ms-pulse-glow 2.6s ease-in-out infinite; }
+
+@keyframes ms-flow-dash {
+  to { stroke-dashoffset: -24; }
+}
+.ms-flow-line { stroke-dasharray: 6 6; animation: ms-flow-dash 1.4s linear infinite; }
+
+@keyframes ms-orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.ms-orbit { animation: ms-orbit 22s linear infinite; }
+
+@keyframes ms-rise {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ms-msg-cycle {
+  0%, 18%  { opacity: 0; transform: translateY(8px); }
+  22%, 42% { opacity: 1; transform: translateY(0); }
+  50%, 100% { opacity: 0; transform: translateY(-4px); }
+}
+.ms-msg-1 { animation: ms-msg-cycle 6s ease-in-out infinite; animation-delay: 0s; }
+.ms-msg-2 { animation: ms-msg-cycle 6s ease-in-out infinite; animation-delay: 2s; }
+.ms-msg-3 { animation: ms-msg-cycle 6s ease-in-out infinite; animation-delay: 4s; }
+
+.ms-reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s ease, transform .8s ease; }
+.ms-reveal.is-visible { opacity: 1; transform: translateY(0); }

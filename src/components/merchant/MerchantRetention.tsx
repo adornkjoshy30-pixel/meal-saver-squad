@@ -1,61 +1,71 @@
-import { Repeat, Timer, UserCheck, TrendingUp } from "lucide-react";
+const orbitLabels = [
+  { label: "List", angle: 0 },
+  { label: "Sell", angle: 90 },
+  { label: "Recover", angle: 180 },
+  { label: "Repeat", angle: 270 },
+];
 
-const habits = [
-  {
-    icon: Timer,
-    title: "List in under 30 seconds",
-    body: "A single WhatsApp message at closing time. Faster than counting leftovers.",
-  },
-  {
-    icon: Repeat,
-    title: "Built as a daily habit",
-    body: "Same number, same format, every evening. No logins, no app updates, no friction.",
-  },
-  {
-    icon: UserCheck,
-    title: "No extra staff required",
-    body: "Whoever closes the kitchen sends the message. That's it. No new role to hire.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Recovered revenue compounds",
-    body: "Even ₹500–₹2,000 recovered per night becomes ₹15K–₹60K of pure margin every month.",
-  },
+const sideNotes = [
+  "30-second listing",
+  "Daily routine",
+  "Revenue recovery",
+  "Zero friction system",
 ];
 
 const MerchantRetention = () => (
-  <section className="py-16 lg:py-24 bg-primary/5 border-b border-border">
-    <div className="max-w-6xl mx-auto px-6 lg:px-12">
-      <div className="max-w-3xl mb-12">
-        <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-3">Why partners keep using it</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
-          Designed to be a daily habit — not a one-time signup.
+  <section className="py-28 lg:py-36 border-t border-[var(--ms-border)] relative overflow-hidden">
+    <div className="absolute inset-0 ms-grid-bg opacity-50 pointer-events-none" />
+    <div className="max-w-7xl mx-auto px-6 lg:px-12 relative">
+      <div className="max-w-2xl mb-16">
+        <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--ms-accent)] mb-4">Retention engine</p>
+        <h2 className="text-4xl lg:text-5xl font-semibold tracking-[-0.025em] leading-[1.05]">
+          A daily operational habit — <br />not a one-time tool.
         </h2>
-        <p className="text-muted-foreground mt-3">
-          MealSaver only works if you list consistently. So we built the lightest possible workflow on the tool you already use all day.
-        </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-5">
-        {habits.map((h) => (
-          <div key={h.title} className="bg-card border border-border rounded-xl p-6 flex gap-4">
-            <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <h.icon className="w-5 h-5 text-primary" aria-hidden="true" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-foreground mb-1">{h.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{h.body}</p>
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Loop diagram */}
+        <div className="relative aspect-square max-w-[460px] mx-auto w-full">
+          <div className="absolute inset-8 rounded-full border border-[var(--ms-border-strong)]" />
+          <div className="absolute inset-8 rounded-full border border-[var(--ms-accent)]/30 ms-orbit"
+               style={{ borderStyle: "dashed" }} />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-[10px] tracking-[0.3em] text-[var(--ms-text-mute)] mb-2">THE LOOP</p>
+              <p className="text-2xl font-semibold tracking-tight">List → Sell <br/> Recover → Repeat</p>
             </div>
           </div>
-        ))}
-      </div>
+          {orbitLabels.map((o) => {
+            const rad = (o.angle * Math.PI) / 180;
+            const r = 46; // percent
+            const x = 50 + r * Math.cos(rad);
+            const y = 50 + r * Math.sin(rad);
+            return (
+              <div
+                key={o.label}
+                className="absolute -translate-x-1/2 -translate-y-1/2"
+                style={{ left: `${x}%`, top: `${y}%` }}
+              >
+                <div className="px-3 py-1.5 rounded-full bg-[var(--ms-bg-2)] border border-[var(--ms-accent)]/40 text-xs font-medium text-[var(--ms-accent)] shadow-[0_0_20px_rgba(45,212,168,0.25)]">
+                  {o.label}
+                </div>
+              </div>
+            );
+          })}
+        </div>
 
-      <div className="mt-10 bg-card border border-border rounded-xl p-6 lg:p-8">
-        <p className="text-sm font-semibold text-primary mb-2">The math of consistency</p>
-        <p className="text-foreground text-lg leading-relaxed">
-          Listing surplus <span className="font-semibold">once a week</span> recovers a few hundred rupees.
-          Listing <span className="font-semibold">every closing shift</span> turns daily waste into a measurable line of recurring monthly revenue.
-        </p>
+        {/* Side notes */}
+        <div className="space-y-3">
+          {sideNotes.map((n, i) => (
+            <div key={n} className="ms-glass rounded-xl px-5 py-4 flex items-center gap-4">
+              <span className="text-[10px] font-mono text-[var(--ms-text-mute)]">0{i + 1}</span>
+              <span className="text-sm font-medium tracking-tight text-[var(--ms-text)]">{n}</span>
+            </div>
+          ))}
+          <p className="text-lg font-medium tracking-tight text-[var(--ms-text)] pt-6 leading-snug">
+            Built to be triggered <span className="text-[var(--ms-accent)]">every closing shift</span> — without reminders, dashboards, or training.
+          </p>
+        </div>
       </div>
     </div>
   </section>

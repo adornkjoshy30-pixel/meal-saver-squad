@@ -3,24 +3,24 @@ import MerchantHero from "@/components/merchant/MerchantHero";
 import MerchantProblem from "@/components/merchant/MerchantProblem";
 import MerchantSolution from "@/components/merchant/MerchantSolution";
 import MerchantRetention from "@/components/merchant/MerchantRetention";
-import MerchantPilot from "@/components/merchant/MerchantPilot";
+import MerchantValue from "@/components/merchant/MerchantValue";
+import MerchantTrust from "@/components/merchant/MerchantTrust";
 import MerchantFinalCTA from "@/components/merchant/MerchantFinalCTA";
-import FAQ from "@/components/FAQ";
 
 const Index = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="ms-dark">
       <PageSEO
-        title="MealSaver | Recover Revenue From Unsold Food via WhatsApp"
-        description="MealSaver helps Kerala restaurants recover daily revenue from unsold food. List surplus on WhatsApp in 30 seconds — no app, no commission. Pilot onboarding open."
+        title="MealSaver | Turn Unsold Food Into Daily Revenue via WhatsApp"
+        description="Restaurants in Kerala recover daily revenue from unsold food by listing surplus meals via WhatsApp in 30 seconds. No app, no setup, no commission."
         path="/"
       />
       <MerchantHero />
       <MerchantProblem />
       <MerchantSolution />
       <MerchantRetention />
-      <MerchantPilot />
-      <FAQ />
+      <MerchantValue />
+      <MerchantTrust />
       <MerchantFinalCTA />
     </div>
   );

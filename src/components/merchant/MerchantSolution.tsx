@@ -1,51 +1,55 @@
-import { MessageCircle, Megaphone, ShoppingBag } from "lucide-react";
+import { MessageCircle, Radio, ShoppingBag } from "lucide-react";
 
 const steps = [
-  {
-    icon: MessageCircle,
-    step: "01",
-    title: "Send surplus details on WhatsApp",
-    body: "Items, quantity, price, pickup window. One message. Under 30 seconds.",
-  },
-  {
-    icon: Megaphone,
-    step: "02",
-    title: "We distribute locally",
-    body: "MealSaver pushes the deal into your area's customer WhatsApp channel within minutes.",
-  },
-  {
-    icon: ShoppingBag,
-    step: "03",
-    title: "Customers pick up & pay you",
-    body: "Buyers come to your counter before expiry and pay you directly. No middleman, no payouts.",
-  },
+  { icon: MessageCircle, label: "WhatsApp Input", n: "01" },
+  { icon: Radio, label: "MealSaver Distribution", n: "02" },
+  { icon: ShoppingBag, label: "Customer Pickup", n: "03" },
 ];
 
 const MerchantSolution = () => (
-  <section className="py-16 lg:py-24 bg-background border-b border-border">
-    <div className="max-w-6xl mx-auto px-6 lg:px-12">
-      <div className="max-w-2xl mb-12">
-        <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-3">How it works</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
-          One WhatsApp message turns surplus into recovered revenue.
+  <section className="py-28 lg:py-36 border-t border-[var(--ms-border)] bg-[var(--ms-bg-2)]">
+    <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-2xl mb-20">
+        <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--ms-accent)] mb-4">The system</p>
+        <h2 className="text-4xl lg:text-5xl font-semibold tracking-[-0.025em] leading-[1.05]">
+          One message. Three steps. Zero infrastructure.
         </h2>
-        <p className="text-muted-foreground mt-3">Zero app. Zero dashboard. Zero new process for your staff.</p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {steps.map((s) => (
-          <div key={s.step} className="relative bg-card border border-border rounded-xl p-6">
-            <span className="text-xs font-mono font-semibold text-primary">{s.step}</span>
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mt-3 mb-4">
-              <s.icon className="w-5 h-5 text-primary" aria-hidden="true" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2">{s.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{s.body}</p>
-          </div>
-        ))}
+      <div className="relative">
+        {/* desktop horizontal flow */}
+        <div className="hidden md:grid grid-cols-3 gap-6 relative">
+          <svg className="absolute left-0 right-0 top-1/2 -translate-y-1/2 w-full h-8 -z-0 pointer-events-none" viewBox="0 0 1000 30" preserveAspectRatio="none">
+            <line x1="120" y1="15" x2="880" y2="15" stroke="rgba(45,212,168,0.5)" strokeWidth="1.5" className="ms-flow-line" />
+          </svg>
+          {steps.map((s) => (
+            <StepCard key={s.n} {...s} />
+          ))}
+        </div>
+
+        {/* mobile stack */}
+        <div className="md:hidden space-y-4">
+          {steps.map((s) => (
+            <StepCard key={s.n} {...s} />
+          ))}
+        </div>
       </div>
+
+      <p className="text-center text-xs text-[var(--ms-text-mute)] tracking-wide mt-16">
+        Zero app. Zero setup. Fully WhatsApp-based.
+      </p>
     </div>
   </section>
+);
+
+const StepCard = ({ icon: Icon, label, n }: { icon: any; label: string; n: string }) => (
+  <div className="relative ms-glass ms-card-hover rounded-2xl p-8 flex flex-col items-center text-center gap-4 z-10">
+    <span className="text-[10px] tracking-[0.25em] text-[var(--ms-text-mute)]">{n}</span>
+    <div className="w-14 h-14 rounded-full bg-[var(--ms-accent-soft)] border border-[var(--ms-accent)]/30 flex items-center justify-center">
+      <Icon className="w-6 h-6 text-[var(--ms-accent)]" strokeWidth={1.5} />
+    </div>
+    <p className="text-base font-medium tracking-tight">{label}</p>
+  </div>
 );
 
 export default MerchantSolution;
