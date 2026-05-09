@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { whatsapp } from "@/config/appConfig";
+import { site, whatsapp } from "@/config/appConfig";
 
 const Hero = () => {
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl lg:text-2xl font-semibold text-primary mb-2">
-            Real Food. Half the Price. Zero Waste.
+            {site.tagline}
           </p>
           <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Every evening, verified meal deals from Kerala restaurants land in your WhatsApp — ready to grab before they're gone. No app. No hassle. Just great food.
