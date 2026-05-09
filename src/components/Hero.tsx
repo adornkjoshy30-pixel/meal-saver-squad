@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Store } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { site, whatsapp } from "@/config/appConfig";
+import { whatsapp } from "@/config/appConfig";
 
 const Hero = () => {
   return (
@@ -10,34 +10,34 @@ const Hero = () => {
         <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            Now launching in Kerala
+            Now live in Idukki
           </div>
           
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-tight">
-            Get Surplus Food Deals <br />
-            <span className="text-primary">From Local Restaurants</span>
+            Surplus Food Deals from <br />
+            <span className="text-primary">Restaurants in Kerala</span>
           </h1>
           
           <p className="text-xl lg:text-2xl font-semibold text-primary mb-2">
-            {site.tagline}
+            Real Food. Half the Price. Zero Waste.
           </p>
           <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Restaurants share unsold meals with us. We verify them and publish the deals in WhatsApp channels — so you can grab affordable food before it goes to waste.
+            Every evening, verified meal deals from Kerala restaurants land in your WhatsApp — ready to grab before they're gone. No app. No hassle. Just great food.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col items-center gap-3 justify-center">
             <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="whatsapp" size="lg" className="group min-h-[48px] w-full sm:w-auto">
                 <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
                 Join WhatsApp Deals
               </Button>
             </a>
-            <Link to="/partners">
-              <Button variant="whatsapp-outline" size="lg" className="min-h-[48px] w-full sm:w-auto">
-                <Store className="w-5 h-5" aria-hidden="true" />
-                Become a Restaurant Partner
-              </Button>
-            </Link>
+            <p className="text-sm text-muted-foreground">
+              Are you a restaurant owner?{" "}
+              <Link to="/partners" className="text-primary font-semibold hover:underline">
+                List your restaurant →
+              </Link>
+            </p>
           </div>
 
           {/* Simple value props */}
