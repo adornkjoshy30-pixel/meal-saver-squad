@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,10 +18,24 @@ const navLinks = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 supports-[backdrop-filter]:bg-background/60 bg-background/90 backdrop-blur-xl backdrop-saturate-150 ${
+        scrolled
+          ? "border-b border-border/60 shadow-[0_4px_24px_-12px_rgba(13,92,63,0.18)]"
+          : "border-b border-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
