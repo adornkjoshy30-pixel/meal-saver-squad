@@ -5,8 +5,8 @@ import { site, contact, social } from "@/config/appConfig";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-primary-foreground py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <footer className="bg-foreground text-primary-foreground pt-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-12">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
@@ -98,6 +98,23 @@ const Footer = () => {
             Made with <Heart className="w-4 h-4 text-destructive fill-destructive" aria-hidden="true" /> in India
           </p>
         </div>
+      </div>
+
+      {/* Oversized brand wordmark — inspired by editorial footer typography */}
+      <div
+        aria-hidden="true"
+        className="relative overflow-hidden select-none border-t border-primary-foreground/10"
+      >
+        <div className="px-2 sm:px-6 pt-8 pb-2 sm:pb-4">
+          <h2
+            className="font-black tracking-[-0.04em] leading-[0.85] text-primary-foreground/95 whitespace-nowrap text-center"
+            style={{ fontSize: "clamp(4rem, 22vw, 22rem)" }}
+          >
+            MEAL SAVER
+          </h2>
+        </div>
+        {/* Soft brand-green underglow to differentiate from TGTG cream-on-teal */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-primary/30 to-transparent" />
       </div>
     </footer>
   );
