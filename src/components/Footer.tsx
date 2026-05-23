@@ -2,6 +2,9 @@ import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { site, contact, social } from "@/config/appConfig";
+import surpriseBag from "@/assets/footer-surprise-bag.png";
+import mealBox from "@/assets/footer-meal-box.png";
+import pizzaBoxes from "@/assets/footer-pizza-boxes.png";
 
 const Footer = () => {
   return (
@@ -100,20 +103,57 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Oversized brand wordmark — inspired by editorial footer typography */}
+      {/* Oversized brand wordmark with surplus food illustrations */}
       <div
         aria-hidden="true"
         className="relative overflow-hidden select-none border-t border-primary-foreground/10"
       >
-        <div className="px-2 sm:px-6 pt-8 pb-2 sm:pb-4">
-          <h2
-            className="font-black tracking-[-0.04em] leading-[0.85] text-primary-foreground/95 whitespace-nowrap text-center"
-            style={{ fontSize: "clamp(4rem, 22vw, 22rem)" }}
+        {/* Illustrations — positioned so they read as decoration around the wordmark */}
+        <img
+          src={surpriseBag}
+          alt=""
+          loading="lazy"
+          className="pointer-events-none absolute left-[3%] bottom-2 w-[14%] max-w-[160px] min-w-[56px] opacity-90 drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] z-10"
+        />
+        <img
+          src={pizzaBoxes}
+          alt=""
+          loading="lazy"
+          className="pointer-events-none absolute right-[2%] bottom-1 w-[16%] max-w-[180px] min-w-[60px] opacity-90 drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] z-10"
+        />
+        <img
+          src={mealBox}
+          alt=""
+          loading="lazy"
+          className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-3 w-[10%] max-w-[110px] min-w-[44px] opacity-90 drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] z-10 hidden sm:block"
+        />
+
+        {/* SVG wordmark — scales to viewport width perfectly on every device */}
+        <div className="px-3 sm:px-6 pt-10 pb-4 sm:pb-6">
+          <svg
+            viewBox="0 0 1000 180"
+            preserveAspectRatio="xMidYMid meet"
+            className="w-full h-auto block"
+            role="img"
+            aria-label={site.name}
           >
-            MEAL SAVER
-          </h2>
+            <text
+              x="500"
+              y="150"
+              textAnchor="middle"
+              fontFamily="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+              fontWeight="900"
+              fontSize="200"
+              letterSpacing="-8"
+              fill="currentColor"
+              className="text-primary-foreground/95"
+            >
+              MEAL SAVER
+            </text>
+          </svg>
         </div>
-        {/* Soft brand-green underglow to differentiate from TGTG cream-on-teal */}
+
+        {/* Soft brand-green underglow */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-primary/30 to-transparent" />
       </div>
     </footer>
