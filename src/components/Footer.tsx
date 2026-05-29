@@ -2,9 +2,6 @@ import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { site, contact, social } from "@/config/appConfig";
-import surpriseBag from "@/assets/footer-surprise-bag.png";
-import mealBox from "@/assets/footer-meal-box.png";
-import pizzaBoxes from "@/assets/footer-pizza-boxes.png";
 
 const Footer = () => {
   return (
@@ -103,58 +100,23 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Oversized brand wordmark with surplus food illustrations */}
+      {/* Brand wordmark */}
       <div
         aria-hidden="true"
         className="relative overflow-hidden select-none border-t border-primary-foreground/10"
       >
-        {/* Illustrations — positioned so they read as decoration around the wordmark */}
-        <img
-          src={surpriseBag}
-          alt=""
-          loading="lazy"
-          className="pointer-events-none absolute left-[3%] bottom-2 w-[14%] max-w-[160px] min-w-[56px] opacity-90 drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] z-10"
-        />
-        <img
-          src={pizzaBoxes}
-          alt=""
-          loading="lazy"
-          className="pointer-events-none absolute right-[2%] bottom-1 w-[16%] max-w-[180px] min-w-[60px] opacity-90 drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] z-10"
-        />
-        <img
-          src={mealBox}
-          alt=""
-          loading="lazy"
-          className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-3 w-[10%] max-w-[110px] min-w-[44px] opacity-90 drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] z-10 hidden sm:block"
-        />
-
-        {/* SVG wordmark — scales to viewport width perfectly on every device */}
-        <div className="px-3 sm:px-6 pt-10 pb-4 sm:pb-6">
-          <svg
-            viewBox="0 0 1000 180"
-            preserveAspectRatio="xMidYMid meet"
-            className="w-full h-auto block"
-            role="img"
-            aria-label={site.name}
+        {/* Compact responsive wordmark that fits the viewport without overflow */}
+        <div className="px-6 py-6 sm:py-8 flex justify-center">
+          <span
+            className="font-black tracking-tight text-primary-foreground/90 leading-none text-center"
+            style={{ fontSize: "clamp(2rem, 11vw, 8rem)", letterSpacing: "-0.04em" }}
           >
-            <text
-              x="500"
-              y="150"
-              textAnchor="middle"
-              fontFamily="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-              fontWeight="900"
-              fontSize="200"
-              letterSpacing="-8"
-              fill="currentColor"
-              className="text-primary-foreground/95"
-            >
-              MEAL SAVER
-            </text>
-          </svg>
+            {site.name.toUpperCase()}
+          </span>
         </div>
 
         {/* Soft brand-green underglow */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-primary/30 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-primary/20 to-transparent" />
       </div>
     </footer>
   );
