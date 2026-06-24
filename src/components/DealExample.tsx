@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const DealExample = () => {
   const reserveMessage = encodeURIComponent(
-    "Hi MealSaver! I'd like to reserve:\n\n🍱 6 Veg Meals – ₹80\n🏪 Hotel Aishwarya, Kattappana\n⏰ Pickup: 8:30 PM – 9:00 PM\n\nPlease confirm my reservation."
+    "Hi Meal Saver! I'd like to reserve:\n\nBakery Surprise Bag – ₹120\nGreen Leaf Bakery, Kattappana\nCollection: 7:30 PM – 8:30 PM\n\nPlease confirm my reservation."
   );
 
   return (
@@ -14,10 +14,10 @@ const DealExample = () => {
             See an Example
           </span>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
-            What a Deal Looks Like
+            What an offer looks like
           </h2>
           <p className="text-lg text-muted-foreground">
-            Here's an example of the surplus food deals we share in our WhatsApp channels. Tap "Reserve" to hold your portion.
+            Here's an example of the offers we share in our WhatsApp channel. Tap "Reserve" to hold your order.
           </p>
         </div>
 
@@ -30,30 +30,29 @@ const DealExample = () => {
                 <ShoppingBag className="w-5 h-5 text-primary-foreground" aria-hidden="true" />
               </div>
               <div>
-                <p className="font-bold text-primary-foreground text-sm">🔔 Surplus Deal Alert</p>
-                <p className="text-primary-foreground/70 text-xs">MealSaver • Idukki Channel</p>
+                <p className="font-bold text-primary-foreground text-sm">New Offer Available</p>
+                <p className="text-primary-foreground/70 text-xs">Meal Saver • Idukki Channel</p>
               </div>
             </div>
 
             {/* Deal content */}
             <div className="p-6 space-y-4">
               <div>
-                <h3 className="font-bold text-foreground text-lg">🍱 6 Veg Meals Available</h3>
-                <p className="text-muted-foreground text-sm mt-1">Hotel Aishwarya, Kattappana</p>
+                <h3 className="font-bold text-foreground text-lg">Bakery Surprise Bag</h3>
+                <p className="text-muted-foreground text-sm mt-1">Green Leaf Bakery, Kattappana</p>
               </div>
 
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-sm">
-                  <span className="text-muted-foreground">💰</span>
                   <span className="text-foreground">
-                    <span className="font-bold text-primary text-lg">₹80</span>
-                    <span className="text-muted-foreground line-through ml-2">₹160</span>
-                    <span className="ml-2 px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">50% OFF</span>
+                    <span className="font-bold text-primary text-lg">₹120</span>
+                    <span className="text-muted-foreground line-through ml-2">₹250</span>
+                    <span className="ml-2 px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">Great Value</span>
                   </span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <Clock className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  <span>Pickup: 8:30 PM – 9:00 PM</span>
+                  <span>Collection: 7:30 PM – 8:30 PM</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <MapPin className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
@@ -61,7 +60,7 @@ const DealExample = () => {
                 </div>
                 <div className="flex items-center gap-3 text-sm text-muted-foreground">
                   <ShoppingBag className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
-                  <span>4 of 6 remaining</span>
+                  <span>3 of 5 remaining</span>
                 </div>
               </div>
 
@@ -80,14 +79,14 @@ const DealExample = () => {
 
               <div className="pt-2 border-t border-border">
                 <p className="text-xs text-muted-foreground">
-                  💬 Tap "Reserve" to send a WhatsApp message. We'll confirm your reservation and share pickup details.
+                  Tap "Reserve" to send a WhatsApp message. We'll confirm your order and share collection details.
                 </p>
               </div>
             </div>
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
-            Deals like this are shared in our WhatsApp channels. Reserve your portion before it's gone.
+            Offers like this go out through our WhatsApp channel. Reserve yours before it's gone.
           </p>
         </div>
       </div>

@@ -38,10 +38,10 @@ const CityChannels = () => {
             WhatsApp Channels
           </span>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
-            Join Deals in Your City
+            Join your city's channel
           </h2>
           <p className="text-lg text-muted-foreground">
-            Each city has its own WhatsApp channel. Join yours to receive surplus food deals from restaurants near you.
+            Each city has its own WhatsApp channel. Join yours to discover quality products from local bakeries, cake shops and supermarkets.
           </p>
         </div>
 

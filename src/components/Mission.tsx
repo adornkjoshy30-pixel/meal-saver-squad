@@ -19,17 +19,16 @@ const Mission = () => {
               </span>
               
               <h2 className="text-3xl lg:text-5xl font-bold text-primary-foreground">
-                Reduce Food Waste in Kerala
+                Save food. Save money.
               </h2>
-              
+
               <p className="text-lg text-primary-foreground/90 leading-relaxed">
                 India wastes over <span className="font-bold">₹1 lakh crore</span> worth of food every year, and Kerala is no exception.
-                Meal Saver is designed to connect local restaurants, bakeries, and grocery stores with conscious customers to rescue food that's still fresh and safe to eat.
+                Meal Saver helps quality food from local bakeries, cake shops and supermarkets find its way to people who want it — instead of going to waste.
               </p>
-              
+
               <p className="text-lg text-primary-foreground/90 leading-relaxed">
-                By choosing Meal Saver, you'll be part of a movement toward a more sustainable Kerala. 
-                Together, we aim to reduce waste, lower food costs, and support a healthier planet for future generations.
+                Every reservation supports a local business, builds community, and contributes to a more sustainable Kerala.
               </p>
             </div>
             

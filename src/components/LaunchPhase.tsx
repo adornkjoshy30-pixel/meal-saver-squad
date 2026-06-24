@@ -12,30 +12,29 @@ const LaunchPhase = () => {
         </span>
 
         <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
-          We're Just Getting Started
+          We're just getting started
         </h2>
 
         <div className="text-lg text-muted-foreground space-y-4 max-w-2xl mx-auto">
           <p>
-            MealSaver is currently preparing to launch city by city across Kerala. 
-            We are onboarding early restaurant partners and building local WhatsApp deal channels.
+            Meal Saver is launching across Kerala — starting in Idukki. We're onboarding bakeries, cake shops, supermarkets and other local food retailers, one community at a time.
           </p>
           <p>
-            This is day one. No fake numbers, no inflated claims — just a simple idea that we believe can make a real difference for restaurants and customers.
+            No fake numbers, no inflated claims — just a simple idea that we believe can make a real difference for local businesses and the people who shop with them.
           </p>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <Link to="/merchant">
+          <Link to="/partners">
             <Button variant="whatsapp-outline" size="lg" className="min-h-[48px] w-full sm:w-auto">
               <Store className="w-5 h-5" aria-hidden="true" />
-              Apply as a Restaurant Partner
+              Partner With Us
             </Button>
           </Link>
           <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
             <Button variant="whatsapp" size="lg" className="min-h-[48px] w-full sm:w-auto">
               <MessageCircle className="w-5 h-5" aria-hidden="true" />
-              Join WhatsApp Deals
+              Get Started
             </Button>
           </a>
         </div>

@@ -65,7 +65,7 @@ const Header = () => {
           <div className="hidden lg:block">
             <Link to="/partners">
               <Button variant="outline" size="sm">
-                Join as Partner
+                Partner With Us
               </Button>
             </Link>
           </div>
@@ -107,7 +107,7 @@ const Header = () => {
           <div className="pt-3">
             <Link to="/partners" onClick={() => setMobileOpen(false)}>
               <Button variant="outline" className="w-full">
-                Join as Partner
+                Partner With Us
               </Button>
             </Link>
           </div>

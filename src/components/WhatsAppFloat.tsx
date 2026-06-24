@@ -45,15 +45,15 @@ const WhatsAppFloat = () => {
               <div className="w-8 h-8 rounded-lg bg-[hsl(142,70%,49%)]/10 flex items-center justify-center">
                 <MessageCircle className="w-4 h-4 text-[hsl(142,70%,49%)]" />
               </div>
-              <p className="font-bold text-foreground text-sm">WhatsApp Deal Alerts</p>
+              <p className="font-bold text-foreground text-sm">Meal Saver on WhatsApp</p>
             </div>
 
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Join the WhatsApp channel to receive surplus food deals from local restaurants.
+              Discover quality products from local bakeries, cake shops and supermarkets — right on WhatsApp.
             </p>
 
             <p className="text-xs text-muted-foreground/70 italic">
-              Deals usually sell out fast.
+              Offers usually go fast.
             </p>
 
             <a
@@ -79,10 +79,10 @@ const WhatsAppFloat = () => {
           <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[hsl(142,70%,49%)]" />
         </span>
         <span className="text-foreground font-semibold text-sm hidden sm:inline">
-          Deals on WhatsApp
+          Meal Saver on WhatsApp
         </span>
         <span className="text-foreground font-semibold text-sm sm:hidden">
-          Join Deals
+          Get Started
         </span>
         <MessageCircle className="w-4 h-4 text-[hsl(142,70%,49%)] group-hover:scale-110 transition-transform" />
       </button>

@@ -3,31 +3,30 @@ import { Store, Users, Smartphone, Check, ShieldCheck, Clock, DollarSign } from 
 import { Link } from "react-router-dom";
 
 const benefits = [
-  { icon: DollarSign, text: "Earn from unsold food instead of throwing it away" },
-  { icon: Users, text: "Reach new local customers via WhatsApp" },
-  { icon: Smartphone, text: "Simple WhatsApp-based workflow — no apps needed" },
+  { icon: Users, text: "Reach new local customers across Kerala" },
+  { icon: DollarSign, text: "Recover value from products that would go unsold" },
+  { icon: ShieldCheck, text: "Strengthen your reputation for sustainability" },
+  { icon: Smartphone, text: "Simple WhatsApp workflow — no apps or dashboards" },
   { icon: Check, text: "Zero cost during pilot — no fees or commissions" },
-  { icon: ShieldCheck, text: "Food safety verified before listing" },
-  { icon: Clock, text: "You set the pickup window and price" },
+  { icon: Clock, text: "You set the collection window and price" },
 ];
 
 const ForRestaurants = () => {
   return (
-    <section id="restaurants" className="py-20 lg:py-32 bg-primary/5">
+    <section id="for-businesses" className="py-20 lg:py-32 bg-primary/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div className="space-y-8">
             <div>
               <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                For Business
+                For Businesses
               </span>
               <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
-                For Restaurants & Stores in Kerala
+                Turn Unsold Products Into New Opportunities
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Whether you run a bakery, hotel, cloud kitchen, or grocery store in Kerala, Meal Saver helps you turn unsold food into revenue. 
-                Send us your surplus details via WhatsApp — we verify and publish deals to nearby customers.
+                Meal Saver helps bakeries, cake shops, supermarkets and food retailers connect with new customers while reducing unnecessary waste. Share what's still good — we help it find a home.
               </p>
             </div>
             
@@ -52,7 +51,7 @@ const ForRestaurants = () => {
               <Link to="/partners">
                 <Button variant="whatsapp" size="lg" className="min-h-[48px]">
                   <Store className="w-5 h-5" aria-hidden="true" />
-                  Become an Early Partner
+                  Partner With Us
                 </Button>
               </Link>
             </div>
@@ -68,21 +67,21 @@ const ForRestaurants = () => {
                     <Store className="w-10 h-10 text-primary" aria-hidden="true" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">Now Onboarding Partners</h3>
-                  <p className="text-muted-foreground">Be among the first restaurants to join Meal Saver in Kerala</p>
+                  <p className="text-muted-foreground">Be among the first local businesses to join Meal Saver in Kerala</p>
                 </div>
                 
                 <div className="grid grid-cols-1 gap-4">
                   <div className="p-4 bg-background rounded-xl">
-                    <p className="font-semibold text-foreground mb-1">✅ Zero cost to join</p>
+                    <p className="font-semibold text-foreground mb-1">Zero cost to join</p>
                     <p className="text-sm text-muted-foreground">No fees or commissions during the pilot. Just WhatsApp.</p>
                   </div>
                   <div className="p-4 bg-background rounded-xl">
-                    <p className="font-semibold text-foreground mb-1">✅ WhatsApp-only workflow</p>
-                    <p className="text-sm text-muted-foreground">No apps or dashboards. Send us surplus details on WhatsApp.</p>
+                    <p className="font-semibold text-foreground mb-1">WhatsApp-only workflow</p>
+                    <p className="text-sm text-muted-foreground">No apps or dashboards. Send us product details on WhatsApp.</p>
                   </div>
                   <div className="p-4 bg-background rounded-xl">
-                    <p className="font-semibold text-foreground mb-1">✅ FSSAI verified onboarding</p>
-                    <p className="text-sm text-muted-foreground">We verify food safety compliance before listing any partner.</p>
+                    <p className="font-semibold text-foreground mb-1">Food safety verified</p>
+                    <p className="text-sm text-muted-foreground">We verify FSSAI compliance before listing any partner.</p>
                   </div>
                 </div>
               </div>

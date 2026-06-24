@@ -7,36 +7,36 @@ import {
 
 const faqs = [
   {
-    question: "Do I need an app to use MealSaver?",
-    answer: "No. MealSaver works entirely through WhatsApp. Join your city's WhatsApp channel, receive surplus food deals, and visit the restaurant to pick up your meal. No app download needed.",
+    question: "What is Meal Saver?",
+    answer: "Meal Saver helps you discover quality food and grocery products from bakeries, cake shops, supermarkets and other local food retailers in Kerala — at great value, before they go unsold.",
   },
   {
-    question: "How do I get surplus food deals?",
-    answer: "Join the WhatsApp channel for your city. Whenever a restaurant near you has surplus food, we publish the deal in the channel with all the details — food items, price, pickup time, and location. You then go directly to the restaurant.",
+    question: "Do I need an app?",
+    answer: "No. Meal Saver works entirely through WhatsApp. Join your city's channel, browse offers, reserve, and collect your order at the store. No app download needed.",
   },
   {
-    question: "How do I reserve a deal?",
-    answer: "When you see a deal in the WhatsApp channel, tap the 'Reserve' link to send a pre-filled WhatsApp message to MealSaver. Our team will confirm your reservation and share the pickup details. Your portion is held until the end of the pickup window.",
+    question: "How do I reserve an order?",
+    answer: "Tap the reservation link on any offer to send a pre-filled WhatsApp message. Our team confirms your order and shares collection details. Your order is held during the collection window.",
   },
   {
-    question: "Is the food safe to eat?",
-    answer: "Yes. We only work with restaurants that meet food safety standards. The food is freshly prepared — it's simply surplus that went unsold. We verify deal details before publishing.",
+    question: "Is the food safe and good quality?",
+    answer: "Yes. Every partner business must comply with local food safety standards. We list only quality products that are safe for consumption — no expired items.",
   },
   {
-    question: "What if a deal sells out before I can reserve?",
-    answer: "Deals are limited by quantity. Once all portions are reserved, the deal is closed. Joining the WhatsApp channel ensures you see deals the moment they're posted, giving you the best chance to reserve.",
+    question: "What kind of products will I find?",
+    answer: "Fresh breads and pastries from bakeries, cakes and desserts from cake shops, everyday groceries from supermarkets, plus frozen, packaged, dairy and refrigerated essentials.",
   },
   {
-    question: "How do restaurants join MealSaver?",
-    answer: "Restaurants can apply through our website. We'll verify your details and onboard you. Once you're a partner, you simply send us your surplus food details via WhatsApp, and we publish the deal in the local channel.",
+    question: "How do local businesses partner with Meal Saver?",
+    answer: "Bakeries, cake shops, supermarkets and other food retailers can apply through our Partners page. We verify your details and onboard you — no setup fees, no commissions during the pilot phase.",
   },
   {
     question: "Is there any cost for customers?",
-    answer: "Joining the WhatsApp channel is completely free. You only pay the discounted price directly to the restaurant when you pick up the food.",
+    answer: "Joining the WhatsApp channel is completely free. You pay the listed price directly at the store when you collect your order.",
   },
   {
-    question: "Is there any cost for restaurants?",
-    answer: "No. Partnering with Meal Saver is completely free during our pilot phase — no setup fees, no monthly charges, no commission. Restaurants just need WhatsApp to share surplus food details with our team.",
+    question: "Where does Meal Saver operate?",
+    answer: "We're launching in Idukki, Kerala first, with Kochi, Trivandrum and Calicut coming soon.",
   },
 ];
 
@@ -52,7 +52,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground">
-            Simple answers about how MealSaver works
+            Simple answers about how Meal Saver works
           </p>
         </div>
 
