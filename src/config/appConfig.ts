@@ -23,7 +23,7 @@ export const env = {
 
 export const site = {
   name: "Meal Saver",
-  tagline: "Real Food. Half the Price. Zero Waste.",
+  tagline: "Enjoy More. Waste Less.",
   url: import.meta.env.VITE_SITE_URL || "https://mealsaver.in",
   location: "Kerala, India",
 } as const;
