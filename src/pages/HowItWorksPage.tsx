@@ -6,8 +6,8 @@ const HowItWorksPage = () => {
   return (
     <div>
       <PageSEO
-        title="How Meal Saver Works | Save Food in 3 Easy Steps"
-        description="Join your city's WhatsApp channel, see surplus food deals from local restaurants, reserve via WhatsApp, and pick up directly. No app needed."
+        title="How Meal Saver Works | Discover, Reserve, Collect, Enjoy"
+        description="Join your city's WhatsApp channel, discover quality products from local bakeries, cake shops and supermarkets, reserve, and collect at the store. No app needed."
         path="/how-it-works"
       />
       <HowItWorks />

@@ -2,30 +2,30 @@ import { Store, ShoppingBag, Sprout } from "lucide-react";
 
 const values = [
   {
-    icon: Store,
-    heading: "What Restaurants Gain",
+    icon: ShoppingBag,
+    heading: "For Customers",
     points: [
-      "Recover revenue from food that would otherwise be thrown away",
-      "Reach new nearby customers without marketing spend",
-      "Reduce daily waste with a simple WhatsApp-based workflow",
+      "Quality products from trusted local bakeries, cake shops and supermarkets",
+      "Easy reservations through WhatsApp — no app to download",
+      "Clear collection windows and reliable pickup at the store",
     ],
   },
   {
-    icon: ShoppingBag,
-    heading: "What Customers Can Expect",
+    icon: Store,
+    heading: "For Local Businesses",
     points: [
-      "Quality meals from local restaurants at 40–60% off",
-      "Easy ordering through WhatsApp — no app to download",
-      "Fresh surplus food with clear pickup windows",
+      "Reach new customers across your neighbourhood",
+      "Recover value from products that would otherwise go unsold",
+      "Strengthen your community impact and sustainability story",
     ],
   },
   {
     icon: Sprout,
-    heading: "Why Meal Saver Exists",
+    heading: "For the Planet",
     points: [
-      "Kerala's restaurants waste thousands of kilos of edible food daily",
-      "Most surplus food is still fresh — it just went unsold",
-      "We believe technology can connect that food with people who want it",
+      "Every order saved is one less item heading to waste",
+      "Support a more sustainable food system in Kerala",
+      "Better for your wallet — and better for the planet",
     ],
   },
 ];
@@ -39,10 +39,10 @@ const WhyMealSaver = () => {
             The Vision
           </span>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
-            Built for Restaurants & Customers
+            Better for everyone
           </h2>
           <p className="text-lg text-muted-foreground">
-            Meal Saver creates a practical way for Kerala's food businesses to reduce waste while making affordable meals accessible to everyone.
+            Meal Saver helps people discover great food and grocery products while helping local businesses reduce waste.
           </p>
         </div>
 

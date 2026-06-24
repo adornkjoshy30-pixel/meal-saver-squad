@@ -1,44 +1,40 @@
-import surpriseBox from "@/assets/surprise-box-branded.jpg";
-import mealBox from "@/assets/meal-box-branded.jpg";
-import groceryBox from "@/assets/grocery-box-branded.jpg";
-import cloudKitchenBox from "@/assets/cloud-kitchen-box-branded.jpg";
+import catBakery from "@/assets/cat-bakery.jpg";
+import catCake from "@/assets/cat-cake.jpg";
+import catSupermarket from "@/assets/cat-supermarket.jpg";
+import catDairy from "@/assets/cat-dairy.jpg";
 
 const boxes = [
   {
-    icon: "✨",
-    title: "Surprise Box",
-    description: "A mix of bakery or café items available at the end of the day.",
-    price: "₹99",
-    originalPrice: "₹299",
-    image: surpriseBox,
+    title: "Bakery Surprise Bag",
+    description: "A selection of pastries, breads and baked goods from a local bakery.",
+    price: "₹120",
+    originalPrice: "₹250",
+    image: catBakery,
     tag: "Popular",
   },
   {
-    icon: "🍱",
-    title: "Meal Saver Box",
-    description: "A fresh, unsold meal from popular restaurants available at discount.",
+    title: "Cake Shop Treats",
+    description: "Cakes, brownies and desserts from neighbourhood cake shops.",
     price: "₹149",
-    originalPrice: "₹399",
-    image: mealBox,
-    tag: "Best Value",
+    originalPrice: "₹350",
+    image: catCake,
+    tag: "Sweet Pick",
   },
   {
-    icon: "🥦",
-    title: "Grocery Rescue Pack",
-    description: "Veggies, fruits, and items nearing best-before date.",
-    price: "₹79",
-    originalPrice: "₹199",
-    image: groceryBox,
+    title: "Supermarket Essentials",
+    description: "Everyday grocery products and pantry favourites at great value.",
+    price: "₹199",
+    originalPrice: "₹400",
+    image: catSupermarket,
     tag: null,
   },
   {
-    icon: "🍕",
-    title: "Cloud Kitchen Pack",
-    description: "Leftover batches from cloud kitchens — safe and budget-friendly.",
-    price: "₹129",
-    originalPrice: "₹349",
-    image: cloudKitchenBox,
-    tag: "New",
+    title: "Dairy & Refrigerated",
+    description: "Fresh dairy products nearing the end of their selling window.",
+    price: "₹89",
+    originalPrice: "₹180",
+    image: catDairy,
+    tag: "Fresh",
   },
 ];
 
@@ -52,11 +48,10 @@ const BoxExamples = () => {
             What We're Building
           </span>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
-            Meal Saver Box Categories
+            Example offers
           </h2>
           <p className="text-lg text-muted-foreground">
-            Here's what you'll be able to grab once we launch — from surprise bakery boxes to grocery rescue packs, 
-            all from local businesses across Kerala at a fraction of the original price.
+            From bakery surprise bags to everyday supermarket essentials — discover quality products from local businesses across Kerala.
           </p>
         </div>
 
@@ -88,12 +83,9 @@ const BoxExamples = () => {
               
               {/* Content */}
               <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-2xl">{box.icon}</span>
-                  <h3 className="font-bold text-foreground text-lg">
-                    {box.title}
-                  </h3>
-                </div>
+                <h3 className="font-bold text-foreground text-lg mb-3">
+                  {box.title}
+                </h3>
                 
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                   {box.description}
@@ -104,7 +96,7 @@ const BoxExamples = () => {
                   <span className="text-2xl font-bold text-primary">{box.price}</span>
                   <span className="text-muted-foreground line-through">{box.originalPrice}</span>
                   <span className="px-2 py-1 rounded-md bg-green-light text-primary text-xs font-semibold">
-                    -60%
+                    Great value
                   </span>
                 </div>
               </div>

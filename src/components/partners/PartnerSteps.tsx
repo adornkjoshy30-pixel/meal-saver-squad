@@ -1,23 +1,23 @@
 const steps = [
   {
     number: "1",
-    title: "Apply as a Partner",
+    title: "Apply to Partner",
     description: "Fill out the form below. Our team will review and get in touch.",
   },
   {
     number: "2",
-    title: "Send Surplus Details via WhatsApp",
-    description: "When you have unsold food, message us with the items, price, quantity, and pickup window.",
+    title: "Share Available Products on WhatsApp",
+    description: "When you have quality products that may go unsold, message us with details, price, quantity, and collection window.",
   },
   {
     number: "3",
-    title: "We Verify & Publish the Deal",
-    description: "Our team checks the details and posts the deal in your city's WhatsApp channel.",
+    title: "We Verify & Publish the Offer",
+    description: "Our team checks the details and posts the offer in your city's WhatsApp channel.",
   },
   {
     number: "4",
-    title: "Customers Pick Up & Pay You Directly",
-    description: "Customers visit your restaurant, pick up the food, and pay you directly. No middleman.",
+    title: "Customers Collect & Pay You Directly",
+    description: "Customers visit your store, collect their order, and pay you directly. No middleman.",
   },
 ];
 

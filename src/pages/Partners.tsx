@@ -8,8 +8,8 @@ import PartnerCTA from "@/components/partners/PartnerCTA";
 const Partners = () => (
   <div>
     <PageSEO
-      title="Partner With Meal Saver | Turn Surplus Food Into Revenue"
-      description="Join Meal Saver as a restaurant partner in Kerala. Zero cost, zero commission. Share surplus food deals via WhatsApp and reach new customers."
+      title="Partner With Meal Saver | For Bakeries, Cake Shops & Supermarkets"
+      description="Join Meal Saver as a local food retailer in Kerala. Reach new customers and reduce waste — zero cost, zero commission during the pilot."
       path="/partners"
     />
     <PartnerHero />

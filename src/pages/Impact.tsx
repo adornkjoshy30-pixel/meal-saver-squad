@@ -3,12 +3,12 @@ import Mission from "@/components/Mission";
 import PageSEO from "@/components/PageSEO";
 
 const projections = [
-  { icon: Utensils, value: "50,000+", label: "Meals rescued from waste", tag: "Year 1 Goal", color: "bg-primary/10 text-primary" },
-  { icon: Target, value: "200+", label: "Restaurant partners onboarded", tag: "Launch Vision", color: "bg-secondary/10 text-secondary" },
+  { icon: Utensils, value: "50,000+", label: "Products rescued from waste", tag: "Year 1 Goal", color: "bg-primary/10 text-primary" },
+  { icon: Target, value: "200+", label: "Local businesses onboarded", tag: "Launch Vision", color: "bg-secondary/10 text-secondary" },
   { icon: Leaf, value: "10,000+ kg", label: "Food diverted from landfills", tag: "Projected at Scale", color: "bg-accent text-accent-foreground" },
   { icon: TrendingDown, value: "₹15L+", label: "Savings for customers", tag: "Expected Impact", color: "bg-primary/10 text-primary" },
   { icon: Rocket, value: "14+", label: "Districts across Kerala", tag: "Expansion Goal", color: "bg-secondary/10 text-secondary" },
-  { icon: Heart, value: "10,000+", label: "Conscious consumers reached", tag: "Pilot-Stage Goal", color: "bg-accent text-accent-foreground" },
+  { icon: Heart, value: "10,000+", label: "Community members reached", tag: "Pilot-Stage Goal", color: "bg-accent text-accent-foreground" },
 ];
 
 const Impact = () => {

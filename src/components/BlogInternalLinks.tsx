@@ -5,17 +5,17 @@ const links = [
   {
     to: "/how-it-works",
     title: "How It Works",
-    description: "See how to grab surplus food in 3 simple steps.",
+    description: "Discover, reserve, collect and enjoy — in four simple steps.",
   },
   {
     to: "/partners",
-    title: "Become a Partner",
-    description: "Be among the first restaurants to join Meal Saver.",
+    title: "Partner With Us",
+    description: "Join Meal Saver as a local bakery, cake shop or supermarket.",
   },
   {
     to: "/impact",
     title: "Our Impact",
-    description: "See the difference surplus food rescue makes in Kerala.",
+    description: "See how Meal Saver helps reduce waste across Kerala.",
   },
 ];
 

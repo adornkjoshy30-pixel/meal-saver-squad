@@ -1,58 +1,81 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ArrowRight, Leaf, Heart, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { site, whatsapp } from "@/config/appConfig";
+import heroBakery from "@/assets/hero-bakery.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[85vh] gradient-hero overflow-hidden flex items-center">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-20 lg:pt-20 lg:pb-24">
-        <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            Now live in Idukki
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-tight">
-            Surplus Food Deals from <br />
-            <span className="text-primary">Restaurants in Kerala</span>
-          </h1>
-          
-          <p className="text-xl lg:text-2xl font-semibold text-primary mb-2">
-            {site.tagline}
-          </p>
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Every evening, verified meal deals from Kerala restaurants land in your WhatsApp — ready to grab before they're gone. No app. No hassle. Just great food.
-          </p>
-          
-          <div className="flex flex-col items-center gap-3 justify-center">
-            <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="whatsapp" size="lg" className="group min-h-[48px] w-full sm:w-auto">
-                <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
-                Join WhatsApp Deals
-              </Button>
-            </a>
-            <p className="text-sm text-muted-foreground">
-              Are you a restaurant owner?{" "}
-              <Link to="/partners" className="text-primary font-semibold hover:underline">
-                List your restaurant →
-              </Link>
+    <section className="relative gradient-hero overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-24 lg:pt-20 lg:pb-32">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Copy */}
+          <div className="space-y-7 animate-fade-in-up text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              Now live in Idukki, Kerala
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-[1.05] tracking-tight">
+              Enjoy More. <br />
+              <span className="text-primary">Waste Less.</span>
+            </h1>
+
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              {site.name} connects you with quality products from bakeries, cake shops, supermarkets and local food retailers — before they go unsold.
             </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center">
+              <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button variant="whatsapp" size="lg" className="group min-h-[48px] w-full sm:w-auto">
+                  <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
+                  Get Started
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Button>
+              </a>
+              <Link to="/partners" className="w-full sm:w-auto">
+                <Button variant="whatsapp-outline" size="lg" className="min-h-[48px] w-full sm:w-auto">
+                  Partner With Us
+                </Button>
+              </Link>
+            </div>
+
+            {/* Trust strip */}
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
+              <div className="flex items-center gap-2 px-3.5 py-2 bg-card rounded-full shadow-soft">
+                <ShieldCheck className="w-4 h-4 text-primary" aria-hidden="true" />
+                <span className="text-sm font-medium text-foreground">Quality checked</span>
+              </div>
+              <div className="flex items-center gap-2 px-3.5 py-2 bg-card rounded-full shadow-soft">
+                <Heart className="w-4 h-4 text-primary" aria-hidden="true" />
+                <span className="text-sm font-medium text-foreground">Local businesses</span>
+              </div>
+              <div className="flex items-center gap-2 px-3.5 py-2 bg-card rounded-full shadow-soft">
+                <Leaf className="w-4 h-4 text-primary" aria-hidden="true" />
+                <span className="text-sm font-medium text-foreground">Less waste</span>
+              </div>
+            </div>
           </div>
 
-          {/* Simple value props */}
-          <div className="flex flex-wrap gap-4 justify-center pt-2">
-            <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
-              <span className="text-lg">📱</span>
-              <span className="text-sm font-medium text-foreground">No app needed</span>
+          {/* Visual */}
+          <div className="relative animate-fade-in-up">
+            <div className="absolute -inset-6 bg-primary/10 rounded-[2.5rem] blur-3xl -z-10" aria-hidden="true" />
+            <div className="relative rounded-3xl overflow-hidden shadow-card aspect-[4/3] bg-card">
+              <img
+                src={heroBakery}
+                alt="Fresh breads and pastries on display at a sunlit local bakery in Kerala"
+                width={1536}
+                height={1024}
+                className="w-full h-full object-cover"
+              />
             </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
-              <span className="text-lg">🍽️</span>
-              <span className="text-sm font-medium text-foreground">40–60% off meals</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl shadow-soft">
-              <span className="text-lg">✅</span>
-              <span className="text-sm font-medium text-foreground">Verified deals only</span>
+            <div className="absolute -bottom-6 -left-4 sm:-left-8 bg-card rounded-2xl shadow-card px-5 py-4 flex items-center gap-3 max-w-[260px]">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Leaf className="w-5 h-5 text-primary" aria-hidden="true" />
+              </div>
+              <p className="text-sm font-medium text-foreground leading-snug">
+                Good food deserves a second chance.
+              </p>
             </div>
           </div>
         </div>
