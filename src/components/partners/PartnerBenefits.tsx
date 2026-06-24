@@ -5,32 +5,32 @@ const benefits = [
   {
     icon: Store,
     title: "Zero Cost to Join",
-    description: "No setup fees, no commissions, no monthly charges during our pilot phase. Just send us your surplus details.",
+    description: "No setup fees, no commissions, no monthly charges during our pilot phase. Just share what's available.",
   },
   {
     icon: MessageCircle,
     title: "WhatsApp-Based Workflow",
-    description: "No apps to install, no dashboards to learn. Share your surplus food details with us on WhatsApp — we handle the rest.",
+    description: "No apps to install, no dashboards to learn. Share product details on WhatsApp — we handle the rest.",
   },
   {
     icon: Users,
-    title: "Reach Nearby Customers",
-    description: "We publish your deals to city-specific WhatsApp channels. Customers see your offer and come directly to your restaurant.",
+    title: "Reach Local Customers",
+    description: "We publish your offers to city-specific WhatsApp channels. Customers see them and come directly to your store.",
   },
   {
     icon: Send,
     title: "You Stay in Control",
-    description: "You decide what to list, the price, the quantity, and the pickup window. We just help spread the word.",
+    description: "You decide what to list, the price, the quantity, and the collection window. We just help spread the word.",
   },
   {
     icon: CheckCircle,
-    title: "Verified Deals Only",
-    description: "We verify every deal before publishing to maintain trust with customers and protect your brand.",
+    title: "Trusted & Verified",
+    description: "We verify every offer before publishing to maintain trust with customers and protect your brand.",
   },
   {
     icon: ArrowRight,
-    title: "Earn Instead of Waste",
-    description: "Turn end-of-day surplus into revenue. Customers get affordable meals, you reduce waste and earn more.",
+    title: "Recover Value, Reduce Waste",
+    description: "Turn unsold products into new opportunities. Customers get great value, you reduce waste and earn more.",
   },
 ];
 

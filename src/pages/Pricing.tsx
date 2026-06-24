@@ -8,8 +8,8 @@ const Pricing = () => {
   return (
     <div>
       <PageSEO
-        title="Pricing | Meal Saver — Free for Restaurants During Pilot"
-        description="Meal Saver is completely free for restaurant partners during our pilot launch in Kerala. Zero fees, zero commission, zero risk."
+        title="Pricing | Meal Saver — Free for Partners During Pilot"
+        description="Meal Saver is completely free for bakery, cake shop and supermarket partners during our pilot launch in Kerala. Zero fees, zero commission, zero risk."
         path="/pricing"
       />
 
@@ -23,7 +23,7 @@ const Pricing = () => {
             Free During Our Pilot Phase
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {site.name} is launching across Kerala. During this phase, partnering with us is completely free — no setup fees, no monthly charges, no commission per order.
+            {site.name} is launching across Kerala. During this phase, partnering with us is completely free for bakeries, cake shops, supermarkets and other local food retailers — no setup fees, no monthly charges, no commission per order.
           </p>
         </div>
       </section>
@@ -37,15 +37,15 @@ const Pricing = () => {
                 <Store className="w-8 h-8 text-primary" />
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-2">Pilot Partner — Free</h2>
-              <p className="text-muted-foreground">Everything you need to start earning from surplus food</p>
+              <p className="text-muted-foreground">Everything you need to reach new customers and reduce waste</p>
             </div>
 
             <div className="space-y-4 mb-8">
               {[
                 "Zero commission on all orders",
-                "Unlimited surplus food listings",
-                "Deal published in your city's WhatsApp channel",
-                "MealSaver team verifies and manages deal posting",
+                "Unlimited product listings",
+                "Offers published in your city's WhatsApp channel",
+                "Meal Saver team verifies and manages posting",
                 "Customers pay you directly — no middleman",
                 "WhatsApp-based workflow — no apps or dashboards",
                 "Priority support during pilot phase",
@@ -60,7 +60,7 @@ const Pricing = () => {
             <Link to="/partners#signup">
               <Button variant="whatsapp" size="lg" className="w-full">
                 <Store className="w-5 h-5" />
-                Apply as a Partner
+                Partner With Us
               </Button>
             </Link>
           </div>
@@ -86,11 +86,11 @@ const Pricing = () => {
               },
               {
                 q: "Do I need any special software?",
-                a: "No. Everything works through WhatsApp. You send us your surplus details, we publish the deal, and customers come to you.",
+                a: "No. Everything works through WhatsApp. You send us product details, we publish the offer, and customers come to you.",
               },
               {
                 q: "What's the catch?",
-                a: "There isn't one. We're building something new and need restaurant partners to make it work. You help us prove the model, we help you earn from food that would otherwise go to waste.",
+                a: "There isn't one. We're building something new and need local partners to make it work. You help us prove the model, we help you recover value from products that would otherwise go to waste.",
               },
             ].map((item, i) => (
               <div key={i} className="bg-background rounded-xl p-6 shadow-soft">

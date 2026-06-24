@@ -53,7 +53,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <PageSEO
         title="Contact Meal Saver | Get in Touch"
-        description="Have questions about surplus food deals or partnerships? Contact the Meal Saver team — we respond within 24-48 hours."
+        description="Have questions about Meal Saver or partnering as a local bakery, cake shop or supermarket? Reach our team — we respond within 24–48 hours."
         path="/contact"
       />
       {/* Hero Section */}
@@ -82,7 +82,7 @@ const Contact = () => {
                   Contact Information
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Whether you're a user looking for support or a restaurant interested in partnering with us, we'd love to hear from you.
+                  Whether you're a customer looking for support or a local bakery, cake shop or supermarket interested in partnering with us, we'd love to hear from you.
                 </p>
               </div>
 
@@ -119,7 +119,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Quick Support</h3>
                     <p className="text-muted-foreground">
-                      For deal-related issues, please contact the restaurant directly. Meal Saver can help facilitate communication.
+                      For order-related issues, please contact the store directly. Meal Saver can help facilitate communication.
                     </p>
                   </div>
                 </div>

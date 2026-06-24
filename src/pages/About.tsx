@@ -2,18 +2,18 @@ import { Leaf, Users, Heart, Target } from "lucide-react";
 import PageSEO from "@/components/PageSEO";
 
 const values = [
-  { icon: Leaf, title: "Sustainability", description: "Every meal rescued is a step toward a greener planet. Our mission starts with reducing food waste across Kerala." },
-  { icon: Users, title: "Community", description: "We're building connections between local businesses and eco-conscious customers who care about food and the environment." },
-  { icon: Heart, title: "Accessibility", description: "Great food shouldn't go to waste — or cost a fortune. We're designing surplus meals to be affordable and easy to access via WhatsApp." },
-  { icon: Target, title: "Transparency", description: "No hidden fees, no commissions. We keep things simple and honest for both restaurants and customers." },
+  { icon: Leaf, title: "Sustainability", description: "Every order is one less item heading to waste. Better for your wallet, better for the planet." },
+  { icon: Users, title: "Community", description: "We connect local bakeries, cake shops and supermarkets with the people in their neighbourhoods." },
+  { icon: Heart, title: "Quality", description: "Only quality products that meet local food safety standards — never expired, always transparent." },
+  { icon: Target, title: "Honesty", description: "No fake metrics, no hidden fees. Just a simple way to enjoy good food at great value." },
 ];
 
 const About = () => {
   return (
     <div>
       <PageSEO
-        title="About Meal Saver | Our Mission to End Food Waste"
-        description="Learn how Meal Saver connects Kerala's restaurants with customers via WhatsApp — reducing surplus food waste and making meals more affordable."
+        title="About Meal Saver | Enjoy More. Waste Less."
+        description="Meal Saver helps people discover quality food and grocery products from Kerala's local bakeries, cake shops and supermarkets — while helping businesses reduce waste."
         path="/about"
       />
       {/* Hero */}
@@ -23,11 +23,10 @@ const About = () => {
             About Us
           </span>
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            We're on a Mission to End Food Waste in Kerala
+            Helping people discover great food. Helping businesses reduce waste.
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Meal Saver connects customers with surplus food from local bakeries, hotels, cloud kitchens, and grocery stores — at discounted prices, all through WhatsApp.
-            We help businesses earn from what would otherwise be wasted, and customers access affordable meals while making a positive impact.
+            Meal Saver is a community-driven marketplace for quality products from local bakeries, cake shops, supermarkets and food retailers across Kerala. Better for your wallet. Better for the planet.
           </p>
         </div>
       </section>
@@ -38,16 +37,13 @@ const About = () => {
           <h2 className="text-3xl font-bold text-foreground mb-6">Our Story</h2>
           <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
             <p>
-              India wastes over ₹1 lakh crore worth of food every year. In Kerala alone, thousands of kilograms of perfectly good food
-              are discarded daily by restaurants, bakeries, and stores — simply because it went unsold.
+              India wastes over ₹1 lakh crore worth of food every year. In Kerala alone, thousands of kilograms of perfectly good food are discarded daily by bakeries, cake shops and supermarkets — simply because it went unsold.
             </p>
             <p>
-              Meal Saver was born from a simple idea: what if we could connect that surplus food with people who want it?
-              No app downloads, no complex onboarding — just WhatsApp.
+              Meal Saver was born from a simple idea: good food deserves a second chance. What if we could connect quality products with people who'd love them — easily, on WhatsApp?
             </p>
             <p>
-              We're currently onboarding our first restaurant partners across Kerala. Restaurants share their surplus with us on WhatsApp,
-              we verify the deals, and publish them in city-specific WhatsApp channels so nearby customers can grab affordable meals.
+              We're onboarding our first local partners across Kerala. They share what's available on WhatsApp, we verify, and customers in the same community get to enjoy quality food at great value.
             </p>
           </div>
         </div>

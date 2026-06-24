@@ -7,10 +7,10 @@ const PartnerSignup = () => (
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div>
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Apply as a Partner
+            Become a Meal Saver Partner
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            Fill out the form and our team will reach out to onboard you. We're currently launching across Kerala — early partners get priority support.
+            Tell us about your bakery, cake shop, supermarket or food store and our team will reach out to onboard you. Early partners get priority support during our Kerala launch.
           </p>
           <div className="space-y-4">
             <div className="flex items-center gap-3">
