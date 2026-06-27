@@ -15,13 +15,30 @@ export default {
     extend: {
       fontFamily: {
         outfit: [
-          "Outfit",
+          "Manrope",
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
           "'Segoe UI'",
           "Roboto",
           "'Helvetica Neue'",
+          "Arial",
+          "sans-serif",
+        ],
+        display: [
+          "Manrope",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "sans-serif",
+        ],
+        sans: [
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
           "Arial",
           "sans-serif",
         ],
