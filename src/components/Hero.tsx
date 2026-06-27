@@ -1,95 +1,156 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, ArrowRight, Leaf, Heart, ShieldCheck } from "lucide-react";
+import { MessageCircle, ArrowRight, Sprout, Store, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { site, whatsapp } from "@/config/appConfig";
 import heroBakery from "@/assets/hero-bakery.jpg";
 
+// Free, hot-linkable bakery/food background loop. Swap with a self-hosted file later.
+const HERO_VIDEO_SRC =
+  "https://videos.pexels.com/video-files/4253687/4253687-uhd_2560_1440_25fps.mp4";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+// Per-line mask reveal for the headline
+const HeadlineLine = ({ children, delay }: { children: React.ReactNode; delay: number }) => (
+  <span className="block overflow-hidden">
+    <motion.span
+      initial={{ y: "110%", filter: "blur(12px)", opacity: 0 }}
+      animate={{ y: "0%", filter: "blur(0px)", opacity: 1 }}
+      transition={{ duration: 0.9, ease: EASE, delay }}
+      className="block"
+    >
+      {children}
+    </motion.span>
+  </span>
+);
+
+const stats = [
+  { icon: Sprout, label: "Now live in Idukki, Kerala" },
+  { icon: Store, label: "Bakeries · Cake shops · Supermarkets" },
+  { icon: Leaf, label: "Free for partners during pilot" },
+];
+
 const Hero = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const videoOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.25]);
+  const contentScale = useTransform(scrollYProgress, [0, 1], [1, 0.94]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
   return (
-    <section className="relative gradient-hero overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-24 lg:pt-20 lg:pb-32">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Copy */}
-          <div className="space-y-7 animate-fade-in-up text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              Now live in Idukki, Kerala
-            </div>
+    <section
+      ref={ref}
+      className="relative -mt-24 min-h-[100svh] w-full overflow-hidden flex items-center"
+    >
+      {/* Background video */}
+      <motion.div className="absolute inset-0 -z-10" style={{ opacity: videoOpacity }}>
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroBakery}
+          aria-hidden="true"
+        >
+          <source src={HERO_VIDEO_SRC} type="video/mp4" />
+        </video>
+        {/* Readability overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/55 via-foreground/35 to-foreground/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/40 via-transparent to-transparent" />
+      </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-[1.05] tracking-tight">
-              Enjoy More. <br />
-              <span className="text-primary">Waste Less.</span>
-            </h1>
+      <motion.div
+        style={{ scale: contentScale, opacity: contentOpacity }}
+        className="relative w-full max-w-7xl mx-auto px-6 lg:px-12 pt-36 pb-28 lg:pt-44 lg:pb-36"
+      >
+        {/* Badge */}
+        <motion.div
+          initial={{ y: 12, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: EASE, delay: 0.3 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/15 backdrop-blur-md border border-background/25 text-background text-sm font-medium"
+        >
+          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <Sprout className="w-4 h-4 text-primary" aria-hidden="true" />
+          Saving food across India
+        </motion.div>
 
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              {site.name} connects you with quality products from bakeries, cake shops, supermarkets and local food retailers — before they go unsold.
-            </p>
+        {/* Headline */}
+        <h1 className="mt-7 font-display font-extrabold text-background text-[clamp(2.75rem,7vw,5.75rem)] leading-[1.02] tracking-[-0.035em] max-w-4xl">
+          <HeadlineLine delay={0.6}>Save great food.</HeadlineLine>
+          <HeadlineLine delay={0.78}>Spend less.</HeadlineLine>
+          <HeadlineLine delay={0.96}>
+            <span className="text-primary">Waste nothing.</span>
+          </HeadlineLine>
+        </h1>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center">
-              <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                <Button variant="whatsapp" size="lg" className="group min-h-[48px] w-full sm:w-auto">
-                  <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
-                  Get Started
-                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </Button>
-              </a>
-              <Link to="/partners" className="w-full sm:w-auto">
-                <Button variant="whatsapp-outline" size="lg" className="min-h-[48px] w-full sm:w-auto">
-                  Partner With Us
-                </Button>
-              </Link>
-            </div>
+        {/* Subhead */}
+        <motion.p
+          initial={{ y: 14, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, ease: EASE, delay: 1.2 }}
+          className="mt-6 text-lg lg:text-xl text-background/85 max-w-xl leading-relaxed"
+        >
+          {site.name} connects you with quality products from local bakeries, cake shops and
+          supermarkets in Kerala — at great value, before they go unsold.
+        </motion.p>
 
-            {/* Trust strip */}
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-2">
-              <div className="flex items-center gap-2 px-3.5 py-2 bg-card rounded-full shadow-soft">
-                <ShieldCheck className="w-4 h-4 text-primary" aria-hidden="true" />
-                <span className="text-sm font-medium text-foreground">Quality checked</span>
-              </div>
-              <div className="flex items-center gap-2 px-3.5 py-2 bg-card rounded-full shadow-soft">
-                <Heart className="w-4 h-4 text-primary" aria-hidden="true" />
-                <span className="text-sm font-medium text-foreground">Local businesses</span>
-              </div>
-              <div className="flex items-center gap-2 px-3.5 py-2 bg-card rounded-full shadow-soft">
-                <Leaf className="w-4 h-4 text-primary" aria-hidden="true" />
-                <span className="text-sm font-medium text-foreground">Less waste</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Visual */}
-          <div className="relative animate-fade-in-up">
-            <div className="absolute -inset-6 bg-primary/10 rounded-[2.5rem] blur-3xl -z-10" aria-hidden="true" />
-            <div className="relative rounded-3xl overflow-hidden shadow-card aspect-[4/3] bg-card">
-              <img
-                src={heroBakery}
-                alt="Fresh breads and pastries on display at a sunlit local bakery in Kerala"
-                width={1536}
-                height={1024}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-4 sm:-left-8 bg-card rounded-2xl shadow-card px-5 py-4 flex items-center gap-3 max-w-[260px]">
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Leaf className="w-5 h-5 text-primary" aria-hidden="true" />
-              </div>
-              <p className="text-sm font-medium text-foreground leading-snug">
-                Good food deserves a second chance.
-              </p>
-            </div>
-          </div>
+        {/* CTAs */}
+        <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <motion.div
+            initial={{ y: 16, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 220, damping: 22, delay: 1.5 }}
+            whileHover={{ y: -2 }}
+          >
+            <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="rounded-full min-h-[52px] px-7 group">
+                <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
+                Find Nearby Boxes
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Button>
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ y: 16, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 220, damping: 22, delay: 1.6 }}
+            whileHover={{ y: -2 }}
+          >
+            <Link to="/partners">
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full min-h-[52px] px-7 border-background/40 bg-background/5 text-background backdrop-blur hover:bg-background/15 hover:text-background"
+              >
+                Become a Partner
+              </Button>
+            </Link>
+          </motion.div>
         </div>
-      </div>
 
-      {/* Wave Divider */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" aria-hidden="true">
-          <path 
-            d="M0 120L48 105C96 90 192 60 288 45C384 30 480 30 576 37.5C672 45 768 60 864 67.5C960 75 1056 75 1152 67.5C1248 60 1344 45 1392 37.5L1440 30V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0Z" 
-            className="fill-card"
-          />
-        </svg>
-      </div>
+        {/* Stats strip (honest, pilot-stage) */}
+        <motion.div
+          initial={{ y: 18, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, ease: EASE, delay: 1.8 }}
+          className="mt-12 inline-flex flex-wrap items-stretch gap-2 p-2 rounded-2xl bg-background/10 border border-background/20 backdrop-blur-md"
+        >
+          {stats.map(({ icon: Icon, label }) => (
+            <div
+              key={label}
+              className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-background/10 text-background"
+            >
+              <Icon className="w-4 h-4 text-primary shrink-0" aria-hidden="true" />
+              <span className="text-sm font-medium whitespace-nowrap">{label}</span>
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
