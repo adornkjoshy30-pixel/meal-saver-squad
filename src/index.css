@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -117,12 +115,14 @@
   }
 
   body {
-    @apply bg-background text-foreground font-outfit antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
     font-size: 16px;
+    font-feature-settings: "cv11", "ss01", "ss03";
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-outfit font-bold tracking-tight;
+    @apply font-display font-extrabold tracking-tight;
+    letter-spacing: -0.02em;
   }
 }
 
