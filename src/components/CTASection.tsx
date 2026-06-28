@@ -1,13 +1,53 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Store } from "lucide-react";
+import { MessageCircle, Store, Sprout, Leaf, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { whatsapp } from "@/config/appConfig";
+import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { Reveal } from "@/components/motion/Reveal";
 
 const CTASection = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const reduced = useReducedMotion();
+
+  useEffect(() => {
+    if (reduced) return;
+    const el = ref.current;
+    if (!el) return;
+    const onMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      setMouse({ x, y });
+    };
+    el.addEventListener("mousemove", onMove);
+    return () => el.removeEventListener("mousemove", onMove);
+  }, [reduced]);
+
+  const decor = [
+    { Icon: Sprout, top: "10%", left: "8%", depth: 30 },
+    { Icon: Leaf, top: "20%", right: "10%", depth: 45 },
+    { Icon: ShoppingBag, bottom: "15%", left: "12%", depth: 20 },
+    { Icon: Store, bottom: "18%", right: "8%", depth: 38 },
+  ];
+
   return (
-    <section className="py-20 lg:py-32 bg-card">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-        <div className="relative">
+    <section ref={ref} className="relative py-20 lg:py-32 bg-card overflow-hidden">
+      {decor.map(({ Icon, depth, ...pos }, i) => (
+        <motion.div
+          key={i}
+          aria-hidden="true"
+          className="absolute text-primary/15 pointer-events-none"
+          style={pos as React.CSSProperties}
+          animate={{ x: mouse.x * depth, y: mouse.y * depth }}
+          transition={{ type: "spring", stiffness: 60, damping: 18 }}
+        >
+          <Icon className="w-16 h-16 lg:w-20 lg:h-20" />
+        </motion.div>
+      ))}
+      <div className="relative max-w-4xl mx-auto px-6 lg:px-12 text-center">
+        <Reveal preset="scale" className="relative">
           <div className="absolute inset-0 bg-primary/5 rounded-3xl blur-3xl" />
           
           <div className="relative bg-background rounded-3xl p-12 lg:p-16 shadow-card">
@@ -36,7 +76,7 @@ const CTASection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Search, MessageCircle, ShoppingBag, Smile } from "lucide-react";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const steps = [
   {
@@ -27,7 +28,7 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="py-20 lg:py-32 bg-card">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Reveal preset="blur" className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
             How It Works
           </span>
@@ -37,11 +38,11 @@ const HowItWorks = () => {
           <p className="text-lg text-muted-foreground">
             Discover quality food at great value — no app to install, just WhatsApp.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative group">
+            <StaggerItem key={index} className="relative group">
               <div className="relative bg-background rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 h-full">
                 <div className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-button">
                   {index + 1}
@@ -52,9 +53,9 @@ const HowItWorks = () => {
                 <h3 className="text-lg font-bold text-foreground mb-2">{step.title}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

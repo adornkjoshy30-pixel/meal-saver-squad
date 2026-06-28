@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const faqs = [
   {
@@ -44,7 +45,7 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-20 lg:py-32 bg-background">
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-12">
+        <Reveal preset="blur" className="text-center mb-12">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
             Questions
           </span>
@@ -54,24 +55,27 @@ const FAQ = () => {
           <p className="text-lg text-muted-foreground">
             Simple answers about how Meal Saver works
           </p>
-        </div>
+        </Reveal>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
-              className="bg-card rounded-xl px-6 shadow-soft border-none"
-            >
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <Stagger stagger={0.05}>
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <StaggerItem key={index}>
+                <AccordionItem
+                  value={`item-${index}`}
+                  className="bg-card rounded-xl px-6 shadow-soft border-none"
+                >
+                  <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline py-5">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </StaggerItem>
+            ))}
+          </Accordion>
+        </Stagger>
       </div>
     </section>
   );

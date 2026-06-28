@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Store, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { whatsapp } from "@/config/appConfig";
+import { Reveal } from "@/components/motion/Reveal";
 
 const LaunchPhase = () => {
   return (
     <section className="py-20 lg:py-32 bg-primary/5">
-      <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center space-y-8">
+      <Reveal preset="blur" className="max-w-3xl mx-auto px-6 lg:px-12 text-center space-y-8">
         <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
           Where We Are Now
         </span>
@@ -38,7 +39,7 @@ const LaunchPhase = () => {
             </Button>
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

@@ -1,18 +1,20 @@
+import { Reveal } from "@/components/motion/Reveal";
+
 const WhyItMatters = () => {
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <Reveal preset="blur" className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
             Why It Matters
           </span>
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
             Good food deserves a second chance
           </h2>
-        </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto items-start">
-          <div className="space-y-6">
+          <Reveal preset="fade-up" className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
               Every day, bakeries, cake shops and supermarkets across Kerala have quality products they didn't get to sell. They're still fresh, still safe — they just need someone to enjoy them.
             </p>
@@ -23,9 +25,9 @@ const WhyItMatters = () => {
             <p className="text-muted-foreground leading-relaxed">
               Meal Saver makes it easy to choose better — better for your wallet, better for local businesses, better for the planet.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="bg-card rounded-2xl p-8 shadow-soft border border-border space-y-6">
+          <Reveal preset="scale" delay={0.1} className="bg-card rounded-2xl p-8 shadow-soft border border-border space-y-6">
             <h3 className="text-xl font-bold text-foreground">Our Trust Standards</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -45,7 +47,7 @@ const WhyItMatters = () => {
                 <span className="text-muted-foreground leading-relaxed">Reliable pickup experience from trusted local businesses.</span>
               </li>
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
