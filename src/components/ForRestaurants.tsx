@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Store, Users, Smartphone, Check, ShieldCheck, Clock, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const benefits = [
   { icon: Users, text: "Reach new local customers across Kerala" },
@@ -17,7 +18,7 @@ const ForRestaurants = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <Reveal preset="fade-up" className="space-y-8">
             <div>
               <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
                 For Businesses
@@ -31,9 +32,9 @@ const ForRestaurants = () => {
             </div>
             
             {/* Benefits Grid */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <Stagger className="grid sm:grid-cols-2 gap-4">
               {benefits.map((benefit, index) => (
-                <div 
+                <StaggerItem
                   key={index}
                   className="flex items-center gap-3 p-4 bg-card rounded-xl shadow-soft"
                 >
@@ -43,9 +44,9 @@ const ForRestaurants = () => {
                   <span className="text-foreground font-medium text-sm">
                     {benefit.text}
                   </span>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
             
             <div className="flex justify-center">
               <Link to="/partners">
@@ -55,10 +56,10 @@ const ForRestaurants = () => {
                 </Button>
               </Link>
             </div>
-          </div>
+          </Reveal>
           
           {/* Visual — honest early-stage card */}
-          <div className="relative">
+          <Reveal preset="scale" delay={0.1} className="relative">
             <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-3xl transform -rotate-6"></div>
             <div className="relative bg-card rounded-3xl p-8 lg:p-12 shadow-card">
               <div className="space-y-8">
@@ -86,7 +87,7 @@ const ForRestaurants = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

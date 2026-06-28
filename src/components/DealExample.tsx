@@ -1,5 +1,6 @@
 import { Clock, MapPin, ShoppingBag, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/motion/Reveal";
 
 const DealExample = () => {
   const reserveMessage = encodeURIComponent(
@@ -9,7 +10,7 @@ const DealExample = () => {
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <Reveal preset="blur" className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
             See an Example
           </span>
@@ -19,9 +20,9 @@ const DealExample = () => {
           <p className="text-lg text-muted-foreground">
             Here's an example of the offers we share in our WhatsApp channel. Tap "Reserve" to hold your order.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="max-w-md mx-auto">
+        <Reveal preset="scale" className="max-w-md mx-auto">
           {/* WhatsApp-style message card */}
           <div className="bg-card rounded-2xl shadow-card overflow-hidden border border-border">
             {/* Header */}
@@ -88,7 +89,7 @@ const DealExample = () => {
           <p className="text-center text-sm text-muted-foreground mt-6">
             Offers like this go out through our WhatsApp channel. Reserve yours before it's gone.
           </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

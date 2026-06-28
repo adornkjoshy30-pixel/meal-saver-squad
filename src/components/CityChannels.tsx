@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin } from "lucide-react";
 import { whatsapp } from "@/config/appConfig";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const cities = [
   {
@@ -33,7 +34,7 @@ const CityChannels = () => {
   return (
     <section className="py-20 lg:py-32 bg-card">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <Reveal preset="blur" className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
             WhatsApp Channels
           </span>
@@ -43,11 +44,11 @@ const CityChannels = () => {
           <p className="text-lg text-muted-foreground">
             Each city has its own WhatsApp channel. Join yours to discover quality products from local bakeries, cake shops and supermarkets.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {cities.map((city, index) => (
-            <div
+            <StaggerItem
               key={index}
               className="bg-background rounded-2xl p-6 shadow-soft border border-border text-center space-y-4"
             >
@@ -77,9 +78,9 @@ const CityChannels = () => {
                   </Button>
                 </a>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

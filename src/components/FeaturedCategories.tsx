@@ -4,6 +4,7 @@ import catSupermarket from "@/assets/cat-supermarket.jpg";
 import catFrozen from "@/assets/cat-frozen.jpg";
 import catPackaged from "@/assets/cat-packaged.jpg";
 import catDairy from "@/assets/cat-dairy.jpg";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const categories = [
   {
@@ -42,7 +43,7 @@ const FeaturedCategories = () => {
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+        <Reveal preset="blur" className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
             Featured Categories
           </span>
@@ -52,12 +53,13 @@ const FeaturedCategories = () => {
           <p className="text-lg text-muted-foreground">
             From freshly baked bread to everyday grocery essentials — explore the kinds of products you'll find on Meal Saver.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {categories.map((category) => (
-            <article
+            <StaggerItem
               key={category.title}
+              as="article"
               className="group bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 border border-border"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -75,9 +77,9 @@ const FeaturedCategories = () => {
                 <h3 className="font-bold text-foreground text-lg mb-2">{category.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{category.description}</p>
               </div>
-            </article>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

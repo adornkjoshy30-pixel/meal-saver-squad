@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import TrustedBy from "@/components/TrustedBy";
 import HowItWorks from "@/components/HowItWorks";
 import FeaturedCategories from "@/components/FeaturedCategories";
 import DealExample from "@/components/DealExample";
@@ -20,13 +21,14 @@ const Index = () => {
         path="/"
       />
       <Hero />
+      <TrustedBy />
       <HowItWorks />
-      <FeaturedCategories />
       <DealExample />
+      <FeaturedCategories />
       <WhyMealSaver />
-      <ForRestaurants />
-      <CityChannels />
       <WhyItMatters />
+      <CityChannels />
+      <ForRestaurants />
       <LaunchPhase />
       <FAQ />
       <CTASection />

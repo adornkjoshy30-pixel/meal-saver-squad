@@ -1,4 +1,5 @@
 import { Store, ShoppingBag, Sprout } from "lucide-react";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const values = [
   {
@@ -34,7 +35,7 @@ const WhyMealSaver = () => {
   return (
     <section className="py-20 lg:py-32 bg-card">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Reveal preset="blur" className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
             The Vision
           </span>
@@ -44,11 +45,11 @@ const WhyMealSaver = () => {
           <p className="text-lg text-muted-foreground">
             Meal Saver helps people discover great food and grocery products while helping local businesses reduce waste.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <Stagger className="grid md:grid-cols-3 gap-8">
           {values.map((item, i) => (
-            <div
+            <StaggerItem
               key={i}
               className="bg-background rounded-2xl p-8 shadow-soft border border-border"
             >
@@ -64,9 +65,9 @@ const WhyMealSaver = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
