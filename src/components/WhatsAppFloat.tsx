@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { MessageCircle, X } from "lucide-react";
-import { whatsapp } from "@/config/appConfig";
+import { waUrl } from "@/lib/whatsapp";
 
-const WHATSAPP_LINK = whatsapp.channelUrl;
+const WHATSAPP_LINK = waUrl("float", { campaign: "floating_widget" });
 
 const WhatsAppFloat = () => {
   const [expanded, setExpanded] = useState(false);

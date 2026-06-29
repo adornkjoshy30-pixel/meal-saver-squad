@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { whatsapp } from "@/config/appConfig";
+import { waUrl } from "@/lib/whatsapp";
 
 const PartnerCTA = () => (
   <section className="py-16 lg:py-24">
@@ -17,10 +17,18 @@ const PartnerCTA = () => (
             Contact Us
           </Button>
         </Link>
-        <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
+        <a
+          href={waUrl("partner-cta", {
+            mode: "chat",
+            text: "Hi Meal Saver team! I'd like to partner my business with you.",
+            campaign: "partner_inquiry",
+          })}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button variant="whatsapp" size="lg">
             <MessageCircle className="w-5 h-5" />
-            Join WhatsApp Channel
+            Chat With Us on WhatsApp
           </Button>
         </a>
       </div>

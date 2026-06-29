@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import PageSEO from "@/components/PageSEO";
 import { site, whatsapp } from "@/config/appConfig";
+import { waUrl } from "@/lib/whatsapp";
 
 const Pricing = () => {
   return (
@@ -112,7 +113,7 @@ const Pricing = () => {
                   Contact Us
                 </Button>
               </Link>
-              <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
+              <a href={waUrl("pricing", { campaign: "pricing_cta" })} target="_blank" rel="noopener noreferrer">
                 <Button variant="whatsapp" size="lg">
                   <MessageCircle className="w-5 h-5" />
                   Join WhatsApp Channel

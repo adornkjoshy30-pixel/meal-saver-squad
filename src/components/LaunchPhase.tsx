@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Store, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { whatsapp } from "@/config/appConfig";
+import { waUrl } from "@/lib/whatsapp";
 import { Reveal } from "@/components/motion/Reveal";
 
 const LaunchPhase = () => {
@@ -32,7 +32,7 @@ const LaunchPhase = () => {
               Partner With Us
             </Button>
           </Link>
-          <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
+          <a href={waUrl("launch-phase", { campaign: "launch_phase" })} target="_blank" rel="noopener noreferrer">
             <Button variant="whatsapp" size="lg" className="min-h-[48px] w-full sm:w-auto">
               <MessageCircle className="w-5 h-5" aria-hidden="true" />
               Get Started
