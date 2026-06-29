@@ -49,6 +49,8 @@ export const social = {
 
 export const whatsapp = {
   channelUrl: "https://whatsapp.com/channel/0029Vb7i7Pu4NVio2gT3Xd2g",
+  /** Direct business WhatsApp number (digits + country code, no '+') for wa.me chat links. */
+  contactNumber: "+917012214280",
 } as const;
 
 // ─── Convenience re-exports ─────────────────────────────────────────────────
