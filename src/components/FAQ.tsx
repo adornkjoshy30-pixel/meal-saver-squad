@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { Helmet } from "react-helmet-async";
 
 const faqs = [
   {
@@ -42,8 +43,21 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+
   return (
     <section id="faq" className="py-20 lg:py-32 bg-background">
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+      </Helmet>
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
         <Reveal preset="blur" className="text-center mb-12">
           <span className="inline-block px-4 py-2 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
