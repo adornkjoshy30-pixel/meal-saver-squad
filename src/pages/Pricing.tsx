@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import PageSEO from "@/components/PageSEO";
 import { site, whatsapp } from "@/config/appConfig";
+import { waUrl } from "@/lib/whatsapp";
 
 const Pricing = () => {
   return (
