@@ -112,7 +112,7 @@ const Pricing = () => {
                   Contact Us
                 </Button>
               </Link>
-              <a href={whatsapp.channelUrl} target="_blank" rel="noopener noreferrer">
+              <a href={waUrl("pricing", { campaign: "pricing_cta" })} target="_blank" rel="noopener noreferrer">
                 <Button variant="whatsapp" size="lg">
                   <MessageCircle className="w-5 h-5" />
                   Join WhatsApp Channel

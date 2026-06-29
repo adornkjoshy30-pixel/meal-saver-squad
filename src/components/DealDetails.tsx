@@ -1,7 +1,7 @@
 import { Clock, MapPin, MessageCircle, ArrowLeft, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { OrderMethodBadge } from "./OrderMethodBadge";
-import { whatsapp } from "@/config/appConfig";
+import { waUrl } from "@/lib/whatsapp";
 
 type OrderMethod = "pickup_only" | "dine_in_only" | "both";
 
@@ -39,10 +39,8 @@ export const DealDetails = ({
   const discount = Math.round(((originalPrice - discountedPrice) / originalPrice) * 100);
 
   const handleGrabNow = () => {
-    const message = encodeURIComponent(
-      `Hi! I want to grab "${title}" from ${restaurantName} for ₹${discountedPrice}.\n\nPickup: ${pickupDate} between ${pickupStartTime} - ${pickupEndTime}`
-    );
-    window.open(whatsapp.channelUrl, "_blank");
+    const text = `Hi! I want to grab "${title}" from ${restaurantName} for ₹${discountedPrice}.\n\nPickup: ${pickupDate} between ${pickupStartTime} - ${pickupEndTime}`;
+    window.open(waUrl("deal-details", { mode: "chat", text, campaign: "deal_reservation" }), "_blank");
   };
 
   const handleShare = async () => {

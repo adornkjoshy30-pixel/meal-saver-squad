@@ -1,31 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin } from "lucide-react";
-import { whatsapp } from "@/config/appConfig";
+import { waUrl } from "@/lib/whatsapp";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const cities = [
   {
     name: "Idukki",
     description: "Kattappana, Thodupuzha, Cheruthoni, Adimaly & more",
-    link: whatsapp.channelUrl,
+    link: waUrl("city-channel", { campaign: "city_idukki" }),
     status: "Live",
   },
   {
     name: "Kochi",
     description: "Ernakulam, Kakkanad, Edappally & more",
-    link: whatsapp.channelUrl,
+    link: waUrl("city-channel", { campaign: "city_kochi" }),
     status: "Coming Soon",
   },
   {
     name: "Trivandrum",
     description: "Technopark, Pattom, Kowdiar & more",
-    link: whatsapp.channelUrl,
+    link: waUrl("city-channel", { campaign: "city_trivandrum" }),
     status: "Coming Soon",
   },
   {
     name: "Calicut",
     description: "SM Street, Palayam, Mankavu & more",
-    link: whatsapp.channelUrl,
+    link: waUrl("city-channel", { campaign: "city_calicut" }),
     status: "Coming Soon",
   },
 ];
