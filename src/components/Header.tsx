@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
-import { site, whatsapp } from "@/config/appConfig";
+import { site } from "@/config/appConfig";
 import { waUrl } from "@/lib/whatsapp";
 
 const navLinks = [
