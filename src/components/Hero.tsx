@@ -163,7 +163,7 @@ const Hero = () => {
         >
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           <Sprout className="w-4 h-4 text-primary" aria-hidden="true" />
-          Saving food across India
+          Now live in Idukki, Kerala
         </motion.div>
 
         {/* Headline */}
@@ -199,7 +199,7 @@ const Hero = () => {
             <a href={waUrl("hero", { campaign: "hero_primary" })} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="rounded-full min-h-[52px] px-7 group">
                 <MessageCircle className="group-hover:scale-110 transition-transform" aria-hidden="true" />
-                Find Nearby Boxes
+                Join WhatsApp Deals
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Button>
             </a>
