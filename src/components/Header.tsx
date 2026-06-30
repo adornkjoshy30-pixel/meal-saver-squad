@@ -4,14 +4,15 @@ import { Menu, X } from "lucide-react";
 import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
-import { site } from "@/config/appConfig";
+import { site, whatsapp } from "@/config/appConfig";
+import { waUrl } from "@/lib/whatsapp";
 
 const navLinks = [
-  { label: "Browse Boxes", to: "/how-it-works" },
   { label: "How It Works", to: "/how-it-works" },
+  { label: "For Businesses", to: "/partners" },
   { label: "Impact", to: "/impact" },
-  { label: "Partners", to: "/partners" },
   { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const Header = () => {
@@ -75,17 +76,15 @@ const Header = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-2 shrink-0">
-            <Link
-              to="/contact"
-              className="text-sm font-medium text-foreground/70 hover:text-foreground px-3 py-2 rounded-full transition-colors"
+            <a
+              href={waUrl("header", { campaign: "header_primary" })}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Log In
-            </Link>
-            <Link to="/partners">
               <Button size="sm" className="rounded-full px-5">
-                Get Started
+                Join WhatsApp
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -125,13 +124,15 @@ const Header = () => {
               {link.label}
             </Link>
           ))}
-          <div className="pt-2 grid grid-cols-2 gap-2">
-            <Link to="/contact" onClick={() => setMobileOpen(false)}>
-              <Button variant="outline" className="w-full rounded-full">Log In</Button>
-            </Link>
-            <Link to="/partners" onClick={() => setMobileOpen(false)}>
-              <Button className="w-full rounded-full">Get Started</Button>
-            </Link>
+          <div className="pt-2">
+            <a
+              href={waUrl("header_mobile", { campaign: "header_mobile_primary" })}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+            >
+              <Button className="w-full rounded-full">Join WhatsApp</Button>
+            </a>
           </div>
         </motion.nav>
       )}

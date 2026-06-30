@@ -1,13 +1,7 @@
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
 import HowItWorks from "@/components/HowItWorks";
-import FeaturedCategories from "@/components/FeaturedCategories";
 import DealExample from "@/components/DealExample";
-import WhyMealSaver from "@/components/WhyMealSaver";
-import ForRestaurants from "@/components/ForRestaurants";
-import CityChannels from "@/components/CityChannels";
-import WhyItMatters from "@/components/WhyItMatters";
-import LaunchPhase from "@/components/LaunchPhase";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import PageSEO from "@/components/PageSEO";
@@ -24,12 +18,6 @@ const Index = () => {
       <TrustedBy />
       <HowItWorks />
       <DealExample />
-      <FeaturedCategories />
-      <WhyMealSaver />
-      <WhyItMatters />
-      <CityChannels />
-      <ForRestaurants />
-      <LaunchPhase />
       <FAQ />
       <CTASection />
     </div>
