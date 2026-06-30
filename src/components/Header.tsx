@@ -126,7 +126,7 @@ const Header = () => {
           ))}
           <div className="pt-2">
             <a
-              href={waUrl("header_mobile", { campaign: "header_mobile_primary" })}
+              href={waUrl("header", { campaign: "header_mobile_primary" })}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
