@@ -15,19 +15,19 @@ const orderMethodLabels: Record<OrderMethod, string> = {
 
 const orderMethodStyles: Record<OrderMethod, { bgColor: string; textColor: string; borderColor: string }> = {
   pickup_only: {
-    bgColor: "bg-blue-50",
-    textColor: "text-blue-700",
-    borderColor: "border-blue-200",
+    bgColor: "bg-[hsl(var(--info-bg))]",
+    textColor: "text-[hsl(var(--info-fg))]",
+    borderColor: "border-[hsl(var(--info-border))]",
   },
   dine_in_only: {
-    bgColor: "bg-amber-50",
-    textColor: "text-amber-700",
-    borderColor: "border-amber-200",
+    bgColor: "bg-warning/10",
+    textColor: "text-warning",
+    borderColor: "border-warning/30",
   },
   both: {
-    bgColor: "bg-green-50",
-    textColor: "text-primary",
-    borderColor: "border-green-200",
+    bgColor: "bg-accent",
+    textColor: "text-accent-foreground",
+    borderColor: "border-primary/20",
   },
 };
 
@@ -77,12 +77,12 @@ export const OrderMethodBadge = ({ method, variant = "badge" }: OrderMethodBadge
 
   return (
     <div className={`flex items-center gap-3 p-3 rounded-xl ${styles.bgColor} border ${styles.borderColor}`}>
-      <div className={`flex items-center justify-center w-10 h-10 rounded-lg bg-white ${styles.textColor}`}>
+      <div className={`flex items-center justify-center w-10 h-10 rounded-lg bg-background ${styles.textColor}`}>
         {renderDetailIcon()}
       </div>
       <div>
         <p className={`font-medium text-sm ${styles.textColor}`}>{label}</p>
-        <p className="text-xs text-gray-500">{orderMethodDescriptions[method]}</p>
+        <p className="text-xs text-muted-foreground">{orderMethodDescriptions[method]}</p>
       </div>
     </div>
   );

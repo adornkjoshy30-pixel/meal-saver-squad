@@ -57,22 +57,24 @@ export const DealDetails = ({
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-background min-h-dvh">
       {/* Header */}
-      <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-100 px-4 py-3">
+      <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border px-4 py-3">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <button
             onClick={onBack}
-            className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+            aria-label="Go back"
+            className="flex items-center gap-2 min-h-11 px-2 -mx-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5" aria-hidden="true" />
             <span className="font-medium">Back</span>
           </button>
           <button
             onClick={handleShare}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+            aria-label="Share this deal"
+            className="min-w-11 min-h-11 flex items-center justify-center rounded-full hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            <Share2 className="w-5 h-5 text-gray-600" />
+            <Share2 className="w-5 h-5 text-muted-foreground" aria-hidden="true" />
           </button>
         </div>
       </div>
@@ -80,15 +82,15 @@ export const DealDetails = ({
       <div className="max-w-2xl mx-auto px-4 py-6">
         {/* Image */}
         <div className="relative rounded-2xl overflow-hidden mb-6">
-          <img src={imageUrl} alt={title} className="w-full aspect-[4/3] object-cover" />
+          <img src={imageUrl} alt={title} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover bg-muted" />
           <div className="absolute top-4 left-4">
-            <span className="bg-red-500 text-white text-sm font-bold px-3 py-1.5 rounded-full shadow-lg">
+            <span className="bg-danger text-danger-foreground text-sm font-bold px-3 py-1.5 rounded-full shadow-lg">
               {discount}% OFF
             </span>
           </div>
           {quantityLeft !== undefined && quantityLeft <= 5 && (
             <div className="absolute bottom-4 left-4">
-              <span className="bg-amber-500 text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
+              <span className="bg-warning text-warning-foreground text-sm font-medium px-3 py-1.5 rounded-full shadow-lg">
                 Only {quantityLeft} left!
               </span>
             </div>
@@ -99,39 +101,39 @@ export const DealDetails = ({
         <div className="space-y-6">
           {/* Title and Restaurant */}
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">{title}</h1>
-            <p className="text-gray-600">{restaurantName}</p>
+            <h1 className="text-2xl font-bold text-foreground mb-2">{title}</h1>
+            <p className="text-muted-foreground">{restaurantName}</p>
           </div>
 
           {/* Description */}
           {description && (
-            <p className="text-gray-600 leading-relaxed">{description}</p>
+            <p className="text-muted-foreground leading-relaxed">{description}</p>
           )}
 
           {/* Order Options Section */}
           <div className="space-y-3">
-            <h2 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">
+            <h2 className="text-sm font-semibold text-foreground uppercase tracking-wide">
               Order Options
             </h2>
             <OrderMethodBadge method={orderMethod} variant="detail" />
           </div>
 
           {/* Pickup Info */}
-          <div className="bg-gray-50 rounded-xl p-4 space-y-3">
+          <div className="bg-muted rounded-xl p-4 space-y-3">
             <div className="flex items-start gap-3">
-              <Clock className="w-5 h-5 text-primary mt-0.5" />
+              <Clock className="w-5 h-5 text-primary mt-0.5" aria-hidden="true" />
               <div>
-                <p className="font-medium text-gray-900">Pickup Time</p>
-                <p className="text-sm text-gray-600">
+                <p className="font-medium text-foreground">Pickup Time</p>
+                <p className="text-sm text-muted-foreground">
                   {pickupDate} • {pickupStartTime} - {pickupEndTime}
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-primary mt-0.5" />
+              <MapPin className="w-5 h-5 text-primary mt-0.5" aria-hidden="true" />
               <div>
-                <p className="font-medium text-gray-900">Location</p>
-                <p className="text-sm text-gray-600">{location}</p>
+                <p className="font-medium text-foreground">Location</p>
+                <p className="text-sm text-muted-foreground">{location}</p>
               </div>
             </div>
           </div>
@@ -139,8 +141,8 @@ export const DealDetails = ({
           {/* Price */}
           <div className="flex items-baseline gap-3">
             <span className="text-3xl font-bold text-primary">₹{discountedPrice}</span>
-            <span className="text-lg text-gray-400 line-through">₹{originalPrice}</span>
-            <span className="text-sm font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded">
+            <span className="text-lg text-muted-foreground line-through">₹{originalPrice}</span>
+            <span className="text-sm font-medium text-accent-foreground bg-accent px-2 py-0.5 rounded">
               Save ₹{originalPrice - discountedPrice}
             </span>
           </div>
@@ -152,7 +154,7 @@ export const DealDetails = ({
             className="w-full shadow-lg"
             onClick={handleGrabNow}
           >
-            <MessageCircle className="w-5 h-5" />
+            <MessageCircle className="w-5 h-5" aria-hidden="true" />
             Grab Now on WhatsApp
           </Button>
         </div>
