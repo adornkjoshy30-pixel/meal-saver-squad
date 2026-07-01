@@ -10,10 +10,13 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   build: {
+    chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ["react", "react-dom", "react-router-dom"],
+          motion: ["framer-motion"],
+          ui: ["@radix-ui/react-dialog", "@radix-ui/react-tooltip", "@radix-ui/react-accordion"],
         },
       },
     },

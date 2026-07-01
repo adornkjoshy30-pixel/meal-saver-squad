@@ -36,16 +36,18 @@ export const DealCard = ({
   };
 
   return (
-    <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 group">
+    <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-300 group">
       {/* Image Section */}
-      <div className="relative h-44 overflow-hidden">
+      <div className="relative h-44 overflow-hidden bg-muted">
         <img
           src={imageUrl}
           alt={title}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute top-3 left-3">
-          <span className="bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+          <span className="bg-danger text-danger-foreground text-xs font-bold px-2.5 py-1 rounded-full">
             {discount}% OFF
           </span>
         </div>
@@ -54,7 +56,7 @@ export const DealCard = ({
         </div>
         {quantityLeft !== undefined && quantityLeft <= 3 && (
           <div className="absolute bottom-3 left-3">
-            <span className="bg-amber-500 text-white text-xs font-medium px-2.5 py-1 rounded-full">
+            <span className="bg-warning text-warning-foreground text-xs font-medium px-2.5 py-1 rounded-full">
               Only {quantityLeft} left!
             </span>
           </div>
@@ -63,16 +65,16 @@ export const DealCard = ({
 
       {/* Content Section */}
       <div className="p-4">
-        <h3 className="font-semibold text-gray-900 mb-1 line-clamp-1">{title}</h3>
-        <p className="text-sm text-gray-500 mb-3">{restaurantName}</p>
+        <h3 className="font-semibold text-foreground mb-1 line-clamp-1">{title}</h3>
+        <p className="text-sm text-muted-foreground mb-3">{restaurantName}</p>
 
-        <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
+        <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
           <div className="flex items-center gap-1">
-            <Clock className="w-3.5 h-3.5" />
+            <Clock className="w-3.5 h-3.5" aria-hidden="true" />
             <span>{pickupTime}</span>
           </div>
           <div className="flex items-center gap-1">
-            <MapPin className="w-3.5 h-3.5" />
+            <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
             <span className="line-clamp-1">{location}</span>
           </div>
         </div>
@@ -81,10 +83,10 @@ export const DealCard = ({
         <div className="flex items-center justify-between">
           <div className="flex items-baseline gap-2">
             <span className="text-xl font-bold text-primary">₹{discountedPrice}</span>
-            <span className="text-sm text-gray-400 line-through">₹{originalPrice}</span>
+            <span className="text-sm text-muted-foreground line-through">₹{originalPrice}</span>
           </div>
-          <Button variant="whatsapp" size="sm" onClick={handleGrabNow}>
-            <MessageCircle className="w-4 h-4" />
+          <Button variant="whatsapp" size="sm" onClick={handleGrabNow} aria-label={`Grab ${title} on WhatsApp`}>
+            <MessageCircle className="w-4 h-4" aria-hidden="true" />
             Grab Now
           </Button>
         </div>

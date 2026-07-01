@@ -34,6 +34,20 @@
 
     --radius: 1rem;
 
+    /* Status / brand tokens (single source of truth) */
+    --whatsapp: 142 70% 49%;
+    --whatsapp-hover: 142 70% 44%;
+    --whatsapp-foreground: 0 0% 100%;
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --surface: 0 0% 100%;
+    --surface-muted: 45 25% 96%;
+    --info-bg: 210 100% 96%;
+    --info-fg: 210 90% 40%;
+    --info-border: 210 80% 88%;
+
     /* Custom colors */
     --cream: 45 33% 97%;
     --cream-dark: 45 25% 93%;

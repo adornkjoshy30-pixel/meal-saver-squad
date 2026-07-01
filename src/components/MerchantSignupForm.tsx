@@ -130,12 +130,12 @@ export const MerchantSignupForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 text-center">
+      <div className="bg-card rounded-3xl p-8 shadow-lg border border-border text-center">
         <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-          <CheckCircle2 className="w-8 h-8 text-primary" />
+          <CheckCircle2 className="w-8 h-8 text-primary" aria-hidden="true" />
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Thank You!</h3>
-        <p className="text-gray-600">Our team will contact you shortly.</p>
+        <h3 className="text-xl font-bold text-foreground mb-2">Thank You!</h3>
+        <p className="text-muted-foreground">Our team will contact you shortly.</p>
         <Button 
           variant="outline" 
           className="mt-6" 
@@ -148,14 +148,14 @@ export const MerchantSignupForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+    <form onSubmit={handleSubmit} className="bg-card rounded-3xl p-8 shadow-lg border border-border">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-          <Store className="w-6 h-6 text-primary" />
+          <Store className="w-6 h-6 text-primary" aria-hidden="true" />
         </div>
         <div>
-          <h3 className="text-xl font-bold text-gray-900">Partner Application</h3>
-          <p className="text-sm text-gray-500">Tell us about your business</p>
+          <h3 className="text-xl font-bold text-foreground">Partner Application</h3>
+          <p className="text-sm text-muted-foreground">Tell us about your business</p>
         </div>
       </div>
 
@@ -171,10 +171,10 @@ export const MerchantSignupForm = () => {
               placeholder="Your business name"
               maxLength={100}
               required
-              className={errors.restaurantName ? "border-red-500" : ""}
+              className={errors.restaurantName ? "border-destructive" : ""}
             />
             {errors.restaurantName && (
-              <p className="text-xs text-red-500">{errors.restaurantName}</p>
+              <p className="text-xs text-destructive">{errors.restaurantName}</p>
             )}
           </div>
           <div className="space-y-2">
@@ -188,10 +188,10 @@ export const MerchantSignupForm = () => {
               placeholder="+91 98765 43210"
               maxLength={15}
               required
-              className={errors.phone ? "border-red-500" : ""}
+              className={errors.phone ? "border-destructive" : ""}
             />
             {errors.phone && (
-              <p className="text-xs text-red-500">{errors.phone}</p>
+              <p className="text-xs text-destructive">{errors.phone}</p>
             )}
           </div>
         </div>
@@ -207,10 +207,10 @@ export const MerchantSignupForm = () => {
               onChange={handleInputChange}
               placeholder="email@example.com"
               maxLength={100}
-              className={errors.email ? "border-red-500" : ""}
+              className={errors.email ? "border-destructive" : ""}
             />
             {errors.email && (
-              <p className="text-xs text-red-500">{errors.email}</p>
+              <p className="text-xs text-destructive">{errors.email}</p>
             )}
           </div>
           <div className="space-y-2">
@@ -223,10 +223,10 @@ export const MerchantSignupForm = () => {
               placeholder="Your business location"
               maxLength={200}
               required
-              className={errors.address ? "border-red-500" : ""}
+              className={errors.address ? "border-destructive" : ""}
             />
             {errors.address && (
-              <p className="text-xs text-red-500">{errors.address}</p>
+              <p className="text-xs text-destructive">{errors.address}</p>
             )}
           </div>
         </div>
@@ -241,17 +241,17 @@ export const MerchantSignupForm = () => {
             placeholder="Tell us about your restaurant, bakery, or kitchen..."
             rows={3}
             maxLength={500}
-            className={errors.description ? "border-red-500" : ""}
+            className={errors.description ? "border-destructive" : ""}
           />
           {errors.description && (
-            <p className="text-xs text-red-500">{errors.description}</p>
+            <p className="text-xs text-destructive">{errors.description}</p>
           )}
         </div>
 
         {/* Order Method Selection (Type of Business) */}
         <div className="space-y-3">
           <Label className="text-base">Type of Business *</Label>
-          <p className="text-sm text-gray-500 -mt-1">How will customers receive their orders?</p>
+          <p className="text-sm text-muted-foreground -mt-1">How will customers receive their orders?</p>
           
           <div className="grid sm:grid-cols-3 gap-3">
             {orderMethodOptions.map((option) => (
@@ -259,37 +259,38 @@ export const MerchantSignupForm = () => {
                 key={option.value}
                 type="button"
                 onClick={() => handleOrderMethodChange(option.value)}
-                className={`relative flex flex-col items-center p-4 rounded-xl border-2 transition-all duration-200 ${
+                aria-pressed={formData.orderMethod === option.value}
+                className={`relative flex flex-col items-center p-4 min-h-[96px] rounded-xl border-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                   formData.orderMethod === option.value
-                    ? "border-primary bg-green-50 ring-2 ring-primary/20"
-                    : "border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50"
+                    ? "border-primary bg-accent ring-2 ring-primary/20"
+                    : "border-border bg-card hover:border-primary/40 hover:bg-muted"
                 }`}
               >
                 <div
                   className={`w-10 h-10 rounded-lg flex items-center justify-center mb-2 ${
                     formData.orderMethod === option.value
-                      ? "bg-primary text-white"
-                      : "bg-gray-100 text-gray-600"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
                   }`}
                 >
                   {"icons" in option ? (
                     <div className="flex items-center gap-0.5">
                       {option.icons.map((Icon, i) => (
-                        <Icon key={i} className="w-4 h-4" />
+                        <Icon key={i} className="w-4 h-4" aria-hidden="true" />
                       ))}
                     </div>
                   ) : (
-                    <option.icon className="w-5 h-5" />
+                    <option.icon className="w-5 h-5" aria-hidden="true" />
                   )}
                 </div>
                 <span
                   className={`font-medium text-sm ${
-                    formData.orderMethod === option.value ? "text-primary" : "text-gray-700"
+                    formData.orderMethod === option.value ? "text-primary" : "text-foreground"
                   }`}
                 >
                   {option.label}
                 </span>
-                <span className="text-xs text-gray-500 text-center mt-1">{option.description}</span>
+                <span className="text-xs text-muted-foreground text-center mt-1">{option.description}</span>
               </button>
             ))}
         </div>
@@ -313,12 +314,12 @@ export const MerchantSignupForm = () => {
           ) : (
             <>
               Submit Application
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </>
           )}
         </Button>
 
-        <p className="text-xs text-gray-500 text-center">
+        <p className="text-xs text-muted-foreground text-center">
           By submitting, you agree to our terms. No fees or charges during the pilot phase.
         </p>
       </div>

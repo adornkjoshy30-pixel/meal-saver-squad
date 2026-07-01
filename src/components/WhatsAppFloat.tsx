@@ -42,8 +42,8 @@ const WhatsAppFloat = () => {
 
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-[hsl(142,70%,49%)]/10 flex items-center justify-center">
-                <MessageCircle className="w-4 h-4 text-[hsl(142,70%,49%)]" />
+              <div className="w-8 h-8 rounded-lg bg-whatsapp/10 flex items-center justify-center">
+                <MessageCircle className="w-4 h-4 text-whatsapp" aria-hidden="true" />
               </div>
               <p className="font-bold text-foreground text-sm">Meal Saver on WhatsApp</p>
             </div>
@@ -60,9 +60,9 @@ const WhatsAppFloat = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full rounded-xl bg-[hsl(142,70%,49%)] hover:bg-[hsl(142,70%,44%)] text-white font-semibold text-sm py-2.5 transition-colors"
+              className="flex items-center justify-center gap-2 w-full min-h-11 rounded-xl bg-whatsapp hover:bg-whatsapp-hover text-whatsapp-foreground font-semibold text-sm py-2.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="w-4 h-4" aria-hidden="true" />
               Join WhatsApp Channel
             </a>
           </div>
@@ -72,11 +72,13 @@ const WhatsAppFloat = () => {
       {/* Compact pill */}
       <button
         onClick={() => setExpanded((prev) => !prev)}
-        className="group flex items-center gap-2 rounded-full bg-card border border-border shadow-card px-4 py-2.5 hover:shadow-glow transition-all duration-300"
+        aria-label={expanded ? "Collapse WhatsApp panel" : "Open WhatsApp panel"}
+        aria-expanded={expanded}
+        className="group flex items-center gap-2 min-h-11 rounded-full bg-card border border-border shadow-card px-4 py-2.5 hover:shadow-glow transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
         <span className="relative flex h-2.5 w-2.5">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(142,70%,49%)] opacity-75" />
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[hsl(142,70%,49%)]" />
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-whatsapp opacity-75" />
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-whatsapp" />
         </span>
         <span className="text-foreground font-semibold text-sm hidden sm:inline">
           Meal Saver on WhatsApp
@@ -84,7 +86,7 @@ const WhatsAppFloat = () => {
         <span className="text-foreground font-semibold text-sm sm:hidden">
           Get Started
         </span>
-        <MessageCircle className="w-4 h-4 text-[hsl(142,70%,49%)] group-hover:scale-110 transition-transform" />
+        <MessageCircle className="w-4 h-4 text-whatsapp group-hover:scale-110 transition-transform" aria-hidden="true" />
       </button>
     </div>
   );
