@@ -4,7 +4,7 @@ import { contact } from "@/config/appConfig";
 
 const Refund = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <PageSEO
         title="Refund & Return Policy | Meal Saver"
         description="Understand Meal Saver's refund policy for surplus food deals. MealSaver is a promotion platform — all payments are made directly to restaurants."

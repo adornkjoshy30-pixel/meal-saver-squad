@@ -3,7 +3,7 @@ import { contact } from "@/config/appConfig";
 
 const Privacy = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <PageSEO
         title="Privacy Policy | Meal Saver"
         description="Learn how Meal Saver collects, uses, and protects your personal information when using our surplus food service in Kerala."

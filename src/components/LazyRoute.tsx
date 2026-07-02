@@ -7,7 +7,7 @@ import ErrorBoundary from "@/components/ErrorBoundary";
  */
 const LazyRoute = ({ component: Component }: { component: LazyExoticComponent<ComponentType<any>> }) => (
   <ErrorBoundary>
-    <Suspense fallback={<div className="min-h-screen bg-background" />}>
+    <Suspense fallback={<div className="min-h-dvh bg-background" />}>
       <Component />
     </Suspense>
   </ErrorBoundary>

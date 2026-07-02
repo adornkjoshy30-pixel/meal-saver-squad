@@ -3,7 +3,7 @@ import { contact } from "@/config/appConfig";
 
 const Terms = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <PageSEO
         title="Terms of Service | Meal Saver"
         description="Read the Terms of Service for MealSaver, a WhatsApp-first surplus food deal communication platform connecting restaurants with customers in Kerala."

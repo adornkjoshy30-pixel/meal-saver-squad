@@ -50,7 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <PageSEO
         title="Contact Meal Saver | Get in Touch"
         description="Have questions about Meal Saver or partnering as a local bakery, cake shop or supermarket? Reach our team — we respond within 24–48 hours."

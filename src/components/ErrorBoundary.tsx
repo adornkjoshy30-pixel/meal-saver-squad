@@ -25,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         this.props.fallback ?? (
-          <div className="min-h-screen flex items-center justify-center bg-background p-6">
+          <div className="min-h-dvh flex items-center justify-center bg-background p-6">
             <div className="text-center space-y-4 max-w-md">
               <h1 className="text-2xl font-bold text-foreground">Something went wrong</h1>
               <p className="text-muted-foreground">
