@@ -5,7 +5,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const AppLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-dvh flex flex-col">
       <Header />
       <main className="flex-1 pt-24">
         <Outlet />

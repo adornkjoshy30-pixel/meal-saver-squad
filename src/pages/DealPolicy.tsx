@@ -3,7 +3,7 @@ import { contact } from "@/config/appConfig";
 
 const DealPolicy = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       <PageSEO
         title="Restaurant Deal Accuracy & Commitment Policy | Meal Saver"
         description="Meal Saver's policy for restaurant partners on deal accuracy, commitment to honour published deals, and maintaining customer trust."
