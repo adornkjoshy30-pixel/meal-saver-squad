@@ -9,7 +9,7 @@
  *   - chat links include a prefilled `text` param
  */
 import { describe, it, expect, beforeAll } from "vitest";
-import { render, screen, within } from "@testing-library/react";
+import { render, act, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -66,11 +66,28 @@ function collectWaLinks(root: HTMLElement): HTMLAnchorElement[] {
   );
 }
 
-const SURFACES: Array<[string, React.ReactElement, { min: number }]> = [
+type SurfaceCase = [string, React.ReactElement, { min: number; setup?: (root: HTMLElement) => void }];
+
+const SURFACES: SurfaceCase[] = [
   ["Hero", <Hero />, { min: 1 }],
   ["Header", <Header />, { min: 1 }],
   ["CTASection", <CTASection />, { min: 1 }],
-  ["WhatsAppFloat", <WhatsAppFloat />, { min: 1 }],
+  [
+    "WhatsAppFloat",
+    <WhatsAppFloat />,
+    {
+      min: 1,
+      setup: (root) => {
+        // Float only mounts anchor after scroll > 300px + expand click.
+        act(() => {
+          Object.defineProperty(window, "scrollY", { value: 500, configurable: true });
+          window.dispatchEvent(new Event("scroll"));
+        });
+        const toggle = root.querySelector<HTMLButtonElement>('button[aria-expanded="false"]');
+        if (toggle) act(() => { fireEvent.click(toggle); });
+      },
+    },
+  ],
   ["CityChannels", <CityChannels />, { min: 1 }],
   ["LaunchPhase", <LaunchPhase />, { min: 1 }],
   ["PartnerCTA", <PartnerCTA />, { min: 1 }],
@@ -83,6 +100,8 @@ describe.each(SURFACES)(
 
     beforeAll(() => {
       const { container } = render(<Wrap>{node}</Wrap>);
+      const opts = (SURFACES.find(([n]) => n === _name)?.[2]) as { setup?: (r: HTMLElement) => void };
+      opts?.setup?.(container);
       links = collectWaLinks(container);
     });
 
