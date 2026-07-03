@@ -10,6 +10,8 @@ import decorBread from "@/assets/decor-bread.png";
 import decorCroissant from "@/assets/decor-croissant.png";
 import decorGroceryBag from "@/assets/decor-grocery-bag.png";
 import decorLeaf from "@/assets/decor-leaf.png";
+import decorCakeSlice from "@/assets/decor-cake-slice.png";
+import decorBasket from "@/assets/decor-shopping-basket.png";
 
 // Free, hot-linkable bakery/food background loop. Swap with a self-hosted file later.
 const HERO_VIDEO_SRC =
@@ -44,6 +46,8 @@ const decorItems = [
   { src: decorLeaf,        alt: "Leaf",             bottom: "28%", left: "8%", size: 72,  depth: 44, float: 22 },
   { src: decorGroceryBag,  alt: "Grocery bag",      bottom: "14%", right: "5%", size: 110, depth: 30, float: 16 },
   { src: decorLeaf,        alt: "Leaf",             top: "45%",  left: "48%",  size: 56,  depth: 52, float: 12 },
+  { src: decorCakeSlice,   alt: "Cake slice",       top: "58%",  right: "18%", size: 82,  depth: 40, float: 20 },
+  { src: decorBasket,      alt: "Shopping basket",  top: "36%",  left: "22%",  size: 92,  depth: 34, float: 15 },
 ] as const;
 
 const Hero = () => {
