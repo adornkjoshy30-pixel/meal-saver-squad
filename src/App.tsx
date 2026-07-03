@@ -24,6 +24,12 @@ const Privacy = lazy(() => import("./pages/Privacy"));
 const Refund = lazy(() => import("./pages/Refund"));
 const DealPolicy = lazy(() => import("./pages/DealPolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const BrowseDeals = lazy(() => import("./pages/BrowseDeals"));
+const CategoryPage = lazy(() => import("./pages/CategoryPage"));
+const CitiesIndex = lazy(() => import("./pages/CitiesIndex"));
+const CityPage = lazy(() => import("./pages/CityPage"));
+const FAQs = lazy(() => import("./pages/FAQs"));
+const SitemapPage = lazy(() => import("./pages/SitemapPage"));
 
 const queryClient = new QueryClient();
 
@@ -51,6 +57,13 @@ const App = () => (
                 <Route path="/refund" element={<LazyRoute component={Refund} />} />
                 <Route path="/merchant" element={<Navigate to="/partners" replace />} />
                 <Route path="/deal-policy" element={<LazyRoute component={DealPolicy} />} />
+                <Route path="/browse" element={<LazyRoute component={BrowseDeals} />} />
+                <Route path="/category/:slug" element={<LazyRoute component={CategoryPage} />} />
+                <Route path="/cities" element={<LazyRoute component={CitiesIndex} />} />
+                <Route path="/cities/:slug" element={<LazyRoute component={CityPage} />} />
+                <Route path="/faqs" element={<LazyRoute component={FAQs} />} />
+                <Route path="/faq" element={<Navigate to="/faqs" replace />} />
+                <Route path="/sitemap" element={<LazyRoute component={SitemapPage} />} />
                 <Route path="*" element={<LazyRoute component={NotFound} />} />
               </Route>
             </Routes>

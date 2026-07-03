@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mealsaver.in/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mealsaver.in/browse</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mealsaver.in/faqs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mealsaver.in/sitemap</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://mealsaver.in/cities</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mealsaver.in/cities/idukki</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mealsaver.in/cities/kattappana</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mealsaver.in/cities/kochi</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mealsaver.in/cities/kottayam</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mealsaver.in/cities/bengaluru</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mealsaver.in/cities/chennai</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mealsaver.in/cities/hyderabad</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mealsaver.in/cities/mumbai</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mealsaver.in/cities/delhi</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://mealsaver.in/category/bakeries</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mealsaver.in/category/cake-shops</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mealsaver.in/category/supermarkets</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mealsaver.in/category/grocery-stores</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mealsaver.in/category/frozen-foods</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mealsaver.in/category/near-expiry-food</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mealsaver.in/category/food-waste</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mealsaver.in/category/affordable-food</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mealsaver.in/category/budget-meals</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mealsaver.in/category/student-meals</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mealsaver.in/category/surprise-boxes</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mealsaver.in/category/food-rescue</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mealsaver.in/category/sustainable-shopping</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://mealsaver.in/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mealsaver.in/how-it-works</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://mealsaver.in/partners</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
