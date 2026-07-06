@@ -3,6 +3,8 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PageSEO from "@/components/PageSEO";
 import BlogInternalLinks from "@/components/BlogInternalLinks";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 import { getPostBySlug } from "@/data/blog-posts";
 import { whatsapp } from "@/config/appConfig";
 import { waUrl } from "@/lib/whatsapp";
@@ -15,15 +17,32 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const crumbs = [
+    { name: "Home", path: "/" },
+    { name: "Blog", path: "/blog" },
+    { name: post.title, path: `/blog/${post.slug}` },
+  ];
+
   return (
     <div>
       <PageSEO
         title={`${post.title} | Meal Saver Blog`}
         description={post.description}
         path={`/blog/${post.slug}`}
+        ogType="article"
+        jsonLd={[
+          articleSchema({
+            title: post.title,
+            description: post.description,
+            path: `/blog/${post.slug}`,
+            date: post.date,
+          }),
+          breadcrumbSchema(crumbs),
+        ]}
       />
       <section className="py-16 lg:py-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">
+          <Breadcrumbs items={crumbs} />
           <Link to="/blog">
             <Button variant="ghost" size="sm" className="mb-8 min-h-[48px]">
               <ArrowLeft className="w-4 h-4" aria-hidden="true" />

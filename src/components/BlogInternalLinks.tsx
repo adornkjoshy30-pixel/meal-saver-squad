@@ -3,26 +3,41 @@ import { ArrowRight } from "lucide-react";
 
 const links = [
   {
-    to: "/how-it-works",
-    title: "How It Works",
-    description: "Discover, reserve, collect and enjoy — in four simple steps.",
+    to: "/browse",
+    title: "Browse Today's Deals",
+    description: "See what local Kerala bakeries and supermarkets are sharing today.",
   },
   {
-    to: "/partners",
-    title: "Partner With Us",
-    description: "Join Meal Saver as a local bakery, cake shop or supermarket.",
+    to: "/category/near-expiry-food",
+    title: "Near-Expiry Food Guide",
+    description: "Why near-expiry food is safe — and how to save 30–70% on groceries.",
   },
   {
-    to: "/impact",
-    title: "Our Impact",
-    description: "See how Meal Saver helps reduce waste across Kerala.",
+    to: "/category/affordable-food",
+    title: "Affordable Food Near You",
+    description: "Quality food at fair prices from trusted Kerala stores.",
+  },
+  {
+    to: "/category/bakeries",
+    title: "Bakery Deals in Kerala",
+    description: "Fresh breads, cakes and pastries at end-of-day prices.",
+  },
+  {
+    to: "/cities/idukki",
+    title: "Meal Saver in Idukki",
+    description: "Our live pilot city — see daily deals across the district.",
+  },
+  {
+    to: "/faqs",
+    title: "Frequently Asked Questions",
+    description: "Everything about how Meal Saver works, safety and pickup.",
   },
 ];
 
 const BlogInternalLinks = () => (
   <aside aria-label="Related pages" className="mt-12 pt-8 border-t border-border">
     <h2 className="text-lg font-bold text-foreground mb-4">Explore More</h2>
-    <div className="grid sm:grid-cols-3 gap-4">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {links.map((link) => (
         <Link
           key={link.to}
