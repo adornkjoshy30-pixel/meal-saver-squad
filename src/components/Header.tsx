@@ -8,10 +8,11 @@ import { site } from "@/config/appConfig";
 import { waUrl } from "@/lib/whatsapp";
 
 const navLinks = [
+  { label: "Browse Deals", to: "/browse" },
   { label: "How It Works", to: "/how-it-works" },
   { label: "For Businesses", to: "/partners" },
-  { label: "Impact", to: "/impact" },
-  { label: "About", to: "/about" },
+  { label: "Cities", to: "/cities" },
+  { label: "FAQs", to: "/faqs" },
   { label: "Contact", to: "/contact" },
 ];
 
