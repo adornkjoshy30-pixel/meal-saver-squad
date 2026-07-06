@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground pt-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-12">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-3">
@@ -65,7 +65,41 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
+          {/* Explore (new SEO pages) */}
+          <div>
+            <h4 className="font-semibold mb-4">Explore</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/browse" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Browse Deals</Link>
+              </li>
+              <li>
+                <Link to="/category/bakeries" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Bakery Deals</Link>
+              </li>
+              <li>
+                <Link to="/category/supermarkets" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Supermarket Deals</Link>
+              </li>
+              <li>
+                <Link to="/category/near-expiry-food" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Near-Expiry Food</Link>
+              </li>
+              <li>
+                <Link to="/category/affordable-food" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Affordable Food</Link>
+              </li>
+              <li>
+                <Link to="/cities" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Cities</Link>
+              </li>
+              <li>
+                <Link to="/cities/idukki" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Idukki</Link>
+              </li>
+              <li>
+                <Link to="/faqs" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">FAQs</Link>
+              </li>
+              <li>
+                <Link to="/sitemap" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">Sitemap</Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Legal */}
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
