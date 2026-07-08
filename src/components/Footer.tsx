@@ -137,20 +137,20 @@ const Footer = () => {
       {/* Brand wordmark */}
       <div
         aria-hidden="true"
-        className="relative overflow-hidden select-none border-t border-primary-foreground/10"
+        className="relative overflow-hidden select-none border-t border-primary-foreground/10 bg-primary"
       >
         {/* Compact responsive wordmark that fits the viewport without overflow */}
         <div className="px-6 py-6 sm:py-8 flex justify-center">
           <span
-            className="font-black tracking-tight text-primary-foreground/90 leading-none text-center"
+            className="font-black tracking-tight text-primary-foreground leading-none text-center"
             style={{ fontSize: "clamp(2rem, 11vw, 8rem)", letterSpacing: "-0.04em" }}
           >
             {site.name.toUpperCase()}
           </span>
         </div>
 
-        {/* Soft brand-green underglow */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-primary/20 to-transparent" />
+        {/* Soft white underglow for depth */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/10 to-transparent" />
       </div>
     </footer>
   );
