@@ -5,7 +5,7 @@ import { site, contact, social } from "@/config/appConfig";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground pt-16">
+    <footer className="bg-primary-dark text-primary-foreground pt-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-12">
         <div className="grid md:grid-cols-5 gap-12 mb-12">
           {/* Brand */}
